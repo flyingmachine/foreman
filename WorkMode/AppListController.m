@@ -27,7 +27,12 @@
   [apps addObject: app];
   appIconView.app = app;
   [appIconView showAppIcon];
+  [self startApp:app];
   NSLog(@"%@", apps);
+}
+
+- (void) startApp:(NSString *)app {
+  [[NSWorkspace sharedWorkspace] launchApplication:app];
 }
 
 @end

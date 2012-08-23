@@ -10,10 +10,10 @@
 
 @class AppListController;
 
-@interface AppIconView : NSImageView
+@interface IconListView : NSView
 @property (assign) IBOutlet AppListController* appListController;
 @property (strong) NSString* app;
 
-- (void)showAppIcon;
+- (void)showAppIcons;
 
 @end

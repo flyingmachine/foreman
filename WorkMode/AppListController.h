@@ -8,13 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 @class DragReceiver;
-@class AppIconView;
+@class IconListView;
 
 @interface AppListController : NSController
 
 @property (strong) NSMutableArray* apps;
 @property (assign) IBOutlet DragReceiver* dragReceiver;
-@property (assign) IBOutlet AppIconView* appIconView;
+@property (assign) IBOutlet IconListView* iconListView;
 
 - (void) addApp: (NSString *) app;
 

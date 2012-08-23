@@ -7,11 +7,11 @@
 //
 
 #import "AppListController.h"
-#import "AppIconView.h"
+#import "IconListView.h"
 
 @implementation AppListController
 @synthesize apps;
-@synthesize appIconView;
+@synthesize iconListView;
 
 - (id)init
 {
@@ -25,10 +25,7 @@
 
 - (void) addApp:(NSString *)app {
   [apps addObject: app];
-  appIconView.app = app;
-  [appIconView showAppIcon];
-  [self startApp:app];
-  NSLog(@"%@", apps);
+  [iconListView showAppIcons];
 }
 
 - (void) startApp:(NSString *)app {

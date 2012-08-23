@@ -12,4 +12,8 @@
 
 @interface AppIconView : NSImageView
 @property (assign) IBOutlet AppListController* appListController;
+@property (strong) NSString* app;
+
+- (void)showAppIcon;
+
 @end

@@ -36,7 +36,7 @@
 
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
 {
-  [appListController addApp: [[NSURL URLFromPasteboard: [sender draggingPasteboard]] absoluteString]];
+  [appListController addApp: [[NSURL URLFromPasteboard: [sender draggingPasteboard]] path]];
   return YES;
 }
 

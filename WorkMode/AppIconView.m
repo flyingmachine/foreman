@@ -9,6 +9,7 @@
 #import "AppIconView.h"
 
 @implementation AppIconView
+@synthesize app;
 
 - (id)initWithFrame:(NSRect)frame
 {
@@ -20,9 +21,22 @@
   return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect
+
+- (void)showAppIcon
 {
-  // Drawing code here.
+//  NSImage *newImage = [[NSImage alloc] initWithContentsOfFile: app];
+  [self setImage:[[NSWorkspace sharedWorkspace] iconForFile:app]];
+  [self setNeedsDisplay:YES];
 }
+
+- (void)drawRect:(NSRect)rect
+{
+  [super drawRect:rect];
+  //highlight by overlaying a gray border
+  [[NSColor grayColor] set];
+  [NSBezierPath setDefaultLineWidth: 5];
+  [NSBezierPath strokeRect: rect];
+}
+
 
 @end

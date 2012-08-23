@@ -11,5 +11,4 @@
 
 @interface DragReceiver : NSView <NSDraggingDestination>
 @property (assign) IBOutlet AppListController* appListController;
-
 @end

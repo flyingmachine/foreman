@@ -7,8 +7,10 @@
 //
 
 #import "DragReceiver.h"
+#import "AppListController.h"
 
 @implementation DragReceiver
+@synthesize appListController;
 
 - (id)initWithFrame:(NSRect)frame
 {
@@ -24,13 +26,27 @@
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender
 {
-  NSLog(@"Dragging entered %@", sender);
   return NSDragOperationCopy;
 }
 
-- (void)drawRect:(NSRect)dirtyRect
+- (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender
 {
+  return YES;
+}
 
+- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
+{
+  [appListController addApp: [[NSURL URLFromPasteboard: [sender draggingPasteboard]] absoluteString]];
+  return YES;
+}
+
+- (void)drawRect:(NSRect)rect
+{
+  [super drawRect:rect];
+  //highlight by overlaying a gray border
+  [[NSColor grayColor] set];
+  [NSBezierPath setDefaultLineWidth: 5];
+  [NSBezierPath strokeRect: rect];
 }
 
 @end

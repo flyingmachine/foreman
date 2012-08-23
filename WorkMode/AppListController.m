@@ -9,4 +9,21 @@
 #import "AppListController.h"
 
 @implementation AppListController
+@synthesize apps;
+
+- (id)init
+{
+  self = [super init];
+  if (self) {
+    apps = [[NSMutableArray alloc] init];
+  }
+  
+  return self;
+}
+
+- (void) addApp:(NSString *)app {
+  [apps addObject: app];
+  NSLog(@"%@", apps);
+}
+
 @end

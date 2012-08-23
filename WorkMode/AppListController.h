@@ -11,7 +11,11 @@
 @class AppIconView;
 
 @interface AppListController : NSController
+
+@property (strong) NSMutableArray* apps;
 @property (assign) IBOutlet DragReceiver* dragReceiver;
 @property (assign) IBOutlet AppIconView* appIconView;
+
+- (void) addApp: (NSString *) app;
 
 @end

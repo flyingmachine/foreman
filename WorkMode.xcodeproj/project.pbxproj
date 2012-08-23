@@ -18,6 +18,8 @@
 		6517C11815E149BE00135B11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6517C11615E149BE00135B11 /* InfoPlist.strings */; };
 		6517C11B15E149BE00135B11 /* WorkModeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C11A15E149BE00135B11 /* WorkModeTests.m */; };
 		6517C12E15E1563E00135B11 /* DragReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C12D15E1563E00135B11 /* DragReceiver.m */; };
+		65D663AD15E5A4FD00C41FEA /* AppListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663AC15E5A4FD00C41FEA /* AppListController.m */; };
+		65D663B115E5A61800C41FEA /* AppIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663B015E5A61800C41FEA /* AppIconView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,10 @@
 		6517C11A15E149BE00135B11 /* WorkModeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkModeTests.m; sourceTree = "<group>"; };
 		6517C12C15E1563E00135B11 /* DragReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragReceiver.h; sourceTree = "<group>"; };
 		6517C12D15E1563E00135B11 /* DragReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragReceiver.m; sourceTree = "<group>"; };
+		65D663AB15E5A4FD00C41FEA /* AppListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListController.h; sourceTree = "<group>"; };
+		65D663AC15E5A4FD00C41FEA /* AppListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListController.m; sourceTree = "<group>"; };
+		65D663AF15E5A61800C41FEA /* AppIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppIconView.h; sourceTree = "<group>"; };
+		65D663B015E5A61800C41FEA /* AppIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppIconView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +127,11 @@
 				6517C10315E149BD00135B11 /* AppDelegate.m */,
 				6517C12C15E1563E00135B11 /* DragReceiver.h */,
 				6517C12D15E1563E00135B11 /* DragReceiver.m */,
+				65D663AF15E5A61800C41FEA /* AppIconView.h */,
+				65D663B015E5A61800C41FEA /* AppIconView.m */,
 				6517C10515E149BD00135B11 /* MainMenu.xib */,
+				65D663AB15E5A4FD00C41FEA /* AppListController.h */,
+				65D663AC15E5A4FD00C41FEA /* AppListController.m */,
 				6517C0F715E149BD00135B11 /* Supporting Files */,
 			);
 			path = WorkMode;
@@ -269,6 +279,8 @@
 				6517C0FD15E149BD00135B11 /* main.m in Sources */,
 				6517C10415E149BD00135B11 /* AppDelegate.m in Sources */,
 				6517C12E15E1563E00135B11 /* DragReceiver.m in Sources */,
+				65D663AD15E5A4FD00C41FEA /* AppListController.m in Sources */,
+				65D663B115E5A61800C41FEA /* AppIconView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

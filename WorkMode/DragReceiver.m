@@ -22,6 +22,10 @@
     return self;
 }
 
+- (BOOL)acceptsFirstResponder {
+  return YES;
+}
+
 #pragma mark - Destination Operations
 
 - (NSString *)draggedFilePath:(id<NSDraggingInfo>)sender
@@ -37,6 +41,7 @@
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender
 {
+  NSLog(@"%@", [[sender draggingPasteboard] pasteboardItems]);
   if ([self appDragged:sender]) {
     return NSDragOperationCopy;
   } else {
@@ -51,7 +56,7 @@
 
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
 {
-  [appListController addApp: [[NSURL URLFromPasteboard: [sender draggingPasteboard]] path]];
+  [appListController addApps: [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
   return YES;
 }
 

@@ -23,8 +23,8 @@
   return self;
 }
 
-- (void) addApp:(NSString *)app {
-  [apps addObject: app];
+- (void) addApps:(NSArray *)appsToAdd {
+  [apps addObjectsFromArray: appsToAdd];
   [iconListView showAppIcons];
 }
 

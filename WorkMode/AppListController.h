@@ -16,6 +16,6 @@
 @property (assign) IBOutlet DragReceiver* dragReceiver;
 @property (assign) IBOutlet IconListView* iconListView;
 
-- (void) addApp: (NSString *) app;
+- (void) addApps: (NSArray *) app;
 
 @end

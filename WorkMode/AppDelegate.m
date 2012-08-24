@@ -13,11 +13,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  [self addAppGroupView];
   // Insert code here to initialize your application
 }
 
-- (void)addAppGroupView
+- (void)addAppGroupView:(NSArray *)apps
 {
   AppGroupController* controller = [[AppGroupController alloc] init];
   NSRect rootFrame = controller.rootView.frame;
@@ -30,6 +29,10 @@
   NSRect newFrame = NSMakeRect(mainView.frame.origin.x, mainView.frame.origin.y, mainView.frame.size.width, mainView.frame.size.height);
   [mainView setFrame:newFrame];
   [mainView addSubview: controller.rootView];
+  
+  if(apps != nil){
+    [controller addApps:apps];
+  }
 }
 
 @end

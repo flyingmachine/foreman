@@ -12,6 +12,7 @@
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSCustomObject</string>
+			<string>NSCustomView</string>
 			<string>NSMenu</string>
 			<string>NSMenuItem</string>
 			<string>NSTextField</string>
@@ -1306,52 +1307,64 @@
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
-						<object class="NSTextField" id="305503072">
+						<object class="NSCustomView" id="703243050">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{181, 17}, {244, 17}}</string>
+							<array class="NSMutableArray" key="NSSubviews">
+								<object class="NSTextField" id="1008745122">
+									<reference key="NSNextResponder" ref="703243050"/>
+									<int key="NSvFlags">268</int>
+									<string key="NSFrame">{{181, 16}, {244, 17}}</string>
+									<reference key="NSSuperview" ref="703243050"/>
+									<reference key="NSWindow"/>
+									<reference key="NSNextKeyView"/>
+									<string key="NSReuseIdentifierKey">_NS:1535</string>
+									<bool key="NSEnabled">YES</bool>
+									<object class="NSTextFieldCell" key="NSCell" id="839824959">
+										<int key="NSCellFlags">605028416</int>
+										<int key="NSCellFlags2">306185216</int>
+										<string key="NSContents">Drag Apps Here To Create New Group</string>
+										<object class="NSFont" key="NSSupport">
+											<string key="NSName">LucidaGrande</string>
+											<double key="NSSize">13</double>
+											<int key="NSfFlags">1044</int>
+										</object>
+										<string key="NSCellIdentifier">_NS:1535</string>
+										<reference key="NSControlView" ref="1008745122"/>
+										<object class="NSColor" key="NSBackgroundColor">
+											<int key="NSColorSpace">6</int>
+											<string key="NSCatalogName">System</string>
+											<string key="NSColorName">controlColor</string>
+											<object class="NSColor" key="NSColor">
+												<int key="NSColorSpace">3</int>
+												<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
+											</object>
+										</object>
+										<object class="NSColor" key="NSTextColor">
+											<int key="NSColorSpace">6</int>
+											<string key="NSCatalogName">System</string>
+											<string key="NSColorName">controlTextColor</string>
+											<object class="NSColor" key="NSColor">
+												<int key="NSColorSpace">3</int>
+												<bytes key="NSWhite">MAA</bytes>
+											</object>
+										</object>
+									</object>
+									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+								</object>
+							</array>
+							<string key="NSFrameSize">{607, 50}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
-							<string key="NSReuseIdentifierKey">_NS:1535</string>
-							<bool key="NSEnabled">YES</bool>
-							<object class="NSTextFieldCell" key="NSCell" id="326466244">
-								<int key="NSCellFlags">605028416</int>
-								<int key="NSCellFlags2">306185216</int>
-								<string key="NSContents">Drag Apps Here To Create New Group</string>
-								<object class="NSFont" key="NSSupport">
-									<string key="NSName">LucidaGrande</string>
-									<double key="NSSize">13</double>
-									<int key="NSfFlags">1044</int>
-								</object>
-								<string key="NSCellIdentifier">_NS:1535</string>
-								<reference key="NSControlView" ref="305503072"/>
-								<object class="NSColor" key="NSBackgroundColor">
-									<int key="NSColorSpace">6</int>
-									<string key="NSCatalogName">System</string>
-									<string key="NSColorName">controlColor</string>
-									<object class="NSColor" key="NSColor">
-										<int key="NSColorSpace">3</int>
-										<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
-									</object>
-								</object>
-								<object class="NSColor" key="NSTextColor">
-									<int key="NSColorSpace">6</int>
-									<string key="NSCatalogName">System</string>
-									<string key="NSColorName">controlTextColor</string>
-									<object class="NSColor" key="NSColor">
-										<int key="NSColorSpace">3</int>
-										<bytes key="NSWhite">MAA</bytes>
-									</object>
-								</object>
-							</object>
-							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+							<reference key="NSNextKeyView" ref="1008745122"/>
+							<string key="NSReuseIdentifierKey">_NS:9</string>
+							<string key="NSClassName">NewAppGroupView</string>
 						</object>
 					</array>
 					<string key="NSFrameSize">{607, 50}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
-					<reference key="NSNextKeyView" ref="305503072"/>
+					<reference key="NSNextKeyView" ref="703243050"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
 				<string key="NSMinSize">{607, 72}</string>
@@ -2003,14 +2016,6 @@
 					<int key="connectionID">535</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">controller</string>
-						<reference key="source" ref="439893737"/>
-						<reference key="destination" ref="781044274"/>
-					</object>
-					<int key="connectionID">1111</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">addFontTrait:</string>
 						<reference key="source" ref="755631768"/>
@@ -2062,9 +2067,17 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">view</string>
 						<reference key="source" ref="781044274"/>
-						<reference key="destination" ref="439893737"/>
+						<reference key="destination" ref="703243050"/>
 					</object>
-					<int key="connectionID">1112</int>
+					<int key="connectionID">1116</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">controller</string>
+						<reference key="source" ref="703243050"/>
+						<reference key="destination" ref="781044274"/>
+					</object>
+					<int key="connectionID">1117</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2591,7 +2604,7 @@
 						<int key="objectID">372</int>
 						<reference key="object" ref="439893737"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="305503072"/>
+							<reference ref="703243050"/>
 						</array>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -3074,17 +3087,25 @@
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">1113</int>
-						<reference key="object" ref="305503072"/>
+						<int key="objectID">1115</int>
+						<reference key="object" ref="703243050"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="326466244"/>
+							<reference ref="1008745122"/>
 						</array>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">1113</int>
+						<reference key="object" ref="1008745122"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="839824959"/>
+						</array>
+						<reference key="parent" ref="703243050"/>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">1114</int>
-						<reference key="object" ref="326466244"/>
-						<reference key="parent" ref="305503072"/>
+						<reference key="object" ref="839824959"/>
+						<reference key="parent" ref="1008745122"/>
 					</object>
 				</array>
 			</object>
@@ -3095,6 +3116,7 @@
 				<string key="1110.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1113.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1114.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="1115.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="112.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="124.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="125.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3157,7 +3179,6 @@
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="371.IBWindowTemplateEditedContentRect">{{380, 496}, {480, 360}}</string>
 				<integer value="1" key="371.NSWindowTemplate.visibleAtLaunch"/>
-				<string key="372.CustomClassName">NewAppGroupView</string>
 				<string key="372.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="375.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="376.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3254,7 +3275,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1114</int>
+			<int key="maxID">1117</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

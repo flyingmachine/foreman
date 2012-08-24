@@ -7,9 +7,11 @@
 //
 
 #import "NewAppGroupViewController.h"
+#import "AppDelegate.h"
 
 @implementation NewAppGroupViewController
 - (void) addApps:(NSArray *)appsToAdd {
-  
+  AppDelegate* delegate = [[NSApplication sharedApplication] delegate];
+  [delegate addAppGroupView: appsToAdd];
 }
 @end

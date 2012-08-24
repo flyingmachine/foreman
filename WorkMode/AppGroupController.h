@@ -10,7 +10,7 @@
 @class DragReceiver;
 @class IconListView;
 
-@interface AppGroupController : NSController
+@interface AppGroupController : NSViewController
 
 @property (strong) NSMutableOrderedSet* apps;
 @property (assign) IBOutlet DragReceiver* dragReceiver;

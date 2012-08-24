@@ -1,23 +1,18 @@
 //
-//  DragReceiver.m
+//  NewAppGroupView.m
 //  WorkMode
 //
-//  Created by Daniel Higginbotham on 8/19/12.
+//  Created by Daniel Higginbotham on 8/24/12.
 //  Copyright (c) 2012 Daniel Higginbotham. All rights reserved.
 //
 
-#import "DragReceiver.h"
-#import "AppGroupController.h"
+#import "NewAppGroupView.h"
+#import "NewAppGroupViewController.h"
 
-@implementation DragReceiver
+@implementation NewAppGroupView
 @synthesize controller;
-
-- (BOOL)acceptsFirstResponder {
-  return YES;
-}
-
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
-{  
+{
   [controller addApps: [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
   return YES;
 }

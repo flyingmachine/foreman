@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
-		<string key="IBDocument.SystemVersion">12A269</string>
+		<string key="IBDocument.SystemVersion">12B19</string>
 		<string key="IBDocument.InterfaceBuilderVersion">2549</string>
 		<string key="IBDocument.AppKitVersion">1187</string>
 		<string key="IBDocument.HIToolboxVersion">624.00</string>
@@ -34,15 +34,17 @@
 				<string key="NSClassName">NSApplication</string>
 			</object>
 			<object class="NSCustomView" id="1005">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSCustomView" id="382143532">
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">297</int>
 						<array class="NSMutableArray" key="NSSubviews"/>
-						<string key="NSFrame">{{207, 0}, {400, 50}}</string>
+						<string key="NSFrame">{{157, 0}, {450, 50}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSClassName">IconListView</string>
 					</object>
@@ -53,8 +55,9 @@
 							<object class="NSTextField" id="633410383">
 								<reference key="NSNextResponder" ref="639661446"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{17, 17}, {165, 17}}</string>
+								<string key="NSFrame">{{17, 17}, {136, 17}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="382143532"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="NSEnabled">YES</bool>
@@ -67,7 +70,7 @@
 										<double key="NSSize">13</double>
 										<int key="NSfFlags">1044</int>
 									</object>
-									<string key="NSPlaceholderString">Enter Work Mode Name</string>
+									<string key="NSPlaceholderString">Name</string>
 									<string key="NSCellIdentifier">_NS:9</string>
 									<reference key="NSControlView" ref="633410383"/>
 									<object class="NSColor" key="NSBackgroundColor">
@@ -94,6 +97,7 @@
 						</array>
 						<string key="NSFrameSize">{607, 50}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="633410383"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSHuggingPriority">{250, 250}</string>
@@ -101,6 +105,8 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{607, 50}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="639661446"/>
 				<string key="NSClassName">NSView</string>
 			</object>
@@ -260,13 +266,13 @@
 					<string key="className">DragReceiver</string>
 					<string key="superclassName">NSView</string>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">appListController</string>
+						<string key="NS.key.0">controller</string>
 						<string key="NS.object.0">AppGroupController</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">appListController</string>
+						<string key="NS.key.0">controller</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">appListController</string>
+							<string key="name">controller</string>
 							<string key="candidateClassName">AppGroupController</string>
 						</object>
 					</object>
@@ -279,13 +285,13 @@
 					<string key="className">IconListView</string>
 					<string key="superclassName">NSView</string>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">appListController</string>
+						<string key="NS.key.0">controller</string>
 						<string key="NS.object.0">AppGroupController</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">appListController</string>
+						<string key="NS.key.0">controller</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">appListController</string>
+							<string key="name">controller</string>
 							<string key="candidateClassName">AppGroupController</string>
 						</object>
 					</object>

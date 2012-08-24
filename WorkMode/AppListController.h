@@ -12,7 +12,7 @@
 
 @interface AppListController : NSController
 
-@property (strong) NSMutableArray* apps;
+@property (strong) NSMutableOrderedSet* apps;
 @property (assign) IBOutlet DragReceiver* dragReceiver;
 @property (assign) IBOutlet IconListView* iconListView;
 

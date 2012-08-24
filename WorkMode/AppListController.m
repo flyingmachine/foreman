@@ -17,7 +17,7 @@
 {
   self = [super init];
   if (self) {
-    apps = [[NSMutableArray alloc] init];
+    apps = [[NSMutableOrderedSet alloc] init];
   }
   
   return self;

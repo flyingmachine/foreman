@@ -18,7 +18,6 @@
 		6517C11815E149BE00135B11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6517C11615E149BE00135B11 /* InfoPlist.strings */; };
 		6517C11B15E149BE00135B11 /* WorkModeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C11A15E149BE00135B11 /* WorkModeTests.m */; };
 		6517C12E15E1563E00135B11 /* DragReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C12D15E1563E00135B11 /* DragReceiver.m */; };
-		651CDD8815E7939C00461C13 /* AppGroupViewNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CDD8715E7939C00461C13 /* AppGroupViewNode.m */; };
 		651CDD8A15E7943200461C13 /* AppGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651CDD8915E7943200461C13 /* AppGroupView.xib */; };
 		65D663AD15E5A4FD00C41FEA /* AppGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663AC15E5A4FD00C41FEA /* AppGroupController.m */; };
 		65D663B115E5A61800C41FEA /* IconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663B015E5A61800C41FEA /* IconListView.m */; };
@@ -56,8 +55,6 @@
 		6517C11A15E149BE00135B11 /* WorkModeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkModeTests.m; sourceTree = "<group>"; };
 		6517C12C15E1563E00135B11 /* DragReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragReceiver.h; sourceTree = "<group>"; };
 		6517C12D15E1563E00135B11 /* DragReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragReceiver.m; sourceTree = "<group>"; };
-		651CDD8615E7939C00461C13 /* AppGroupViewNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGroupViewNode.h; sourceTree = "<group>"; };
-		651CDD8715E7939C00461C13 /* AppGroupViewNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGroupViewNode.m; sourceTree = "<group>"; };
 		651CDD8915E7943200461C13 /* AppGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppGroupView.xib; sourceTree = "<group>"; };
 		65D663AB15E5A4FD00C41FEA /* AppGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGroupController.h; sourceTree = "<group>"; };
 		65D663AC15E5A4FD00C41FEA /* AppGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGroupController.m; sourceTree = "<group>"; };
@@ -177,8 +174,6 @@
 				6517C12D15E1563E00135B11 /* DragReceiver.m */,
 				65D663AF15E5A61800C41FEA /* IconListView.h */,
 				65D663B015E5A61800C41FEA /* IconListView.m */,
-				651CDD8615E7939C00461C13 /* AppGroupViewNode.h */,
-				651CDD8715E7939C00461C13 /* AppGroupViewNode.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -306,7 +301,6 @@
 				6517C12E15E1563E00135B11 /* DragReceiver.m in Sources */,
 				65D663AD15E5A4FD00C41FEA /* AppGroupController.m in Sources */,
 				65D663B115E5A61800C41FEA /* IconListView.m in Sources */,
-				651CDD8815E7939C00461C13 /* AppGroupViewNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

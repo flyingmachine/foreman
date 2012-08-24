@@ -10,7 +10,7 @@
 #import "AppGroupController.h"
 
 @implementation DragReceiver
-@synthesize appListController;
+@synthesize controller;
 
 - (id)initWithFrame:(NSRect)frame
 {
@@ -41,7 +41,6 @@
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender
 {
-  NSLog(@"%@", [[sender draggingPasteboard] pasteboardItems]);
   if ([self appDragged:sender]) {
     return NSDragOperationCopy;
   } else {
@@ -55,8 +54,8 @@
 }
 
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
-{
-  [appListController addApps: [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
+{  
+  [controller addApps: [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
   return YES;
 }
 

@@ -13,8 +13,6 @@
 
 - (id)initWithFrame:(NSRect)frame
 {
-  NSLog(@"Array of views %@", [NSBundle loadNibNamed:@"AppGroupView"
-                                               owner:nil]);
   self = [super initWithFrame:frame];
   if (self) {
   }
@@ -28,7 +26,7 @@
   NSMutableArray* newSubViews = [[NSMutableArray alloc] init];
   float sideLength = 50.0;
   float leftMargin = -1 * sideLength;
-  for(NSString* app in self.appListController.apps) {
+  for(NSString* app in self.controller.apps) {
     leftMargin += sideLength;
     NSImageView* imgView = [[NSImageView alloc] initWithFrame:NSMakeRect(leftMargin, 0, sideLength, sideLength)];
     NSImage* img = [[NSWorkspace sharedWorkspace] iconForFile:app];

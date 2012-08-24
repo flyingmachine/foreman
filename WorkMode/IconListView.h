@@ -11,7 +11,7 @@
 @class AppGroupController;
 
 @interface IconListView : NSView
-@property (assign) IBOutlet AppGroupController* appListController;
+@property (strong) IBOutlet AppGroupController* controller;
 @property (strong) NSString* app;
 
 - (void)showAppIcons;

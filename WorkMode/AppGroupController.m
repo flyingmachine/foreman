@@ -18,6 +18,7 @@
   self = [super init];
   if (self) {
     apps = [[NSMutableOrderedSet alloc] init];
+    [NSBundle loadNibNamed:@"AppGroupView" owner:self];
   }
   
   return self;

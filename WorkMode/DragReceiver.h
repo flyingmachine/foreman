@@ -10,5 +10,5 @@
 @class AppGroupController;
 
 @interface DragReceiver : NSView <NSDraggingDestination>
-@property (assign) IBOutlet AppGroupController* appListController;
+@property (strong) IBOutlet AppGroupController* controller;
 @end

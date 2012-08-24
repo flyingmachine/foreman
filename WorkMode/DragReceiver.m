@@ -24,14 +24,29 @@
 
 #pragma mark - Destination Operations
 
+- (NSString *)draggedFilePath:(id<NSDraggingInfo>)sender
+{
+  return [[NSURL URLFromPasteboard:[sender draggingPasteboard]] path];
+}
+
+
+- (BOOL)appDragged:(id<NSDraggingInfo>)sender
+{
+  return [[NSWorkspace sharedWorkspace] isFilePackageAtPath: [self draggedFilePath:sender]];
+}
+
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender
 {
-  return NSDragOperationCopy;
+  if ([self appDragged:sender]) {
+    return NSDragOperationCopy;
+  } else {
+    return NSDragOperationNone;
+  }
 }
 
 - (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender
 {
-  return YES;
+  return [self appDragged: sender];
 }
 
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender

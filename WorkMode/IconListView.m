@@ -24,12 +24,15 @@
 - (void)showAppIcons
 {
   NSMutableArray* newSubViews = [[NSMutableArray alloc] init];
-  float i = -30.0;
+  float sideLength = 50.0;
+  float leftMargin = -1 * sideLength;
   for(NSString* app in self.appListController.apps) {
-    i += 30;
-    NSImageView* img = [[NSImageView alloc] initWithFrame:NSMakeRect(i, 0, 30, 30)];
-    [img setImage:[[NSWorkspace sharedWorkspace] iconForFile:app]];
-    [newSubViews addObject:img];
+    leftMargin += sideLength;
+    NSImageView* imgView = [[NSImageView alloc] initWithFrame:NSMakeRect(leftMargin, 0, sideLength, sideLength)];
+    NSImage* img = [[NSWorkspace sharedWorkspace] iconForFile:app];
+    [img setSize:NSMakeSize(sideLength, sideLength)];
+    [imgView setImage:img];
+    [newSubViews addObject:imgView];
   }
   [self setSubviews:newSubViews];
   [self setNeedsDisplay:YES];

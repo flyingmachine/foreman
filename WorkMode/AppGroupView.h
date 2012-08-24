@@ -8,6 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class DragReceiver;
+@class IconListView;
+@class AppGroupController;
+
 @interface AppGroupView : NSView
+{
+  IBOutlet NSView* rootView;
+}
+
+@property (assign) AppGroupController* controller;
+@property (assign) IBOutlet DragReceiver* dragReceiver;
+@property (assign) IBOutlet IconListView* iconListView;
 
 @end

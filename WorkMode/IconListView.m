@@ -13,6 +13,8 @@
 
 - (id)initWithFrame:(NSRect)frame
 {
+  NSLog(@"Array of views %@", [NSBundle loadNibNamed:@"AppGroupView"
+                                               owner:nil]);
   self = [super initWithFrame:frame];
   if (self) {
   }

@@ -7,6 +7,8 @@
 //
 
 #import "AppGroupView.h"
+#import "IconListView.h"
+#import "DragReceiver.h"
 
 @implementation AppGroupView
 
@@ -14,15 +16,12 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code here.
+      [NSBundle loadNibNamed:@"AppGroupView" owner:self];
+      self.dragReceiver.appListController = self.controller;
+      self.iconListView.appListController = self.controller;
     }
     
     return self;
-}
-
-- (void)drawRect:(NSRect)dirtyRect
-{
-    // Drawing code here.
 }
 
 @end

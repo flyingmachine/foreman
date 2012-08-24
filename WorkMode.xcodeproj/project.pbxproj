@@ -18,7 +18,9 @@
 		6517C11815E149BE00135B11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6517C11615E149BE00135B11 /* InfoPlist.strings */; };
 		6517C11B15E149BE00135B11 /* WorkModeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C11A15E149BE00135B11 /* WorkModeTests.m */; };
 		6517C12E15E1563E00135B11 /* DragReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C12D15E1563E00135B11 /* DragReceiver.m */; };
-		65D663AD15E5A4FD00C41FEA /* AppListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663AC15E5A4FD00C41FEA /* AppListController.m */; };
+		651CDD8815E7939C00461C13 /* AppGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CDD8715E7939C00461C13 /* AppGroupView.m */; };
+		651CDD8A15E7943200461C13 /* AppGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651CDD8915E7943200461C13 /* AppGroupView.xib */; };
+		65D663AD15E5A4FD00C41FEA /* AppGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663AC15E5A4FD00C41FEA /* AppGroupController.m */; };
 		65D663B115E5A61800C41FEA /* IconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663B015E5A61800C41FEA /* IconListView.m */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +56,11 @@
 		6517C11A15E149BE00135B11 /* WorkModeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkModeTests.m; sourceTree = "<group>"; };
 		6517C12C15E1563E00135B11 /* DragReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragReceiver.h; sourceTree = "<group>"; };
 		6517C12D15E1563E00135B11 /* DragReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragReceiver.m; sourceTree = "<group>"; };
-		65D663AB15E5A4FD00C41FEA /* AppListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppListController.h; sourceTree = "<group>"; };
-		65D663AC15E5A4FD00C41FEA /* AppListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppListController.m; sourceTree = "<group>"; };
+		651CDD8615E7939C00461C13 /* AppGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGroupView.h; sourceTree = "<group>"; };
+		651CDD8715E7939C00461C13 /* AppGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGroupView.m; sourceTree = "<group>"; };
+		651CDD8915E7943200461C13 /* AppGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppGroupView.xib; sourceTree = "<group>"; };
+		65D663AB15E5A4FD00C41FEA /* AppGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGroupController.h; sourceTree = "<group>"; };
+		65D663AC15E5A4FD00C41FEA /* AppGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGroupController.m; sourceTree = "<group>"; };
 		65D663AF15E5A61800C41FEA /* IconListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconListView.h; sourceTree = "<group>"; };
 		65D663B015E5A61800C41FEA /* IconListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconListView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,15 +128,12 @@
 		6517C0F615E149BD00135B11 /* WorkMode */ = {
 			isa = PBXGroup;
 			children = (
+				651CDD8B15E794F400461C13 /* nibs */,
+				651CDD8515E7936200461C13 /* views */,
 				6517C10215E149BD00135B11 /* AppDelegate.h */,
 				6517C10315E149BD00135B11 /* AppDelegate.m */,
-				6517C12C15E1563E00135B11 /* DragReceiver.h */,
-				6517C12D15E1563E00135B11 /* DragReceiver.m */,
-				65D663AF15E5A61800C41FEA /* IconListView.h */,
-				65D663B015E5A61800C41FEA /* IconListView.m */,
-				6517C10515E149BD00135B11 /* MainMenu.xib */,
-				65D663AB15E5A4FD00C41FEA /* AppListController.h */,
-				65D663AC15E5A4FD00C41FEA /* AppListController.m */,
+				65D663AB15E5A4FD00C41FEA /* AppGroupController.h */,
+				65D663AC15E5A4FD00C41FEA /* AppGroupController.m */,
 				6517C0F715E149BD00135B11 /* Supporting Files */,
 			);
 			path = WorkMode;
@@ -166,6 +168,28 @@
 				6517C11615E149BE00135B11 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		651CDD8515E7936200461C13 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				6517C12C15E1563E00135B11 /* DragReceiver.h */,
+				6517C12D15E1563E00135B11 /* DragReceiver.m */,
+				65D663AF15E5A61800C41FEA /* IconListView.h */,
+				65D663B015E5A61800C41FEA /* IconListView.m */,
+				651CDD8615E7939C00461C13 /* AppGroupView.h */,
+				651CDD8715E7939C00461C13 /* AppGroupView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		651CDD8B15E794F400461C13 /* nibs */ = {
+			isa = PBXGroup;
+			children = (
+				6517C10515E149BD00135B11 /* MainMenu.xib */,
+				651CDD8915E7943200461C13 /* AppGroupView.xib */,
+			);
+			name = nibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +266,7 @@
 				6517C0FB15E149BD00135B11 /* InfoPlist.strings in Resources */,
 				6517C10115E149BD00135B11 /* Credits.rtf in Resources */,
 				6517C10715E149BD00135B11 /* MainMenu.xib in Resources */,
+				651CDD8A15E7943200461C13 /* AppGroupView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +304,9 @@
 				6517C0FD15E149BD00135B11 /* main.m in Sources */,
 				6517C10415E149BD00135B11 /* AppDelegate.m in Sources */,
 				6517C12E15E1563E00135B11 /* DragReceiver.m in Sources */,
-				65D663AD15E5A4FD00C41FEA /* AppListController.m in Sources */,
+				65D663AD15E5A4FD00C41FEA /* AppGroupController.m in Sources */,
 				65D663B115E5A61800C41FEA /* IconListView.m in Sources */,
+				651CDD8815E7939C00461C13 /* AppGroupView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

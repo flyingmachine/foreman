@@ -7,8 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@class AppListController;
+@class AppGroupController;
 
 @interface DragReceiver : NSView <NSDraggingDestination>
-@property (assign) IBOutlet AppListController* appListController;
+@property (assign) IBOutlet AppGroupController* appListController;
 @end

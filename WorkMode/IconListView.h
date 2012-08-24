@@ -8,10 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class AppListController;
+@class AppGroupController;
 
 @interface IconListView : NSView
-@property (assign) IBOutlet AppListController* appListController;
+@property (assign) IBOutlet AppGroupController* appListController;
 @property (strong) NSString* app;
 
 - (void)showAppIcons;

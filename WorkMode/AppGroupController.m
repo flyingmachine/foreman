@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 Daniel Higginbotham. All rights reserved.
 //
 
-#import "AppListController.h"
+#import "AppGroupController.h"
 #import "IconListView.h"
 
-@implementation AppListController
+@implementation AppGroupController
 @synthesize apps;
 @synthesize iconListView;
 

@@ -237,7 +237,7 @@
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">AppGroupController</string>
-					<string key="superclassName">NSController</string>
+					<string key="superclassName">NSViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="dragReceiver">DragReceiver</string>
 						<string key="iconListView">IconListView</string>
@@ -263,8 +263,16 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">DragReceiver</string>
+					<string key="className">AppReceiver</string>
 					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/AppReceiver.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">DragReceiver</string>
+					<string key="superclassName">AppReceiver</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">controller</string>
 						<string key="NS.object.0">AppGroupController</string>

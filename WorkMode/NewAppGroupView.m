@@ -13,7 +13,7 @@
 @synthesize controller;
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
 {
-  [controller addApps: [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
+  [controller addAppGroupWithName:@"" andApps:[[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
   return YES;
 }
 

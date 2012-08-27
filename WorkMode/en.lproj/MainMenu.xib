@@ -1295,8 +1295,8 @@
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{993, 848}, {607, 50}}</string>
-				<int key="NSWTFlags">1954021376</int>
+				<string key="NSWindowRect">{{993, 831}, {607, 50}}</string>
+				<int key="NSWTFlags">1949827072</int>
 				<string key="NSWindowTitle">WorkMode</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
@@ -1317,7 +1317,6 @@
 									<string key="NSFrame">{{181, 16}, {244, 17}}</string>
 									<reference key="NSSuperview" ref="703243050"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:1535</string>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSTextFieldCell" key="NSCell" id="839824959">

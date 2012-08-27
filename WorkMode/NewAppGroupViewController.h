@@ -9,5 +9,5 @@
 #import <Cocoa/Cocoa.h>
 
 @interface NewAppGroupViewController : NSViewController
-- (void) addApps: (NSArray *) appsToAdd;
+- (void) addAppGroupWithName:(NSString *)name andApps:(NSArray *)apps;
 @end

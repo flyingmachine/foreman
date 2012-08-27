@@ -10,29 +10,47 @@
 #import "AppGroupController.h"
 
 @implementation AppDelegate
-
+@synthesize appGroups;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  // Insert code here to initialize your application
+  appGroups = [[NSMutableArray alloc] init];
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector: @selector(addAppGroup:)
+                                               name: @"addAppGroup"
+                                             object: nil];
+  [self setEmptyWindow];
 }
 
-- (void)addAppGroupView:(NSArray *)apps
+- (void) setEmptyWindow {
+  NSView * v = self.window.contentView;
+  int adjust = 50 - v.frame.size.height;
+  [self resize:adjust animate:NO];
+}
+
+- (void)addAppGroup:(NSNotification *)notification
 {
+  NSDictionary* group = [notification userInfo];
+  [appGroups addObject:group];
   AppGroupController* controller = [[AppGroupController alloc] init];
-  NSRect rootFrame = controller.rootView.frame;
+  [self resize:controller.rootView.frame.size.height animate:YES];
+    
+  NSView* mainView = self.window.contentView;
+  [mainView addSubview: controller.rootView];
   
+  if([group valueForKey:@"apps"] != nil){
+    [controller addApps:[group valueForKey:@"apps"]];
+  }
+}
+
+- (void)resize: (int) heightAdjust animate:(BOOL)animate{
   NSRect newWinFrame = self.window.frame;
-  newWinFrame.size.height += rootFrame.size.height;
-  [self.window setFrame:newWinFrame display:YES];
+  newWinFrame.size.height += heightAdjust;
+  newWinFrame.origin.y -= heightAdjust;
+  [self.window setFrame:newWinFrame display:NO animate:animate];
   
   NSView* mainView = self.window.contentView;
   NSRect newFrame = NSMakeRect(mainView.frame.origin.x, mainView.frame.origin.y, mainView.frame.size.width, mainView.frame.size.height);
   [mainView setFrame:newFrame];
-  [mainView addSubview: controller.rootView];
-  
-  if(apps != nil){
-    [controller addApps:apps];
-  }
 }
 
 @end

@@ -138,7 +138,6 @@
 				6576BB4115E7FC8400FB5A98 /* AddAppGroup */,
 				6576BB3F15E7FC5000FB5A98 /* AppGroup */,
 				651CDD8B15E794F400461C13 /* nibs */,
-				651CDD8515E7936200461C13 /* views */,
 				6517C10215E149BD00135B11 /* AppDelegate.h */,
 				6517C10315E149BD00135B11 /* AppDelegate.m */,
 				6517C0F715E149BD00135B11 /* Supporting Files */,
@@ -175,13 +174,6 @@
 				6517C11615E149BE00135B11 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		651CDD8515E7936200461C13 /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = views;
 			sourceTree = "<group>";
 		};
 		651CDD8B15E794F400461C13 /* nibs */ = {

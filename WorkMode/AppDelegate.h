@@ -9,7 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
 @property (assign) IBOutlet NSWindow *window;
-- (void)addAppGroupView: (NSArray *)apps;
+@property (strong) NSMutableArray* appGroups;
 @end

@@ -10,8 +10,9 @@
 #import "AppDelegate.h"
 
 @implementation NewAppGroupViewController
-- (void) addApps:(NSArray *)appsToAdd {
-  AppDelegate* delegate = [[NSApplication sharedApplication] delegate];
-  [delegate addAppGroupView: appsToAdd];
+
+- (void) addAppGroupWithName:(NSString *)name andApps:(NSArray *)apps {
+  NSDictionary* group = @{ @"name" : name, @"apps" : apps };
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"addAppGroup" object:self userInfo:group];
 }
 @end

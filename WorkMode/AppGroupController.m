@@ -10,14 +10,15 @@
 #import "IconListView.h"
 
 @implementation AppGroupController
-@synthesize apps;
+@synthesize appGroup;
 @synthesize iconListView;
 
-- (id)init
+- (id)initWithAppGroup:(NSDictionary *)appG
 {
-  self = [super init];
+  self = [self init];
   if (self) {
-    apps = [[NSMutableOrderedSet alloc] init];
+    appGroup = appG;
+    NSLog(@"%@", appGroup);
     [NSBundle loadNibNamed:@"AppGroupView" owner:self];
   }
   
@@ -25,8 +26,10 @@
 }
 
 - (void) addApps:(NSArray *)appsToAdd {
-  [apps addObjectsFromArray: appsToAdd];
+  
+  [[appGroup valueForKey:@"apps"] addObjectsFromArray: appsToAdd];
   [iconListView showAppIcons];
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"addApp" object:self userInfo:NULL];
 }
 
 - (void) startApp:(NSString *)app {

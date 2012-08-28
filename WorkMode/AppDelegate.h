@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#define FILE_LOCATION @"app_groups"
+
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property (assign) IBOutlet NSWindow *window;

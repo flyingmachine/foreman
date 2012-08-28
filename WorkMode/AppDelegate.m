@@ -13,33 +13,51 @@
 @synthesize appGroups;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  appGroups = [[NSMutableArray alloc] init];
+  if ([[NSFileManager defaultManager] fileExistsAtPath:FILE_LOCATION]) {
+    appGroups = [NSArray arrayWithContentsOfFile:FILE_LOCATION];
+  } else {
+    appGroups = [[NSMutableArray alloc] init];
+  }
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector: @selector(addAppGroup:)
                                                name: @"addAppGroup"
                                              object: nil];
-  [self setEmptyWindow];
+  
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector: @selector(saveAppGroups)
+                                               name: @"addApp"
+                                             object: nil];
+
+  [self setFreshWindow];
 }
 
-- (void) setEmptyWindow {
+- (void) setFreshWindow {
   NSView * v = self.window.contentView;
   int adjust = 50 - v.frame.size.height;
   [self resize:adjust animate:NO];
+  for(NSDictionary *appGroup in appGroups) {
+    [self displayAppGroup:appGroup];
+  }
 }
 
 - (void)addAppGroup:(NSNotification *)notification
 {
   NSDictionary* group = [notification userInfo];
   [appGroups addObject:group];
-  AppGroupController* controller = [[AppGroupController alloc] init];
+  [self displayAppGroup:group];
+}
+
+- (void)displayAppGroup:(NSDictionary *)group {
+  AppGroupController* controller = [[AppGroupController alloc] initWithAppGroup:group];
   [self resize:controller.rootView.frame.size.height animate:YES];
-    
+  
   NSView* mainView = self.window.contentView;
   [mainView addSubview: controller.rootView];
-  
-  if([group valueForKey:@"apps"] != nil){
-    [controller addApps:[group valueForKey:@"apps"]];
-  }
+}
+
+- (void)saveAppGroups {
+  NSLog(@"save");
+  [appGroups writeToFile:FILE_LOCATION atomically:YES];
 }
 
 - (void)resize: (int) heightAdjust animate:(BOOL)animate{

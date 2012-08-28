@@ -12,11 +12,12 @@
 
 @interface AppGroupController : NSViewController
 
-@property (strong) NSMutableOrderedSet* apps;
+@property (strong) NSDictionary* appGroup;
 @property (assign) IBOutlet DragReceiver* dragReceiver;
 @property (assign) IBOutlet IconListView* iconListView;
 @property (assign) IBOutlet NSView* rootView;
 
 - (void) addApps: (NSArray *) app;
+- (AppGroupController *) initWithAppGroup: (NSDictionary *) appGroup;
 
 @end

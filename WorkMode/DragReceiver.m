@@ -22,4 +22,8 @@
   return YES;
 }
 
+- (void)mouseUp:(NSEvent *)theEvent {
+  [controller launchApps];
+}
+
 @end

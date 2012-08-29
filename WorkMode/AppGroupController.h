@@ -18,6 +18,7 @@
 @property (assign) IBOutlet NSView* rootView;
 
 - (void) addApps: (NSArray *) app;
+- (void) launchApps;
 - (AppGroupController *) initWithAppGroup: (NSDictionary *) appGroup;
 
 @end

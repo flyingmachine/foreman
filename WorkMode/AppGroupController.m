@@ -37,6 +37,10 @@
   [[NSNotificationCenter defaultCenter] postNotificationName:@"addApp" object:self userInfo:NULL];
 }
 
+- (void) launchApps {
+  
+}
+
 - (void) startApp:(NSString *)app {
   [[NSWorkspace sharedWorkspace] launchApplication:app];
 }

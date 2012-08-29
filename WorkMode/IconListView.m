@@ -26,7 +26,6 @@
   NSMutableArray* newSubViews = [[NSMutableArray alloc] init];
   float sideLength = 50.0;
   float leftMargin = -1 * sideLength;
-  NSLog(@"%@", self.controller.appGroup);
   for(NSString* app in [self.controller.appGroup valueForKey:@"apps"]) {
     leftMargin += sideLength;
     NSImageView* imgView = [[NSImageView alloc] initWithFrame:NSMakeRect(leftMargin, 0, sideLength, sideLength)];

@@ -14,7 +14,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
   if ([[NSFileManager defaultManager] fileExistsAtPath:FILE_LOCATION]) {
-    appGroups = [NSArray arrayWithContentsOfFile:FILE_LOCATION];
+    appGroups = [NSMutableArray arrayWithContentsOfFile:FILE_LOCATION];
   } else {
     appGroups = [[NSMutableArray alloc] init];
   }

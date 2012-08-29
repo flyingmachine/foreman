@@ -33,7 +33,6 @@
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender
 {
-  NSLog(@"drag entered");
   if ([self appDragged:sender]) {
     return NSDragOperationCopy;
   } else {

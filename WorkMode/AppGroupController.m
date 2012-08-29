@@ -18,16 +18,21 @@
   self = [self init];
   if (self) {
     appGroup = appG;
-    NSLog(@"%@", appGroup);
     [NSBundle loadNibNamed:@"AppGroupView" owner:self];
     [iconListView showAppIcons];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"addApp" object:self userInfo:NULL];
   }
   
   return self;
 }
 
 - (void) addApps:(NSArray *)appsToAdd {
-  [[appGroup valueForKey:@"apps"] addObjectsFromArray: appsToAdd];
+  for (NSString *app in appsToAdd) {
+    if (![[appGroup valueForKey:@"apps"] containsObject:app]) {
+      [[appGroup valueForKey:@"apps"] addObject: app];
+    }
+  }
+  NSLog(@"add apps");
   [iconListView showAppIcons];
   [[NSNotificationCenter defaultCenter] postNotificationName:@"addApp" object:self userInfo:NULL];
 }

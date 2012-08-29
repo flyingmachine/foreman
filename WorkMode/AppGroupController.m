@@ -38,7 +38,10 @@
 }
 
 - (void) launchApps {
-  
+  for (NSString *app in [appGroup valueForKey:@"apps"]) {
+    [[NSWorkspace sharedWorkspace] launchApplication:app];
+  }
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"appsLaunched" object:self userInfo:NULL];
 }
 
 - (void) startApp:(NSString *)app {

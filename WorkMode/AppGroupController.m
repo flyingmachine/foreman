@@ -20,13 +20,13 @@
     appGroup = appG;
     NSLog(@"%@", appGroup);
     [NSBundle loadNibNamed:@"AppGroupView" owner:self];
+    [iconListView showAppIcons];
   }
   
   return self;
 }
 
 - (void) addApps:(NSArray *)appsToAdd {
-  
   [[appGroup valueForKey:@"apps"] addObjectsFromArray: appsToAdd];
   [iconListView showAppIcons];
   [[NSNotificationCenter defaultCenter] postNotificationName:@"addApp" object:self userInfo:NULL];

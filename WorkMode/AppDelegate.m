@@ -45,6 +45,7 @@
   NSDictionary* group = [notification userInfo];
   [appGroups addObject:group];
   [self displayAppGroup:group];
+  [self saveAppGroups];
 }
 
 - (void)displayAppGroup:(NSDictionary *)group {
@@ -56,7 +57,6 @@
 }
 
 - (void)saveAppGroups {
-  NSLog(@"save");
   [appGroups writeToFile:FILE_LOCATION atomically:YES];
 }
 

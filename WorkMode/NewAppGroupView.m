@@ -10,11 +10,22 @@
 #import "NewAppGroupViewController.h"
 
 @implementation NewAppGroupView
+{
+  NSImage *_bg;
+}
 @synthesize controller;
+
+- (void)awakeFromNib {
+  self.wantsLayer = YES;
+  self.layer.contents = (id)[NSImage imageNamed:@"bg.png"];
+
+}
+
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
 {
   [controller addAppGroupWithName:@"" andApps:[[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
   return YES;
 }
+
 
 @end

@@ -15,7 +15,6 @@
 @property (strong) NSDictionary* appGroup;
 @property (assign) IBOutlet DragReceiver* dragReceiver;
 @property (assign) IBOutlet IconListView* iconListView;
-@property (assign) IBOutlet NSView* rootView;
 
 - (void) addApps: (NSArray *) app;
 - (void) launchApps;

@@ -18,6 +18,14 @@
   } else {
     appGroups = [[NSMutableArray alloc] init];
   }
+  
+  [self createObservers];
+  [self setFreshWindow];
+  
+  [self.window setOpaque:NO];
+}
+
+- (void) createObservers {
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector: @selector(addAppGroup:)
                                                name: @"addAppGroup"
@@ -27,8 +35,6 @@
                                            selector: @selector(saveAppGroups)
                                                name: @"addApp"
                                              object: nil];
-
-  [self setFreshWindow];
 }
 
 - (void) setFreshWindow {
@@ -50,10 +56,10 @@
 
 - (void)displayAppGroup:(NSDictionary *)group {
   AppGroupController* controller = [[AppGroupController alloc] initWithAppGroup:group];
-  [self resize:controller.rootView.frame.size.height animate:YES];
+  [self resize:controller.view.frame.size.height animate:YES];
   
   NSView* mainView = self.window.contentView;
-  [mainView addSubview: controller.rootView];
+  [mainView addSubview: controller.view];
 }
 
 - (void)saveAppGroups {

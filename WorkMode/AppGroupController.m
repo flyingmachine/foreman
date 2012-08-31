@@ -7,6 +7,8 @@
 
 #import "AppGroupController.h"
 #import "IconListView.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @implementation AppGroupController
 @synthesize appGroup;

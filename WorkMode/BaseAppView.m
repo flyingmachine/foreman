@@ -20,10 +20,6 @@
     return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect
-{
-  [[NSColor clearColor] set];
-  NSRectFill([self frame]);
-}
+
 
 @end

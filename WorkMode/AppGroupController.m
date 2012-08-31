@@ -7,6 +7,7 @@
 
 #import "AppGroupController.h"
 #import "IconListView.h"
+#import "Headers.h"
 #import <QuartzCore/QuartzCore.h>
 
 
@@ -20,6 +21,10 @@
   if (self) {
     appGroup = appG;
     [NSBundle loadNibNamed:@"AppGroupView" owner:self];
+    
+    CGRect newFrame = self.view.frame;
+    newFrame.origin.y = BOTTOM_PADDING;
+    self.view.frame = newFrame;
     [iconListView showAppIcons];
   }
   

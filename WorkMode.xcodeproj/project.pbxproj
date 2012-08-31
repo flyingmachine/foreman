@@ -77,6 +77,7 @@
 		65D663AF15E5A61800C41FEA /* IconListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconListView.h; sourceTree = "<group>"; };
 		65D663B015E5A61800C41FEA /* IconListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconListView.m; sourceTree = "<group>"; };
 		65DE63B815F1718C007BF140 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		65DE63BC15F17855007BF140 /* Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +149,9 @@
 				6576BB3F15E7FC5000FB5A98 /* AppGroup */,
 				651CDD8B15E794F400461C13 /* nibs */,
 				6517C10215E149BD00135B11 /* AppDelegate.h */,
+				6517C10315E149BD00135B11 /* AppDelegate.m */,
 				655AB72815F0D27600C842BA /* BaseAppView.h */,
 				655AB72915F0D27600C842BA /* BaseAppView.m */,
-				6517C10315E149BD00135B11 /* AppDelegate.m */,
 				6517C0F715E149BD00135B11 /* Supporting Files */,
 			);
 			path = WorkMode;
@@ -227,6 +228,7 @@
 			children = (
 				6576BB4C15E8007000FB5A98 /* AppReceiver.h */,
 				6576BB4D15E8007000FB5A98 /* AppReceiver.m */,
+				65DE63BC15F17855007BF140 /* Headers.h */,
 			);
 			name = Super;
 			sourceTree = "<group>";

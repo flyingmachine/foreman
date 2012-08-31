@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "AppGroupController.h"
+#import "Headers.h"
+
 
 @implementation AppDelegate
 @synthesize appGroups;
@@ -39,7 +41,7 @@
 
 - (void) setFreshWindow {
   NSView * v = self.window.contentView;
-  int adjust = 50 - v.frame.size.height;
+  int adjust = (50 + BOTTOM_PADDING) - v.frame.size.height;
   [self resize:adjust animate:NO];
   for(NSDictionary *appGroup in appGroups) {
     [self displayAppGroup:appGroup];
@@ -59,6 +61,7 @@
   [self resize:controller.view.frame.size.height animate:YES];
   
   NSView* mainView = self.window.contentView;
+  NSLog(@"%f", controller.view.frame.origin.y);
   [mainView addSubview: controller.view];
 }
 

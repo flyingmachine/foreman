@@ -44,7 +44,7 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
   if (_hasMouse) {
-    [[NSColor selectedTextBackgroundColor] setFill];
+    [[NSColor gridColor] setFill];
   } else {
     [[NSColor windowBackgroundColor] setFill];
   }

@@ -29,6 +29,9 @@
 		65DE63B915F1718C007BF140 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DE63B815F1718C007BF140 /* bg.png */; };
 		65F8B6B315F24E280002EAC6 /* app-group-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B215F24E280002EAC6 /* app-group-bg.png */; };
 		65F8B6B615F251FF0002EAC6 /* app-group-bg-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B515F251FF0002EAC6 /* app-group-bg-highlighted.png */; };
+		65F8B6B815F253990002EAC6 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B715F253990002EAC6 /* grey.png */; };
+		65F8B6BA15F254B50002EAC6 /* shattered.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B915F254B50002EAC6 /* shattered.png */; };
+		65F8B6BC15F255100002EAC6 /* crisp_paper_ruffles.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6BB15F255100002EAC6 /* crisp_paper_ruffles.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		65DE63BC15F17855007BF140 /* Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
 		65F8B6B215F24E280002EAC6 /* app-group-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-group-bg.png"; sourceTree = "<group>"; };
 		65F8B6B515F251FF0002EAC6 /* app-group-bg-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-group-bg-highlighted.png"; sourceTree = "<group>"; };
+		65F8B6B715F253990002EAC6 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
+		65F8B6B915F254B50002EAC6 /* shattered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shattered.png; sourceTree = "<group>"; };
+		65F8B6BB15F255100002EAC6 /* crisp_paper_ruffles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crisp_paper_ruffles.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +246,9 @@
 		65DE63BB15F17192007BF140 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65F8B6BB15F255100002EAC6 /* crisp_paper_ruffles.png */,
+				65F8B6B915F254B50002EAC6 /* shattered.png */,
+				65F8B6B715F253990002EAC6 /* grey.png */,
 				65F8B6B215F24E280002EAC6 /* app-group-bg.png */,
 				65F8B6B515F251FF0002EAC6 /* app-group-bg-highlighted.png */,
 				65DE63B815F1718C007BF140 /* bg.png */,
@@ -325,6 +334,9 @@
 				65DE63B915F1718C007BF140 /* bg.png in Resources */,
 				65F8B6B315F24E280002EAC6 /* app-group-bg.png in Resources */,
 				65F8B6B615F251FF0002EAC6 /* app-group-bg-highlighted.png in Resources */,
+				65F8B6B815F253990002EAC6 /* grey.png in Resources */,
+				65F8B6BA15F254B50002EAC6 /* shattered.png in Resources */,
+				65F8B6BC15F255100002EAC6 /* crisp_paper_ruffles.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

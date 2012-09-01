@@ -16,17 +16,16 @@
 @synthesize controller;
 
 
-//- (void)awakeFromNib {
-//  self.wantsLayer = YES;
-//  self.layer.contents = (id)[NSImage imageNamed:@"bg.png"];
-//
-//}
-
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
 {
   [controller addAppGroupWithName:@"" andApps:[[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
   return YES;
 }
 
+- (void)drawRect:(NSRect)dirtyRect
+{
+  [[NSColor colorWithPatternImage:[NSImage imageNamed:@"crisp_paper_ruffles.png"]] setFill];
+  NSRectFill(dirtyRect);
+}
 
 @end

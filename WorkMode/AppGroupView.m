@@ -44,12 +44,28 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
   if (_hasMouse) {
-    [[NSColor gridColor] setFill];
+    [self rk_drawPatternImage:[NSColor colorWithPatternImage:[NSImage imageNamed:@"app-group-bg-highlighted.png"]] inRect:self.bounds];
   } else {
-    [[NSColor windowBackgroundColor] setFill];
+    [self rk_drawPatternImage:[NSColor colorWithPatternImage:[NSImage imageNamed:@"app-group-bg.png"]] inRect:self.bounds];
   }
-  NSRectFill(dirtyRect);
-//  [self drawBorder:dirtyRect];
+}
+
+- (void)rk_drawPatternImage:(NSColor*)patternColor inRect:(NSRect)rect
+{
+  [self rk_drawPatternImage:patternColor inBezierPath:[NSBezierPath bezierPathWithRect:rect]];
+}
+
+- (void)rk_drawPatternImage:(NSColor*)patternColor inBezierPath:(NSBezierPath*)path
+{
+  [NSGraphicsContext saveGraphicsState];
+  
+  CGFloat yOffset = NSMaxY([self convertRect:self.bounds toView:nil]);
+  CGFloat xOffset = NSMinX([self convertRect:self.bounds toView:nil]);
+  [[NSGraphicsContext currentContext] setPatternPhase:NSMakePoint(xOffset, yOffset)];
+  
+  [patternColor set];
+  [path fill];
+  [NSGraphicsContext restoreGraphicsState];
 }
 
 

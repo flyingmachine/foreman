@@ -15,11 +15,12 @@
 }
 @synthesize controller;
 
-- (void)awakeFromNib {
-  self.wantsLayer = YES;
-  self.layer.contents = (id)[NSImage imageNamed:@"bg.png"];
 
-}
+//- (void)awakeFromNib {
+//  self.wantsLayer = YES;
+//  self.layer.contents = (id)[NSImage imageNamed:@"bg.png"];
+//
+//}
 
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
 {

@@ -27,6 +27,8 @@
 		65D663AD15E5A4FD00C41FEA /* AppGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663AC15E5A4FD00C41FEA /* AppGroupController.m */; };
 		65D663B115E5A61800C41FEA /* IconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663B015E5A61800C41FEA /* IconListView.m */; };
 		65DE63B915F1718C007BF140 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DE63B815F1718C007BF140 /* bg.png */; };
+		65F8B6B315F24E280002EAC6 /* app-group-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B215F24E280002EAC6 /* app-group-bg.png */; };
+		65F8B6B615F251FF0002EAC6 /* app-group-bg-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B515F251FF0002EAC6 /* app-group-bg-highlighted.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		65D663B015E5A61800C41FEA /* IconListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconListView.m; sourceTree = "<group>"; };
 		65DE63B815F1718C007BF140 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		65DE63BC15F17855007BF140 /* Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
+		65F8B6B215F24E280002EAC6 /* app-group-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-group-bg.png"; sourceTree = "<group>"; };
+		65F8B6B515F251FF0002EAC6 /* app-group-bg-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-group-bg-highlighted.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +240,8 @@
 		65DE63BB15F17192007BF140 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65F8B6B215F24E280002EAC6 /* app-group-bg.png */,
+				65F8B6B515F251FF0002EAC6 /* app-group-bg-highlighted.png */,
 				65DE63B815F1718C007BF140 /* bg.png */,
 			);
 			name = Resources;
@@ -317,6 +323,8 @@
 				6517C10715E149BD00135B11 /* MainMenu.xib in Resources */,
 				651CDD8A15E7943200461C13 /* AppGroupView.xib in Resources */,
 				65DE63B915F1718C007BF140 /* bg.png in Resources */,
+				65F8B6B315F24E280002EAC6 /* app-group-bg.png in Resources */,
+				65F8B6B615F251FF0002EAC6 /* app-group-bg-highlighted.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

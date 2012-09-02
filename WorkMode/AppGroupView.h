@@ -9,4 +9,5 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AppGroupView : NSView
+- (void)shiftUp;
 @end

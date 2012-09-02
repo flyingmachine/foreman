@@ -18,6 +18,7 @@
 
 - (void) addApps: (NSArray *) app;
 - (void) launchApps;
+- (IBAction)removeAppGroup:(id)sender;
 - (AppGroupController *) initWithAppGroup: (NSDictionary *) appGroup;
 
 @end

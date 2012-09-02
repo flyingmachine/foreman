@@ -9,6 +9,7 @@
 #import "IconListView.h"
 #import "Headers.h"
 #import <QuartzCore/QuartzCore.h>
+#import "AppDelegate.h"
 
 
 @implementation AppGroupController
@@ -40,6 +41,10 @@
   NSLog(@"add apps");
   [iconListView showAppIcons];
   [[NSNotificationCenter defaultCenter] postNotificationName:@"addApp" object:self userInfo:NULL];
+}
+
+- (void) removeAppGroup:(id)sender {
+  [(AppDelegate *)[[NSApplication sharedApplication] delegate] removeAppGroup: self];
 }
 
 - (void) launchApps {

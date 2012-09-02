@@ -8,9 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #define FILE_LOCATION @"app_groups"
-
+@class AppGroupController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property (assign) IBOutlet NSWindow *window;
 @property (strong) NSMutableArray* appGroups;
+
+- (void) removeAppGroup: (AppGroupController *)appGroup;
+
 @end

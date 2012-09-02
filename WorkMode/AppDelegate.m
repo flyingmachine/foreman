@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppGroupController.h"
+#import "AppGroupView.h"
 #import "Headers.h"
 
 
@@ -23,8 +24,6 @@
   
   [self createObservers];
   [self setFreshWindow];
-  
-  [self.window setOpaque:NO];
 }
 
 - (void) createObservers {
@@ -44,7 +43,7 @@
   int adjust = (50 + BOTTOM_PADDING) - v.frame.size.height;
   [self resize:adjust animate:NO];
   for(NSDictionary *appGroup in appGroups) {
-    [self displayAppGroup:appGroup];
+    [self displayAppGroup:appGroup animate:NO];
   }
 }
 
@@ -57,11 +56,14 @@
 }
 
 - (void)displayAppGroup:(NSDictionary *)group {
+  [self displayAppGroup:group animate:YES];
+}
+
+- (void)displayAppGroup:(NSDictionary *)group animate:(BOOL)shouldAnimate {
   AppGroupController* controller = [[AppGroupController alloc] initWithAppGroup:group];
-  [self resize:controller.view.frame.size.height animate:YES];
+  [self resize:controller.view.frame.size.height animate:shouldAnimate];
   
   NSView* mainView = self.window.contentView;
-  NSLog(@"%f", controller.view.frame.origin.y);
   [mainView addSubview: controller.view];
 }
 
@@ -79,5 +81,32 @@
   NSRect newFrame = NSMakeRect(mainView.frame.origin.x, mainView.frame.origin.y, mainView.frame.size.width, mainView.frame.size.height);
   [mainView setFrame:newFrame];
 }
+
+- (void)removeAppGroup:(AppGroupController *)appGroupController {
+  [appGroups removeObject:appGroupController.appGroup];
+  
+  NSMutableArray * toShift = [[NSMutableArray alloc] init];
+  
+  BOOL isAfter = NO;
+  for (NSView * subv in [self.window.contentView subviews]) {
+    if (subv == appGroupController.view) {
+      isAfter = YES;
+    }
+    
+    if ([subv class] == [AppGroupView class] && isAfter) {
+      [toShift addObject:subv];
+    }
+  }
+  
+  [appGroupController.view removeFromSuperview];
+  for (AppGroupView * subv in toShift) {
+    [subv shiftUp];
+  }
+  
+  [self resize: -65 animate:YES];
+  
+  [self saveAppGroups];
+}
+
 
 @end

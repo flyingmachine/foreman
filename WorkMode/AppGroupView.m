@@ -89,5 +89,11 @@
   [textViewSurround fill];
 }
 
+-(void)shiftUp {
+  NSRect frameRect = self.frame;
+  frameRect.origin.y += frameRect.size.height;
+  self.frame = frameRect;
+}
+
 
 @end

@@ -12,6 +12,8 @@
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSBox</string>
+			<string>NSButton</string>
+			<string>NSButtonCell</string>
 			<string>NSCustomObject</string>
 			<string>NSCustomView</string>
 			<string>NSTextField</string>
@@ -44,6 +46,7 @@
 						<string key="NSFrame">{{0, -2}, {607, 5}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSOffsets">{0, 0}</string>
 						<object class="NSTextFieldCell" key="NSTitleCell">
@@ -78,6 +81,39 @@
 						<reference key="NSNextResponder" ref="1005"/>
 						<int key="NSvFlags">268</int>
 						<array class="NSMutableArray" key="NSSubviews">
+							<object class="NSButton" id="688083516">
+								<reference key="NSNextResponder" ref="639661446"/>
+								<int key="NSvFlags">268</int>
+								<string key="NSFrame">{{564, 7}, {30, 30}}</string>
+								<reference key="NSSuperview" ref="639661446"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="124223351"/>
+								<string key="NSReuseIdentifierKey">_NS:1574</string>
+								<bool key="NSEnabled">YES</bool>
+								<object class="NSButtonCell" key="NSCell" id="327909418">
+									<int key="NSCellFlags">67108864</int>
+									<int key="NSCellFlags2">134479872</int>
+									<string key="NSContents"/>
+									<object class="NSFont" key="NSSupport">
+										<string key="NSName">LucidaGrande</string>
+										<double key="NSSize">9</double>
+										<int key="NSfFlags">3614</int>
+									</object>
+									<string key="NSCellIdentifier">_NS:1574</string>
+									<reference key="NSControlView" ref="688083516"/>
+									<int key="NSButtonFlags">147062784</int>
+									<int key="NSButtonFlags2">135</int>
+									<object class="NSCustomResource" key="NSNormalImage">
+										<string key="NSClassName">NSImage</string>
+										<string key="NSResourceName">NSStopProgressFreestandingTemplate</string>
+									</object>
+									<string key="NSAlternateContents"/>
+									<string key="NSKeyEquivalent"/>
+									<int key="NSPeriodicDelay">200</int>
+									<int key="NSPeriodicInterval">25</int>
+								</object>
+								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
+							</object>
 							<object class="NSCustomView" id="382143532">
 								<reference key="NSNextResponder" ref="639661446"/>
 								<int key="NSvFlags">297</int>
@@ -85,7 +121,7 @@
 								<string key="NSFrame">{{117, 0}, {490, 50}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="124223351"/>
+								<reference key="NSNextKeyView" ref="688083516"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<string key="NSClassName">IconListView</string>
 							</object>
@@ -220,12 +256,14 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="83008027"/>
 							<reference ref="382143532"/>
+							<reference ref="688083516"/>
 						</array>
 						<reference key="parent" ref="1005"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">3</int>
 						<reference key="object" ref="382143532"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="639661446"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -246,6 +284,19 @@
 						<reference key="object" ref="124223351"/>
 						<reference key="parent" ref="1005"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">35</int>
+						<reference key="object" ref="688083516"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="327909418"/>
+						</array>
+						<reference key="parent" ref="639661446"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">36</int>
+						<reference key="object" ref="327909418"/>
+						<reference key="parent" ref="688083516"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -258,12 +309,14 @@
 				<string key="31.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="32.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="34.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="35.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="36.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">34</int>
+			<int key="maxID">36</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -349,5 +402,9 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">NSStopProgressFreestandingTemplate</string>
+			<string key="NS.object.0">{83, 83}</string>
+		</object>
 	</data>
 </archive>

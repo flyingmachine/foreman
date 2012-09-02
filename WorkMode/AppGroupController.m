@@ -38,7 +38,6 @@
       [[appGroup valueForKey:@"apps"] addObject: app];
     }
   }
-  NSLog(@"add apps");
   [iconListView showAppIcons];
   [[NSNotificationCenter defaultCenter] postNotificationName:@"addApp" object:self userInfo:NULL];
 }
@@ -48,9 +47,22 @@
 }
 
 - (void) launchApps {
-  for (NSString *app in [appGroup valueForKey:@"apps"]) {
-    [[NSWorkspace sharedWorkspace] launchApplication:app];
+  NSMutableArray *openApps = [[NSMutableArray alloc] init];
+  
+  for (NSRunningApplication *runningApp in[[NSWorkspace sharedWorkspace] runningApplications]) {
+    if ([runningApp bundleURL]) {
+      [openApps addObject:[[runningApp bundleURL] path]];
+    }
   }
+  
+  NSLog(@"open apps: %@", openApps);
+  
+  for (NSString *app in [appGroup valueForKey:@"apps"]) {
+    if (![openApps containsObject:app]) {
+      [[NSWorkspace sharedWorkspace] launchApplication:app];
+    }
+  }
+  
   [[NSNotificationCenter defaultCenter] postNotificationName:@"appsLaunched" object:self userInfo:NULL];
   
 //  for (NSRunningApplication *runningApp in [[NSWorkspace sharedWorkspace] runningApplications]) {
@@ -75,7 +87,7 @@
 }
 
 - (void) closeApps {
-  NSMutableArray *appsToClose = [[NSMutableArray alloc] initWithArray:@[]];
+  NSMutableArray *appsToClose = [[NSMutableArray alloc] init];
   NSDictionary *info;
   OSErr err = NO;
   ProcessSerialNumber psn = {0, kNoProcess};
@@ -86,7 +98,6 @@
     if (!err)
     {
       info = (__bridge NSDictionary *)ProcessInformationCopyDictionary(&psn, kProcessDictionaryIncludeAllInformationMask);
-      NSLog(@"%@", info);
       NSString *bundlePath = (NSString *)[info valueForKey:@"BundlePath"];
       if (
           [[info valueForKey:@"LSUIElement"] intValue] != 1 &&
@@ -94,7 +105,6 @@
           ![bundlePath hasPrefix:@"/System"] &&
           ![[appGroup valueForKey:@"apps"] containsObject:bundlePath]
           ) {
-        NSLog(@"lsuielement: %@", [info valueForKey:@"LSUIElement"]);
         
         [appsToClose addObject:bundlePath];
       }

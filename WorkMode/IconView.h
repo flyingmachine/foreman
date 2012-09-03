@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface IconView : NSView
+@interface IconView : NSImageView
 
 @end

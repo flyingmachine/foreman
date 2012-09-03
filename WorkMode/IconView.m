@@ -9,20 +9,31 @@
 #import "IconView.h"
 
 @implementation IconView
-
 - (id)initWithFrame:(NSRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
+  self = [super initWithFrame:frame];
+  if (self) {
+    NSTrackingArea *trackingArea = [[NSTrackingArea alloc]
+                                    initWithRect: frame
+                                    options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveAlways )
+                                    owner:self userInfo:nil];
+    [self addTrackingArea:trackingArea];
+  }
+  
+  return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect
-{
-    // Drawing code here.
+
+- (void)mouseEntered:(NSEvent *)theEvent {
+  NSButton* btn = [self.subviews objectAtIndex:0];
+  [btn setEnabled:YES];
+  [btn setTransparent:NO];
+}
+
+- (void)mouseExited:(NSEvent *)theEvent {
+  NSButton* btn = [self.subviews objectAtIndex:0];
+  [btn setEnabled:NO];
+  [btn setTransparent:YES];
 }
 
 @end

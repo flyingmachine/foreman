@@ -32,6 +32,9 @@
 		65F8B6B815F253990002EAC6 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B715F253990002EAC6 /* grey.png */; };
 		65F8B6BA15F254B50002EAC6 /* shattered.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B915F254B50002EAC6 /* shattered.png */; };
 		65F8B6BC15F255100002EAC6 /* crisp_paper_ruffles.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6BB15F255100002EAC6 /* crisp_paper_ruffles.png */; };
+		65F8FEE415F3958C00362DB0 /* Icon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F8FEE315F3958C00362DB0 /* Icon.xib */; };
+		65F8FEEC15F3A18400362DB0 /* IconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8FEEB15F3A18400362DB0 /* IconViewController.m */; };
+		65F8FEEF15F4F6D900362DB0 /* IconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8FEEE15F4F6D900362DB0 /* IconView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,11 @@
 		65F8B6B715F253990002EAC6 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
 		65F8B6B915F254B50002EAC6 /* shattered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shattered.png; sourceTree = "<group>"; };
 		65F8B6BB15F255100002EAC6 /* crisp_paper_ruffles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crisp_paper_ruffles.png; sourceTree = "<group>"; };
+		65F8FEE315F3958C00362DB0 /* Icon.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Icon.xib; sourceTree = "<group>"; };
+		65F8FEEA15F3A18400362DB0 /* IconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconViewController.h; sourceTree = "<group>"; };
+		65F8FEEB15F3A18400362DB0 /* IconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconViewController.m; sourceTree = "<group>"; };
+		65F8FEED15F4F6D900362DB0 /* IconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconView.h; sourceTree = "<group>"; };
+		65F8FEEE15F4F6D900362DB0 /* IconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +211,7 @@
 			children = (
 				6517C10515E149BD00135B11 /* MainMenu.xib */,
 				651CDD8915E7943200461C13 /* AppGroupView.xib */,
+				65F8FEE315F3958C00362DB0 /* Icon.xib */,
 			);
 			name = nibs;
 			sourceTree = "<group>";
@@ -210,6 +219,7 @@
 		6576BB3F15E7FC5000FB5A98 /* AppGroup */ = {
 			isa = PBXGroup;
 			children = (
+				65F8FEE615F39FAF00362DB0 /* icon */,
 				65D663AB15E5A4FD00C41FEA /* AppGroupController.h */,
 				65D663AC15E5A4FD00C41FEA /* AppGroupController.m */,
 				6517C12C15E1563E00135B11 /* DragReceiver.h */,
@@ -254,6 +264,17 @@
 				65DE63B815F1718C007BF140 /* bg.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		65F8FEE615F39FAF00362DB0 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				65F8FEEA15F3A18400362DB0 /* IconViewController.h */,
+				65F8FEEB15F3A18400362DB0 /* IconViewController.m */,
+				65F8FEED15F4F6D900362DB0 /* IconView.h */,
+				65F8FEEE15F4F6D900362DB0 /* IconView.m */,
+			);
+			name = icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +358,7 @@
 				65F8B6B815F253990002EAC6 /* grey.png in Resources */,
 				65F8B6BA15F254B50002EAC6 /* shattered.png in Resources */,
 				65F8B6BC15F255100002EAC6 /* crisp_paper_ruffles.png in Resources */,
+				65F8FEE415F3958C00362DB0 /* Icon.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +403,8 @@
 				6576BB4E15E8007000FB5A98 /* AppReceiver.m in Sources */,
 				655AB71E15F0CA0F00C842BA /* AppGroupView.m in Sources */,
 				655AB72A15F0D27600C842BA /* BaseAppView.m in Sources */,
+				65F8FEEC15F3A18400362DB0 /* IconViewController.m in Sources */,
+				65F8FEEF15F4F6D900362DB0 /* IconView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

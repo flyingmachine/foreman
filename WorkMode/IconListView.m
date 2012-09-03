@@ -8,13 +8,15 @@
 
 #import "IconListView.h"
 #import "AppGroupController.h"
+#import "IconViewController.h"
 
 @implementation IconListView
-
+@synthesize iconViewControllers;
 - (id)initWithFrame:(NSRect)frame
 {
   self = [super initWithFrame:frame];
   if (self) {
+    self.iconViewControllers = [[NSMutableArray alloc] init];
   }
   
   return self;
@@ -23,16 +25,17 @@
 
 - (void)showAppIcons
 {
+  [self.iconViewControllers removeAllObjects];
+  
   NSMutableArray* newSubViews = [[NSMutableArray alloc] init];
   float sideLength = 50.0;
-  float leftMargin = -1 * sideLength;
+  float leftMargin = 0;
   for(NSString* app in [self.controller.appGroup valueForKey:@"apps"]) {
+    IconViewController* vc = [[IconViewController alloc] initWithNibName:@"Icon" bundle:nil];
+    [iconViewControllers addObject:vc];
+    [vc setup:leftMargin app:app appGroupController:self.controller];
+    [newSubViews addObject:vc.view];
     leftMargin += sideLength;
-    NSImageView* imgView = [[NSImageView alloc] initWithFrame:NSMakeRect(leftMargin, 0, sideLength, sideLength)];
-    NSImage* img = [[NSWorkspace sharedWorkspace] iconForFile:app];
-    [img setSize:NSMakeSize(sideLength, sideLength)];
-    [imgView setImage:img];
-    [newSubViews addObject:imgView];
   }
   [self setSubviews:newSubViews];
   [self setNeedsDisplay:YES];

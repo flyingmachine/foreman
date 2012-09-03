@@ -13,6 +13,7 @@
 @interface IconListView : NSView
 @property (strong) IBOutlet AppGroupController* controller;
 @property (strong) NSString* app;
+@property (strong) NSMutableArray* iconViewControllers;
 
 - (void)showAppIcons;
 

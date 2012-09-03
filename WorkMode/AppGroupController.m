@@ -46,6 +46,13 @@
   [(AppDelegate *)[[NSApplication sharedApplication] delegate] removeAppGroup: self];
 }
 
+- (void) removeApp:(NSString *)app {
+  NSLog(@"removing app appgroupcontroller");
+  [[appGroup valueForKey:@"apps"] removeObject:app];
+  [iconListView showAppIcons];
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"addApp" object:self userInfo:NULL];
+}
+
 - (void) launchApps {
   NSMutableArray *openApps = [[NSMutableArray alloc] init];
   

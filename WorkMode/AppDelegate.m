@@ -16,8 +16,8 @@
 @synthesize appGroups;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  if ([[NSFileManager defaultManager] fileExistsAtPath:FILE_LOCATION]) {
-    appGroups = [NSMutableArray arrayWithContentsOfFile:FILE_LOCATION];
+  if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForDataFile]]) {
+    appGroups = [NSMutableArray arrayWithContentsOfFile:[self pathForDataFile]];
   } else {
     appGroups = [[NSMutableArray alloc] init];
   }
@@ -36,6 +36,12 @@
                                            selector: @selector(saveAppGroups)
                                                name: @"addApp"
                                              object: nil];
+  
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector: @selector(saveAppGroups)
+                                               name: @"updateAppGroup"
+                                             object: nil];
+
 }
 
 - (void) setFreshWindow {
@@ -65,10 +71,11 @@
   
   NSView* mainView = self.window.contentView;
   [mainView addSubview: controller.view];
+  NSLog(@"%f", controller.view.frame.origin.y);
 }
 
 - (void)saveAppGroups {
-  [appGroups writeToFile:FILE_LOCATION atomically:YES];
+  [appGroups writeToFile:[self pathForDataFile] atomically:YES];
 }
 
 - (void)resize: (int) heightAdjust animate:(BOOL)animate{
@@ -108,5 +115,25 @@
   [self saveAppGroups];
 }
 
+#pragma mark storage
+
+- (NSString *) pathForDataFile
+{
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+  
+  NSString *folder = @"~/Library/Application Support/Foreman/";
+  folder = [folder stringByExpandingTildeInPath];
+  
+  NSError *error = nil;
+  
+  if ([fileManager fileExistsAtPath: folder] == NO)
+  {
+    [fileManager createDirectoryAtPath: folder
+           withIntermediateDirectories:YES
+                            attributes:nil
+                                 error:&error];
+  }
+  return [folder stringByAppendingPathComponent: FILE_LOCATION];
+}
 
 @end

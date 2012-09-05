@@ -43,7 +43,7 @@
 				<array class="NSMutableArray" key="NSMenuItems">
 					<object class="NSMenuItem" id="694149608">
 						<reference key="NSMenu" ref="649796088"/>
-						<string key="NSTitle">WorkMode</string>
+						<string key="NSTitle">Foreman</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -57,11 +57,11 @@
 						</object>
 						<string key="NSAction">submenuAction:</string>
 						<object class="NSMenu" key="NSSubmenu" id="110575045">
-							<string key="NSTitle">WorkMode</string>
+							<string key="NSTitle">Foreman</string>
 							<array class="NSMutableArray" key="NSMenuItems">
 								<object class="NSMenuItem" id="238522557">
 									<reference key="NSMenu" ref="110575045"/>
-									<string key="NSTitle">About WorkMode</string>
+									<string key="NSTitle">About Foreman</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
@@ -126,7 +126,7 @@
 								</object>
 								<object class="NSMenuItem" id="755159360">
 									<reference key="NSMenu" ref="110575045"/>
-									<string key="NSTitle">Hide WorkMode</string>
+									<string key="NSTitle">Hide Foreman</string>
 									<string key="NSKeyEquiv">h</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -164,7 +164,7 @@
 								</object>
 								<object class="NSMenuItem" id="632727374">
 									<reference key="NSMenu" ref="110575045"/>
-									<string key="NSTitle">Quit WorkMode</string>
+									<string key="NSTitle">Quit Foreman</string>
 									<string key="NSKeyEquiv">q</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -1279,7 +1279,7 @@
 							<array class="NSMutableArray" key="NSMenuItems">
 								<object class="NSMenuItem" id="105068016">
 									<reference key="NSMenu" ref="992780483"/>
-									<string key="NSTitle">WorkMode Help</string>
+									<string key="NSTitle">Foreman Help</string>
 									<string key="NSKeyEquiv">?</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -1298,7 +1298,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{993, 831}, {607, 50}}</string>
 				<int key="NSWTFlags">1949827072</int>
-				<string key="NSWindowTitle">WorkMode</string>
+				<string key="NSWindowTitle">Foreman</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
@@ -1315,14 +1315,14 @@
 								<object class="NSTextField" id="449138400">
 									<reference key="NSNextResponder" ref="703243050"/>
 									<int key="NSvFlags">268</int>
-									<string key="NSFrame">{{173, 11}, {261, 29}}</string>
+									<string key="NSFrame">{{181, 15}, {244, 20}}</string>
 									<reference key="NSSuperview" ref="703243050"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="887515462"/>
 									<string key="NSReuseIdentifierKey">_NS:1535</string>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSTextFieldCell" key="NSCell" id="422461900">
-										<int key="NSCellFlags">609222720</int>
+										<int key="NSCellFlags">605028416</int>
 										<int key="NSCellFlags2">306185216</int>
 										<string key="NSContents">Drag Apps Here To Create New Group</string>
 										<object class="NSFont" key="NSSupport" id="4923572">
@@ -1332,7 +1332,6 @@
 										</object>
 										<string key="NSCellIdentifier">_NS:1535</string>
 										<reference key="NSControlView" ref="449138400"/>
-										<int key="NSTextBezelStyle">1</int>
 										<object class="NSColor" key="NSBackgroundColor">
 											<int key="NSColorSpace">6</int>
 											<string key="NSCatalogName">System</string>
@@ -1368,7 +1367,6 @@
 							<string key="NSFrame">{{0, -2}, {607, 5}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSOffsets">{0, 0}</string>
 							<object class="NSTextFieldCell" key="NSTitleCell">

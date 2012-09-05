@@ -15,7 +15,7 @@
   if (self) {
     NSTrackingArea *trackingArea = [[NSTrackingArea alloc]
                                     initWithRect: frame
-                                    options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveAlways )
+                                    options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
                                     owner:self userInfo:nil];
     [self addTrackingArea:trackingArea];
   }
@@ -23,11 +23,20 @@
   return self;
 }
 
-
-- (void)mouseEntered:(NSEvent *)theEvent {
+- (void)enableDeleteBtn {
   NSButton* btn = [self.subviews objectAtIndex:0];
   [btn setEnabled:YES];
   [btn setTransparent:NO];
+}
+
+- (void)mouseEntered:(NSEvent *)theEvent {
+  [self enableDeleteBtn];
+}
+
+
+
+- (void)cursorUpdate:(NSEvent *)event {
+  [self enableDeleteBtn];
 }
 
 - (void)mouseExited:(NSEvent *)theEvent {

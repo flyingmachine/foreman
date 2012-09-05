@@ -26,6 +26,7 @@
     CGRect newFrame = self.view.frame;
     newFrame.origin.y = BOTTOM_PADDING;
     self.view.frame = newFrame;
+    [self.nameField setStringValue:[appGroup valueForKey:@"name"]];
     [iconListView showAppIcons];
   }
   
@@ -72,24 +73,6 @@
   
   [[NSNotificationCenter defaultCenter] postNotificationName:@"appsLaunched" object:self userInfo:NULL];
   
-//  for (NSRunningApplication *runningApp in [[NSWorkspace sharedWorkspace] runningApplications]) {
-//    FSRef ref;
-//    CFURLGetFSRef((__bridge CFURLRef)([runningApp bundleURL]), &ref);
-//    
-//    CFTypeRef tref;
-//    LSCopyItemAttribute(&ref, kLSRolesAll, kLSItemDisplayKind, &tref);
-//    
-//    NSLog(@"%@", tref);
-//    
-//    LSCopyItemAttribute(&ref, kLSRolesAll, kLSItemDisplayName, &tref);
-//    NSLog(@"%@", tref);
-//    
-//    LSCopyItemAttribute(&ref, kLSRolesAll, kLSItemIsInvisible, &tref);
-//    if (tref == kCFBooleanTrue) {
-//      NSLog(@"invisible");
-//    }
-//    
-//  }
   [self closeApps];
 }
 
@@ -124,6 +107,27 @@
     if ([appsToClose containsObject:[[runningApp bundleURL] path]]) {
       [runningApp terminate];
     }
+  }
+}
+
+#pragma mark NSTextField Delegate
+
+- (void)saveName {
+  [appGroup setValue: self.nameField.stringValue forKey:@"name"];
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"updateAppGroup" object:self userInfo:NULL];
+}
+
+- (BOOL)control:(NSControl *)control textShouldEndEditing:(NSTextField *)fieldEditor {
+  [self saveName];
+  return YES;
+}
+
+- (BOOL)control:(NSControl *)control textView:(NSTextView *)textView doCommandBySelector:(SEL)command {
+  if (command == @selector(cancelOperation:) || command == @selector(insertNewline:)) {
+    [[textView window] makeFirstResponder:nil];
+    return YES;
+  } else {
+    return NO;
   }
 }
 

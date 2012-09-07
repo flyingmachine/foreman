@@ -10,9 +10,16 @@
 #import "AppGroupController.h"
 #import "AppGroupView.h"
 #import "Headers.h"
+#import "NSStatusItem+BCStatusItem.h"
+#import "StatusItemView.h"
 
+@interface AppDelegate () <StatusItemViewDataProvier>
+@end
 
-@implementation AppDelegate
+@implementation AppDelegate {
+  NSStatusItem * _statusItem;
+  NSMutableArray *groupControllers;
+}
 @synthesize appGroups;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -21,10 +28,27 @@
   } else {
     appGroups = [[NSMutableArray alloc] init];
   }
+  groupControllers = [NSMutableArray new];
   
   [self createObservers];
   [self setFreshWindow];
+  [self createStatusItem];
 }
+
+-(void)awakeFromNib
+{
+	[_window setReleasedWhenClosed:FALSE];
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag{
+
+	if(flag==NO){
+		[_window makeKeyAndOrderFront:self];
+	}
+	return YES;
+}
+
+
 
 - (void) createObservers {
   [[NSNotificationCenter defaultCenter] addObserver: self
@@ -53,6 +77,20 @@
   }
 }
 
+- (void)createStatusItem {
+	_statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+	StatusItemView *statusItemView = [[StatusItemView alloc] initWithStatusItem:_statusItem];
+  [statusItemView setDataProvider:self];
+	[_statusItem setView:statusItemView];
+  [_statusItem setMenu:self.statusMenu];
+	[[_statusItem menu] setDelegate:statusItemView];
+	[_statusItem setHighlightMode:YES];
+	[_statusItem setImage:[NSImage imageNamed:@"status"]];
+	[_statusItem setAlternateImage:[NSImage imageNamed:@"status-selected"]];
+	[_statusItem setViewDelegate:self];
+//	[[statusItem view] registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]];
+}
+
 - (void)addAppGroup:(NSNotification *)notification
 {
   NSMutableDictionary* group = [[NSMutableDictionary alloc] initWithDictionary:[notification userInfo]];
@@ -66,7 +104,9 @@
 }
 
 - (void)displayAppGroup:(NSDictionary *)group animate:(BOOL)shouldAnimate {
+  // Todo this should be extracted to better ensure the sync with appGrouns
   AppGroupController* controller = [[AppGroupController alloc] initWithAppGroup:group];
+  [groupControllers addObject:controller];
   [self resize:controller.view.frame.size.height animate:shouldAnimate];
   
   NSView* mainView = self.window.contentView;
@@ -135,5 +175,22 @@
   }
   return [folder stringByAppendingPathComponent: FILE_LOCATION];
 }
+
+#pragma mark StatusItemViewDataProvier
+
+- (NSArray*)groupNamesForStatusItemView:(StatusItemView *)view {
+  NSMutableArray *names = [NSMutableArray new];
+  [appGroups enumerateObjectsUsingBlock:^(NSDictionary* group, NSUInteger idx, BOOL *stop) {
+    [names addObject:[group valueForKey:@"name"]];
+  }];
+  return names;
+}
+
+- (void)statusItemView:(StatusItemView *)view didSelectGroupAtIndex:(NSInteger)index {
+  AppGroupController *controller = groupControllers[index];
+  [controller launchApps];
+}
+
+
 
 @end

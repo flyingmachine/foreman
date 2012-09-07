@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63E94952D8E34BA29690C9D6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F26BE23C1414786939AA9D3 /* libPods.a */; };
 		6517C0F115E149BD00135B11 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6517C0F015E149BD00135B11 /* Cocoa.framework */; };
 		6517C0FB15E149BD00135B11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6517C0F915E149BD00135B11 /* InfoPlist.strings */; };
 		6517C0FD15E149BD00135B11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C0FC15E149BD00135B11 /* main.m */; };
@@ -37,6 +38,9 @@
 		65F8FEEC15F3A18400362DB0 /* IconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8FEEB15F3A18400362DB0 /* IconViewController.m */; };
 		65F8FEEF15F4F6D900362DB0 /* IconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8FEEE15F4F6D900362DB0 /* IconView.m */; };
 		65FD49FC15F8B23A0035C8C4 /* icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 65FD49FB15F8B23A0035C8C4 /* icons.icns */; };
+		E591300915FA70E700DF4389 /* status-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = E591300715FA70E700DF4389 /* status-selected.png */; };
+		E591300A15FA70E700DF4389 /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = E591300815FA70E700DF4389 /* status.png */; };
+		E591300F15FA748800DF4389 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E591300E15FA748800DF4389 /* StatusItemView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +55,7 @@
 
 /* Begin PBXFileReference section */
 		6517C0EC15E149BD00135B11 /* Foreman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foreman.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6517C0F015E149BD00135B11 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6517C0F015E149BD00135B11 /* Cocoa.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6517C0F315E149BD00135B11 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		6517C0F415E149BD00135B11 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6517C0F515E149BD00135B11 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +104,12 @@
 		65F8FEED15F4F6D900362DB0 /* IconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconView.h; sourceTree = "<group>"; };
 		65F8FEEE15F4F6D900362DB0 /* IconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconView.m; sourceTree = "<group>"; };
 		65FD49FB15F8B23A0035C8C4 /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icons.icns; sourceTree = "<group>"; };
+		8F26BE23C1414786939AA9D3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83FBA0A25FF42DD9BF15855 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		E591300715FA70E700DF4389 /* status-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-selected.png"; sourceTree = "<group>"; };
+		E591300815FA70E700DF4389 /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
+		E591300D15FA748800DF4389 /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
+		E591300E15FA748800DF4389 /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6517C0F115E149BD00135B11 /* Cocoa.framework in Frameworks */,
+				63E94952D8E34BA29690C9D6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,10 +139,13 @@
 			children = (
 				65FD49FB15F8B23A0035C8C4 /* icons.icns */,
 				654CA53215F80C5E00779BE9 /* icon.icns */,
+				E591300715FA70E700DF4389 /* status-selected.png */,
+				E591300815FA70E700DF4389 /* status.png */,
 				6517C0F615E149BD00135B11 /* Foreman */,
 				6517C11315E149BE00135B11 /* ForemanTests */,
 				6517C0EF15E149BD00135B11 /* Frameworks */,
 				6517C0ED15E149BD00135B11 /* Products */,
+				B83FBA0A25FF42DD9BF15855 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +164,7 @@
 				6517C0F015E149BD00135B11 /* Cocoa.framework */,
 				6517C10E15E149BE00135B11 /* SenTestingKit.framework */,
 				6517C0F215E149BD00135B11 /* Other Frameworks */,
+				8F26BE23C1414786939AA9D3 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,11 +189,12 @@
 				651CDD8B15E794F400461C13 /* nibs */,
 				6517C10215E149BD00135B11 /* AppDelegate.h */,
 				6517C10315E149BD00135B11 /* AppDelegate.m */,
+				E591300D15FA748800DF4389 /* StatusItemView.h */,
+				E591300E15FA748800DF4389 /* StatusItemView.m */,
 				655AB72815F0D27600C842BA /* BaseAppView.h */,
 				655AB72915F0D27600C842BA /* BaseAppView.m */,
 				6517C0F715E149BD00135B11 /* Supporting Files */,
 			);
-			name = Foreman;
 			path = Foreman;
 			sourceTree = "<group>";
 		};
@@ -201,7 +217,6 @@
 				6517C11A15E149BE00135B11 /* ForemanTests.m */,
 				6517C11415E149BE00135B11 /* Supporting Files */,
 			);
-			name = ForemanTests;
 			path = ForemanTests;
 			sourceTree = "<group>";
 		};
@@ -295,6 +310,7 @@
 				6517C0E815E149BD00135B11 /* Sources */,
 				6517C0E915E149BD00135B11 /* Frameworks */,
 				6517C0EA15E149BD00135B11 /* Resources */,
+				22BF7F2B1444406DA1DBBC9F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,6 +385,8 @@
 				65F8FEE415F3958C00362DB0 /* Icon.xib in Resources */,
 				654CA53315F80C5E00779BE9 /* icon.icns in Resources */,
 				65FD49FC15F8B23A0035C8C4 /* icons.icns in Resources */,
+				E591300915FA70E700DF4389 /* status-selected.png in Resources */,
+				E591300A15FA70E700DF4389 /* status.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +401,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		22BF7F2B1444406DA1DBBC9F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		6517C10B15E149BE00135B11 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,6 +447,7 @@
 				655AB72A15F0D27600C842BA /* BaseAppView.m in Sources */,
 				65F8FEEC15F3A18400362DB0 /* IconViewController.m in Sources */,
 				65F8FEEF15F4F6D900362DB0 /* IconView.m in Sources */,
+				E591300F15FA748800DF4389 /* StatusItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +556,7 @@
 		};
 		6517C11F15E149BE00135B11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83FBA0A25FF42DD9BF15855 /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -536,6 +570,7 @@
 		};
 		6517C12015E149BE00135B11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83FBA0A25FF42DD9BF15855 /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

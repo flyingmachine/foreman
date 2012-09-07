@@ -102,12 +102,14 @@
   }
   
   NSLog(@"apps to close: %@", appsToClose);
-  
+
+  NSRunningApplication* currentApplication = [NSRunningApplication currentApplication];
   for (NSRunningApplication *runningApp in [[NSWorkspace sharedWorkspace] runningApplications]) {
-    if ([appsToClose containsObject:[[runningApp bundleURL] path]]) {
+    if ([appsToClose containsObject:[[runningApp bundleURL] path]] && !([runningApp isEqual:currentApplication])) {
       [runningApp terminate];
     }
   }
+  [currentApplication hide];
 }
 
 #pragma mark NSTextField Delegate

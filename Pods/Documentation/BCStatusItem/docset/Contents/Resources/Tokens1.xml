@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/BCStatusItemView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/BCStatusItemView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/BCStatusItemView/setDoesHighlight:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (assign, nonatomic) BOOL doesHighlight</Declaration>
+			
+			
+			<Anchor>//api/name/doesHighlight</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/BCStatusItemView/doesHighlight</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (assign, nonatomic) BOOL doesHighlight</Declaration>
+			
+			
+			<Anchor>//api/name/doesHighlight</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/BCStatusItemView/setTitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/BCStatusItemView/title</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/BCStatusItemView/setAttributedTitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSAttributedString *attributedTitle</Declaration>
+			
+			
+			<Anchor>//api/name/attributedTitle</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/BCStatusItemView/attributedTitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSAttributedString *attributedTitle</Declaration>
+			
+			
+			<Anchor>//api/name/attributedTitle</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/BCStatusItemView/setImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSImage *image</Declaration>
+			
+			
+			<Anchor>//api/name/image</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/BCStatusItemView/image</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSImage *image</Declaration>
+			
+			
+			<Anchor>//api/name/image</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/BCStatusItemView/setAlternateImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSImage *alternateImage</Declaration>
+			
+			
+			<Anchor>//api/name/alternateImage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/BCStatusItemView/alternateImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSImage *alternateImage</Declaration>
+			
+			
+			<Anchor>//api/name/alternateImage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/BCStatusItemView/setDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (assign, nonatomic) id&lt;&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/BCStatusItemView/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (assign, nonatomic) id&lt;&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/BCStatusItemView/setEnabled:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, getter=isEnabled) BOOL enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/BCStatusItemView/enabled</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, getter=isEnabled) BOOL enabled</Declaration>
+			
+			
+			<Anchor>//api/name/enabled</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/BCStatusItemView/viewWithStatusItem:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>+ (BCStatusItemView *)viewWithStatusItem:(NSStatusItem *)statusItem</Declaration>
+			
+			
+			<Anchor>//api/name/viewWithStatusItem:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/BCStatusItemView/initWithStatusItem:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithStatusItem:(NSStatusItem *)statusItem</Declaration>
+			
+			
+			<Anchor>//api/name/initWithStatusItem:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

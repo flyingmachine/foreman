@@ -19,7 +19,6 @@
 		6517C11B15E149BE00135B11 /* WorkModeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C11A15E149BE00135B11 /* WorkModeTests.m */; };
 		6517C12E15E1563E00135B11 /* DragReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C12D15E1563E00135B11 /* DragReceiver.m */; };
 		651CDD8A15E7943200461C13 /* AppGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651CDD8915E7943200461C13 /* AppGroupView.xib */; };
-		654CA53115F80A6900779BE9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 654CA53015F80A6900779BE9 /* icon.png */; };
 		654CA53315F80C5E00779BE9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 654CA53215F80C5E00779BE9 /* icon.icns */; };
 		655AB71E15F0CA0F00C842BA /* AppGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB71D15F0CA0F00C842BA /* AppGroupView.m */; };
 		655AB72A15F0D27600C842BA /* BaseAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB72915F0D27600C842BA /* BaseAppView.m */; };
@@ -37,6 +36,7 @@
 		65F8FEE415F3958C00362DB0 /* Icon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F8FEE315F3958C00362DB0 /* Icon.xib */; };
 		65F8FEEC15F3A18400362DB0 /* IconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8FEEB15F3A18400362DB0 /* IconViewController.m */; };
 		65F8FEEF15F4F6D900362DB0 /* IconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F8FEEE15F4F6D900362DB0 /* IconView.m */; };
+		65FD49FC15F8B23A0035C8C4 /* icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 65FD49FB15F8B23A0035C8C4 /* icons.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,6 @@
 		6517C12C15E1563E00135B11 /* DragReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragReceiver.h; sourceTree = "<group>"; };
 		6517C12D15E1563E00135B11 /* DragReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragReceiver.m; sourceTree = "<group>"; };
 		651CDD8915E7943200461C13 /* AppGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppGroupView.xib; sourceTree = "<group>"; };
-		654CA53015F80A6900779BE9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		654CA53215F80C5E00779BE9 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		655AB71C15F0CA0F00C842BA /* AppGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGroupView.h; sourceTree = "<group>"; };
 		655AB71D15F0CA0F00C842BA /* AppGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGroupView.m; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		65F8FEEB15F3A18400362DB0 /* IconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconViewController.m; sourceTree = "<group>"; };
 		65F8FEED15F4F6D900362DB0 /* IconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconView.h; sourceTree = "<group>"; };
 		65F8FEEE15F4F6D900362DB0 /* IconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconView.m; sourceTree = "<group>"; };
+		65FD49FB15F8B23A0035C8C4 /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icons.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +126,8 @@
 		6517C0E115E149BD00135B11 = {
 			isa = PBXGroup;
 			children = (
+				65FD49FB15F8B23A0035C8C4 /* icons.icns */,
 				654CA53215F80C5E00779BE9 /* icon.icns */,
-				654CA53015F80A6900779BE9 /* icon.png */,
 				6517C0F615E149BD00135B11 /* Foreman */,
 				6517C11315E149BE00135B11 /* ForemanTests */,
 				6517C0EF15E149BD00135B11 /* Frameworks */,
@@ -367,8 +367,8 @@
 				65F8B6BA15F254B50002EAC6 /* shattered.png in Resources */,
 				65F8B6BC15F255100002EAC6 /* crisp_paper_ruffles.png in Resources */,
 				65F8FEE415F3958C00362DB0 /* Icon.xib in Resources */,
-				654CA53115F80A6900779BE9 /* icon.png in Resources */,
 				654CA53315F80C5E00779BE9 /* icon.icns in Resources */,
+				65FD49FC15F8B23A0035C8C4 /* icons.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +528,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WorkMode/Foreman-Prefix.pch";
 				INFOPLIST_FILE = "WorkMode/Foreman-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = Foreman;
 				WRAPPER_EXTENSION = app;
 			};
@@ -540,6 +541,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WorkMode/Foreman-Prefix.pch";
 				INFOPLIST_FILE = "WorkMode/Foreman-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = Foreman;
 				WRAPPER_EXTENSION = app;
 			};

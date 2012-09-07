@@ -20,7 +20,7 @@
   if (self) {
     NSTrackingArea *trackingArea = [[NSTrackingArea alloc]
                                     initWithRect: frame
-                                    options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveAlways )
+                                    options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
                                     owner:self userInfo:nil];
     [self addTrackingArea:trackingArea];
   }

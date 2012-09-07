@@ -16,7 +16,7 @@
 		6517C10F15E149BE00135B11 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6517C10E15E149BE00135B11 /* SenTestingKit.framework */; };
 		6517C11015E149BE00135B11 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6517C0F015E149BD00135B11 /* Cocoa.framework */; };
 		6517C11815E149BE00135B11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6517C11615E149BE00135B11 /* InfoPlist.strings */; };
-		6517C11B15E149BE00135B11 /* WorkModeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C11A15E149BE00135B11 /* WorkModeTests.m */; };
+		6517C11B15E149BE00135B11 /* ForemanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C11A15E149BE00135B11 /* ForemanTests.m */; };
 		6517C12E15E1563E00135B11 /* DragReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C12D15E1563E00135B11 /* DragReceiver.m */; };
 		651CDD8A15E7943200461C13 /* AppGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651CDD8915E7943200461C13 /* AppGroupView.xib */; };
 		654CA53315F80C5E00779BE9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 654CA53215F80C5E00779BE9 /* icon.icns */; };
@@ -45,7 +45,7 @@
 			containerPortal = 6517C0E315E149BD00135B11 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6517C0EB15E149BD00135B11;
-			remoteInfo = WorkMode;
+			remoteInfo = Foreman;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -67,8 +67,8 @@
 		6517C10E15E149BE00135B11 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		6517C11515E149BE00135B11 /* ForemanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ForemanTests-Info.plist"; sourceTree = "<group>"; };
 		6517C11715E149BE00135B11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6517C11915E149BE00135B11 /* WorkModeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkModeTests.h; sourceTree = "<group>"; };
-		6517C11A15E149BE00135B11 /* WorkModeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkModeTests.m; sourceTree = "<group>"; };
+		6517C11915E149BE00135B11 /* ForemanTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForemanTests.h; sourceTree = "<group>"; };
+		6517C11A15E149BE00135B11 /* ForemanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForemanTests.m; sourceTree = "<group>"; };
 		6517C12C15E1563E00135B11 /* DragReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragReceiver.h; sourceTree = "<group>"; };
 		6517C12D15E1563E00135B11 /* DragReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragReceiver.m; sourceTree = "<group>"; };
 		651CDD8915E7943200461C13 /* AppGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppGroupView.xib; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 				6517C0F715E149BD00135B11 /* Supporting Files */,
 			);
 			name = Foreman;
-			path = WorkMode;
+			path = Foreman;
 			sourceTree = "<group>";
 		};
 		6517C0F715E149BD00135B11 /* Supporting Files */ = {
@@ -197,12 +197,12 @@
 		6517C11315E149BE00135B11 /* ForemanTests */ = {
 			isa = PBXGroup;
 			children = (
-				6517C11915E149BE00135B11 /* WorkModeTests.h */,
-				6517C11A15E149BE00135B11 /* WorkModeTests.m */,
+				6517C11915E149BE00135B11 /* ForemanTests.h */,
+				6517C11A15E149BE00135B11 /* ForemanTests.m */,
 				6517C11415E149BE00135B11 /* Supporting Files */,
 			);
 			name = ForemanTests;
-			path = WorkModeTests;
+			path = ForemanTests;
 			sourceTree = "<group>";
 		};
 		6517C11415E149BE00135B11 /* Supporting Files */ = {
@@ -301,7 +301,7 @@
 			dependencies = (
 			);
 			name = Foreman;
-			productName = WorkMode;
+			productName = Foreman;
 			productReference = 6517C0EC15E149BD00135B11 /* Foreman.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -320,7 +320,7 @@
 				6517C11215E149BE00135B11 /* PBXTargetDependency */,
 			);
 			name = ForemanTests;
-			productName = WorkModeTests;
+			productName = ForemanTests;
 			productReference = 6517C10D15E149BE00135B11 /* ForemanTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -422,7 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6517C11B15E149BE00135B11 /* WorkModeTests.m in Sources */,
+				6517C11B15E149BE00135B11 /* ForemanTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,8 +526,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WorkMode/Foreman-Prefix.pch";
-				INFOPLIST_FILE = "WorkMode/Foreman-Info.plist";
+				GCC_PREFIX_HEADER = "Foreman/Foreman-Prefix.pch";
+				INFOPLIST_FILE = "Foreman/Foreman-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = Foreman;
 				WRAPPER_EXTENSION = app;
@@ -539,8 +539,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WorkMode/Foreman-Prefix.pch";
-				INFOPLIST_FILE = "WorkMode/Foreman-Info.plist";
+				GCC_PREFIX_HEADER = "Foreman/Foreman-Prefix.pch";
+				INFOPLIST_FILE = "Foreman/Foreman-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = Foreman;
 				WRAPPER_EXTENSION = app;
@@ -550,12 +550,12 @@
 		6517C12215E149BE00135B11 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WorkMode.app/Contents/MacOS/WorkMode";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Foreman.app/Contents/MacOS/Foreman";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WorkMode/WorkMode-Prefix.pch";
-				INFOPLIST_FILE = "WorkModeTests/ForemanTests-Info.plist";
+				GCC_PREFIX_HEADER = "Foreman/Foreman-Prefix.pch";
+				INFOPLIST_FILE = "ForemanTests/ForemanTests-Info.plist";
 				PRODUCT_NAME = ForemanTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -565,12 +565,12 @@
 		6517C12315E149BE00135B11 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WorkMode.app/Contents/MacOS/WorkMode";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Foreman.app/Contents/MacOS/Foreman";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WorkMode/WorkMode-Prefix.pch";
-				INFOPLIST_FILE = "WorkModeTests/ForemanTests-Info.plist";
+				GCC_PREFIX_HEADER = "Foreman/Foreman-Prefix.pch";
+				INFOPLIST_FILE = "ForemanTests/ForemanTests-Info.plist";
 				PRODUCT_NAME = ForemanTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

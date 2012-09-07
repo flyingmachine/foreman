@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/BCStatusItemViewDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/BCStatusItemViewDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/BCStatusItemViewDelegate/statusItemView:draggingEntered:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>- (NSDragOperation)statusItemView:(BCStatusItemView *)view draggingEntered:(id&lt;NSDraggingInfo&gt;)info</Declaration>
+			
+			
+			<Anchor>//api/name/statusItemView:draggingEntered:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/BCStatusItemViewDelegate/statusItemView:draggingExited:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>- (void)statusItemView:(BCStatusItemView *)view draggingExited:(id&lt;NSDraggingInfo&gt;)info</Declaration>
+			
+			
+			<Anchor>//api/name/statusItemView:draggingExited:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/BCStatusItemViewDelegate/statusItemView:prepareForDragOperation:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)statusItemView:(BCStatusItemView *)view prepareForDragOperation:(id&lt;NSDraggingInfo&gt;)info</Declaration>
+			
+			
+			<Anchor>//api/name/statusItemView:prepareForDragOperation:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/BCStatusItemViewDelegate/statusItemView:performDragOperation:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>BCStatusItemView.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)statusItemView:(BCStatusItemView *)view performDragOperation:(id&lt;NSDraggingInfo&gt;)info</Declaration>
+			
+			
+			<Anchor>//api/name/statusItemView:performDragOperation:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

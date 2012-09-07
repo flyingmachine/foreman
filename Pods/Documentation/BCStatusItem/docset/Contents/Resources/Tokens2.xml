@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSStatusItem+BCStatusItem.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSStatusItem(BCStatusItem)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSStatusItem+BCStatusItem.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSStatusItem(BCStatusItem)/setupView</TokenIdentifier>
+			<Abstract type="html">Sets up a BCStatusItemView, copies needed NSStatusItem properties and sets the view on the status item
+Call this after you do any of these: setImage, setAlternateImage, setTitle, setAttributedTitle, setHighlightMode</Abstract>
+			<DeclaredIn>NSStatusItem+BCStatusItem.h</DeclaredIn>			
+			
+			<Declaration>- (void)setupView</Declaration>
+			
+			
+			<Anchor>//api/name/setupView</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSStatusItem(BCStatusItem)/setAllowsDragging:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSStatusItem+BCStatusItem.h</DeclaredIn>			
+			
+			<Declaration>- (void)setAllowsDragging:(BOOL)dragging</Declaration>
+			
+			
+			<Anchor>//api/name/setAllowsDragging:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSStatusItem(BCStatusItem)/setDraggingTypes:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSStatusItem+BCStatusItem.h</DeclaredIn>			
+			
+			<Declaration>- (void)setDraggingTypes:(NSArray *)types</Declaration>
+			
+			
+			<Anchor>//api/name/setDraggingTypes:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSStatusItem(BCStatusItem)/draggingTypes</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSStatusItem+BCStatusItem.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)draggingTypes</Declaration>
+			
+			
+			<Anchor>//api/name/draggingTypes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSStatusItem(BCStatusItem)/setFrame:</TokenIdentifier>
+			<Abstract type="html">Convenience method which gets the window frame for the custom NSStatusItem view</Abstract>
+			<DeclaredIn>NSStatusItem+BCStatusItem.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSRect frame</Declaration>
+			
+			
+			<Anchor>//api/name/frame</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSStatusItem(BCStatusItem)/frame</TokenIdentifier>
+			<Abstract type="html">Convenience method which gets the window frame for the custom NSStatusItem view</Abstract>
+			<DeclaredIn>NSStatusItem+BCStatusItem.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSRect frame</Declaration>
+			
+			
+			<Anchor>//api/name/frame</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSStatusItem(BCStatusItem)/setViewDelegate:</TokenIdentifier>
+			<Abstract type="html">Sets the view&apos;s delegate, convenience method</Abstract>
+			<DeclaredIn>NSStatusItem+BCStatusItem.h</DeclaredIn>			
+			
+			<Declaration>- (void)setViewDelegate:(id)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/setViewDelegate:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

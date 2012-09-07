@@ -55,7 +55,7 @@
 
 - (void)addAppGroup:(NSNotification *)notification
 {
-  NSDictionary* group = [notification userInfo];
+  NSMutableDictionary* group = [[NSMutableDictionary alloc] initWithDictionary:[notification userInfo]];
   [appGroups addObject:group];
   [self displayAppGroup:group];
   [self saveAppGroups];

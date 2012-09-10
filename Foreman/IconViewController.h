@@ -7,12 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@class AppGroupController;
+@class LaunchGroupController;
 @interface IconViewController : NSViewController
-@property (strong) AppGroupController* appGroupController;
+@property (strong) LaunchGroupController* appGroupController;
 @property (strong) NSString* app;
 @property (strong) IBOutlet NSImageView* imgView;
 
 - (IBAction)removeApp:(id)sender;
-- (void)setup:(float)leftMargin app:(NSString *)app appGroupController:(AppGroupController *)agc;
+- (void)setup:(float)leftMargin app:(NSString *)app appGroupController:(LaunchGroupController *)agc;
 @end

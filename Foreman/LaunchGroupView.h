@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppGroupView : NSView
+@interface LaunchGroupView : NSView
 - (void)shiftUp;
 @end

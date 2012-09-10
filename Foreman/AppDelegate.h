@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #define FILE_LOCATION @"app_groups"
-@class AppGroupController;
+@class LaunchGroupController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property (assign) IBOutlet NSWindow *window;
@@ -16,6 +16,6 @@
 @property (strong) NSMutableArray* appGroups;
 @property (strong) NSMutableArray* safeGroup;
 
-- (void) removeAppGroup: (AppGroupController *)appGroup;
+- (void) removeAppGroup: (LaunchGroupController *)appGroup;
 
 @end

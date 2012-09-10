@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 Daniel Higginbotham. All rights reserved.
 //
 
-#import "AppGroupView.h"
+#import "LaunchGroupView.h"
 #define BORDER_WIDTH 3
 
-@implementation AppGroupView
+@implementation LaunchGroupView
 {
   BOOL _hasMouse;
 }

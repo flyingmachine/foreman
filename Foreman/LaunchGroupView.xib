@@ -28,7 +28,7 @@
 		</object>
 		<array class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
 			<object class="NSCustomObject" id="1001">
-				<string key="NSClassName">AppGroupController</string>
+				<string key="NSClassName">LaunchGroupController</string>
 			</object>
 			<object class="NSCustomObject" id="1003">
 				<string key="NSClassName">FirstResponder</string>
@@ -37,7 +37,7 @@
 				<string key="NSClassName">NSApplication</string>
 			</object>
 			<object class="NSCustomView" id="1005">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSBox" id="124223351">
@@ -45,8 +45,6 @@
 						<int key="NSvFlags">12</int>
 						<string key="NSFrame">{{0, -2}, {607, 5}}</string>
 						<reference key="NSSuperview" ref="1005"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSOffsets">{0, 0}</string>
 						<object class="NSTextFieldCell" key="NSTitleCell">
@@ -87,7 +85,6 @@
 								<array class="NSMutableArray" key="NSSubviews"/>
 								<string key="NSFrame">{{117, 0}, {490, 50}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="325517153"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<string key="NSClassName">IconListView</string>
@@ -97,7 +94,6 @@
 								<int key="NSvFlags">268</int>
 								<string key="NSFrame">{{564, 7}, {30, 30}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="124223351"/>
 								<string key="NSReuseIdentifierKey">_NS:1574</string>
 								<bool key="NSEnabled">YES</bool>
@@ -130,7 +126,6 @@
 								<int key="NSvFlags">268</int>
 								<string key="NSFrame">{{13, 14}, {96, 22}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="382143532"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="NSEnabled">YES</bool>
@@ -160,7 +155,6 @@
 						</array>
 						<string key="NSFrame">{{0, 7}, {607, 50}}</string>
 						<reference key="NSSuperview" ref="1005"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="828279234"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSHuggingPriority">{250, 250}</string>
@@ -168,10 +162,8 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{607, 65}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="639661446"/>
-				<string key="NSClassName">AppGroupView</string>
+				<string key="NSClassName">LaunchGroupView</string>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -381,14 +373,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/AppGroupController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">AppGroupView</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/AppGroupView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

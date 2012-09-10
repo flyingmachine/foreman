@@ -7,7 +7,7 @@
 //
 
 #import "DragReceiver.h"
-#import "AppGroupController.h"
+#import "LaunchGroupController.h"
 
 @implementation DragReceiver
 @synthesize controller;

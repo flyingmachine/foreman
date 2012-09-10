@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "AppGroupController.h"
-#import "AppGroupView.h"
+#import "LaunchGroupController.h"
+#import "LaunchGroupView.h"
 #import "Headers.h"
 #import "NSStatusItem+BCStatusItem.h"
 #import "StatusItemView.h"
@@ -111,7 +111,7 @@
 
 - (void)displayAppGroup:(NSDictionary *)group animate:(BOOL)shouldAnimate {
   // Todo this should be extracted to better ensure the sync with appGrouns
-  AppGroupController* controller = [[AppGroupController alloc] initWithAppGroup:group];
+  LaunchGroupController* controller = [[LaunchGroupController alloc] initWithAppGroup:group];
   [groupControllers addObject:controller];
   [self resize:controller.view.frame.size.height animate:shouldAnimate];
   
@@ -135,7 +135,7 @@
   [mainView setFrame:newFrame];
 }
 
-- (void)removeAppGroup:(AppGroupController *)appGroupController {
+- (void)removeAppGroup:(LaunchGroupController *)appGroupController {
   [appGroups removeObject:appGroupController.appGroup];
   
   NSMutableArray * toShift = [[NSMutableArray alloc] init];
@@ -146,13 +146,13 @@
       isAfter = YES;
     }
     
-    if ([subv class] == [AppGroupView class] && isAfter) {
+    if ([subv class] == [LaunchGroupView class] && isAfter) {
       [toShift addObject:subv];
     }
   }
   
   [appGroupController.view removeFromSuperview];
-  for (AppGroupView * subv in toShift) {
+  for (LaunchGroupView * subv in toShift) {
     [subv shiftUp];
   }
   
@@ -193,7 +193,7 @@
 }
 
 - (void)statusItemView:(StatusItemView *)view didSelectGroupAtIndex:(NSInteger)index {
-  AppGroupController *controller = groupControllers[index];
+  LaunchGroupController *controller = groupControllers[index];
   [controller launchApps];
 }
 

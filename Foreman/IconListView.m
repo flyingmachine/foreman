@@ -7,7 +7,7 @@
 //
 
 #import "IconListView.h"
-#import "AppGroupController.h"
+#import "LaunchGroupController.h"
 #import "IconViewController.h"
 
 @implementation IconListView

@@ -10,7 +10,7 @@
 @class DragReceiver;
 @class IconListView;
 
-@interface AppGroupController : NSViewController <NSTextFieldDelegate>
+@interface LaunchGroupController : NSViewController <NSTextFieldDelegate>
 
 @property (strong) NSDictionary* appGroup;
 @property (assign) IBOutlet DragReceiver *dragReceiver;
@@ -21,6 +21,6 @@
 - (void) launchApps;
 - (IBAction)removeAppGroup:(id)sender;
 - (void)removeApp:(id)app;
-- (AppGroupController *) initWithAppGroup: (NSDictionary *) appGroup;
+- (LaunchGroupController *) initWithAppGroup: (NSDictionary *) appGroup;
 
 @end

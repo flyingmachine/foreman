@@ -8,9 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "AppReceiver.h"
-@class AppGroupController;
+@class LaunchGroupController;
 
 
 @interface DragReceiver : AppReceiver
-@property (strong) IBOutlet AppGroupController* controller;
+@property (strong) IBOutlet LaunchGroupController* controller;
 @end

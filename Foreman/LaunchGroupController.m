@@ -5,14 +5,14 @@
 //  Copyright (c) 2012 Daniel Higginbotham. All rights reserved.
 //
 
-#import "AppGroupController.h"
+#import "LaunchGroupController.h"
 #import "IconListView.h"
 #import "Headers.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
 
 
-@implementation AppGroupController
+@implementation LaunchGroupController
 @synthesize appGroup;
 @synthesize iconListView;
 

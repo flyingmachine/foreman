@@ -147,7 +147,8 @@
 }
 
 - (void)saveAppGroups {
-  [appGroups writeToFile:[self pathForLaunchGroups] atomically:YES];
+  [self.appGroups writeToFile:[self pathForLaunchGroups] atomically:YES];
+  [self.safeGroup writeToFile:[self pathForSafeGroup] atomically:YES];
 }
 
 - (void)resize: (int) heightAdjust animate:(BOOL)animate{

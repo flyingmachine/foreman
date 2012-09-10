@@ -52,6 +52,7 @@
 - (void) closeApps {
   NSMutableArray *appsToClose = [[NSMutableArray alloc] init];
   NSDictionary *info;
+  AppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
   OSErr err = NO;
   ProcessSerialNumber psn = {0, kNoProcess};
   while (!err)
@@ -66,7 +67,8 @@
           [[info valueForKey:@"LSUIElement"] intValue] != 1 &&
           bundlePath &&
           ![bundlePath hasPrefix:@"/System"] &&
-          ![[self.appGroup valueForKey:@"apps"] containsObject:bundlePath]
+          ![[self.appGroup valueForKey:@"apps"] containsObject:bundlePath] &&
+          ![[appDelegate.safeGroup valueForKey:@"apps"] containsObject:bundlePath]
           ) {
         
         [appsToClose addObject:bundlePath];

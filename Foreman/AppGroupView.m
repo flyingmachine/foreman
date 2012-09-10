@@ -68,27 +68,6 @@
   [NSGraphicsContext restoreGraphicsState];
 }
 
-
--(void)drawBorder:(NSRect)rect{
-  //  NSRect rect = [self bounds];
-  NSRect frameRect = [self bounds];
-  
-  if(rect.size.height < frameRect.size.height)
-    return;
-  NSRect newRect = NSMakeRect(rect.origin.x+2, rect.origin.y+2, rect.size.width-3, rect.size.height-3);
-  
-  NSBezierPath *textViewSurround = [NSBezierPath bezierPathWithRoundedRect:newRect xRadius:10 yRadius:10];
-  [textViewSurround setLineWidth:BORDER_WIDTH];
-  if (_hasMouse) {
-    [[NSColor whiteColor] set];
-  } else {
-    [[NSColor windowBackgroundColor] set];
-  }
-  
-  [textViewSurround stroke];
-  [textViewSurround fill];
-}
-
 -(void)shiftUp {
   NSRect frameRect = self.frame;
   frameRect.origin.y += frameRect.size.height;

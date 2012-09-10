@@ -21,6 +21,7 @@
   NSMutableArray *groupControllers;
 }
 @synthesize appGroups;
+@synthesize safeGroup;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
   if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForDataFile]]) {
@@ -64,6 +65,11 @@
   [[NSNotificationCenter defaultCenter] addObserver: self
                                            selector: @selector(saveAppGroups)
                                                name: @"updateAppGroup"
+                                             object: nil];
+  
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector: @selector(saveSafeGroup)
+                                               name: @"updateSafeGroup"
                                              object: nil];
 
 }

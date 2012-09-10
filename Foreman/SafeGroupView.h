@@ -7,9 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "AppReceiver.h"
 @class SafeGroupViewController;
 
 
-@interface SafeGroupView : NSView
+@interface SafeGroupView : AppReceiver
 @property (strong) IBOutlet SafeGroupViewController* controller;
 @end

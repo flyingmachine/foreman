@@ -14,6 +14,7 @@
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSMenu *statusMenu;
 @property (strong) NSMutableArray* appGroups;
+@property (strong) NSMutableArray* safeGroup;
 
 - (void) removeAppGroup: (AppGroupController *)appGroup;
 

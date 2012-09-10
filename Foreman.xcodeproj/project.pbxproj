@@ -29,6 +29,9 @@
 		65D663AD15E5A4FD00C41FEA /* AppGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663AC15E5A4FD00C41FEA /* AppGroupController.m */; };
 		65D663B115E5A61800C41FEA /* IconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663B015E5A61800C41FEA /* IconListView.m */; };
 		65DE63B915F1718C007BF140 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DE63B815F1718C007BF140 /* bg.png */; };
+		65F05F4D15FD6ED600556F80 /* SafeGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F05F4C15FD6ED600556F80 /* SafeGroupView.xib */; };
+		65F05F5315FD6F7800556F80 /* SafeGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F05F5215FD6F7800556F80 /* SafeGroupViewController.m */; };
+		65F05F5615FD6F8A00556F80 /* SafeGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F05F5515FD6F8A00556F80 /* SafeGroupView.m */; };
 		65F8B6B315F24E280002EAC6 /* app-group-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B215F24E280002EAC6 /* app-group-bg.png */; };
 		65F8B6B615F251FF0002EAC6 /* app-group-bg-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B515F251FF0002EAC6 /* app-group-bg-highlighted.png */; };
 		65F8B6B815F253990002EAC6 /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F8B6B715F253990002EAC6 /* grey.png */; };
@@ -93,6 +96,11 @@
 		65D663B015E5A61800C41FEA /* IconListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconListView.m; sourceTree = "<group>"; };
 		65DE63B815F1718C007BF140 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		65DE63BC15F17855007BF140 /* Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
+		65F05F4C15FD6ED600556F80 /* SafeGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SafeGroupView.xib; sourceTree = "<group>"; };
+		65F05F5115FD6F7800556F80 /* SafeGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeGroupViewController.h; sourceTree = "<group>"; };
+		65F05F5215FD6F7800556F80 /* SafeGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeGroupViewController.m; sourceTree = "<group>"; };
+		65F05F5415FD6F8A00556F80 /* SafeGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeGroupView.h; sourceTree = "<group>"; };
+		65F05F5515FD6F8A00556F80 /* SafeGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeGroupView.m; sourceTree = "<group>"; };
 		65F8B6B215F24E280002EAC6 /* app-group-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-group-bg.png"; sourceTree = "<group>"; };
 		65F8B6B515F251FF0002EAC6 /* app-group-bg-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-group-bg-highlighted.png"; sourceTree = "<group>"; };
 		65F8B6B715F253990002EAC6 /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
@@ -182,6 +190,7 @@
 		6517C0F615E149BD00135B11 /* Foreman */ = {
 			isa = PBXGroup;
 			children = (
+				65F05F4F15FD6F3300556F80 /* SafeGroup */,
 				65DE63BB15F17192007BF140 /* Resources */,
 				6576BB4B15E8005500FB5A98 /* Super */,
 				6576BB4115E7FC8400FB5A98 /* NewAppGroup */,
@@ -235,6 +244,7 @@
 				6517C10515E149BD00135B11 /* MainMenu.xib */,
 				651CDD8915E7943200461C13 /* AppGroupView.xib */,
 				65F8FEE315F3958C00362DB0 /* Icon.xib */,
+				65F05F4C15FD6ED600556F80 /* SafeGroupView.xib */,
 			);
 			name = nibs;
 			sourceTree = "<group>";
@@ -287,6 +297,17 @@
 				65DE63B815F1718C007BF140 /* bg.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		65F05F4F15FD6F3300556F80 /* SafeGroup */ = {
+			isa = PBXGroup;
+			children = (
+				65F05F5115FD6F7800556F80 /* SafeGroupViewController.h */,
+				65F05F5215FD6F7800556F80 /* SafeGroupViewController.m */,
+				65F05F5415FD6F8A00556F80 /* SafeGroupView.h */,
+				65F05F5515FD6F8A00556F80 /* SafeGroupView.m */,
+			);
+			name = SafeGroup;
 			sourceTree = "<group>";
 		};
 		65F8FEE615F39FAF00362DB0 /* icon */ = {
@@ -387,6 +408,7 @@
 				65FD49FC15F8B23A0035C8C4 /* icons.icns in Resources */,
 				E591300915FA70E700DF4389 /* status-selected.png in Resources */,
 				E591300A15FA70E700DF4389 /* status.png in Resources */,
+				65F05F4D15FD6ED600556F80 /* SafeGroupView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +470,8 @@
 				65F8FEEC15F3A18400362DB0 /* IconViewController.m in Sources */,
 				65F8FEEF15F4F6D900362DB0 /* IconView.m in Sources */,
 				E591300F15FA748800DF4389 /* StatusItemView.m in Sources */,
+				65F05F5315FD6F7800556F80 /* SafeGroupViewController.m in Sources */,
+				65F05F5615FD6F8A00556F80 /* SafeGroupView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

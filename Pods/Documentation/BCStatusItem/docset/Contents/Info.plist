@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.cocoapods.BCStatusItem-0.0.1</string>
+	<key>CFBundleName</key>
+	<string>BCStatusItem 0.0.1 Documentation</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	
+	
+	<key>DocSetDescription</key>
+	<string>Classes for extending the abilities of NSStatusItem including drag &amp; drop and getting its location.</string>
+	
+	<key>DocSetFeedName</key>
+	<string>BCStatusItem 0.0.1 Documentation</string>
+	
+	<key>DocSetMinimumXcodeVersion</key>
+	<string>3.0</string>
+	
+	<key>DashDocSetFamily</key>
+	<string>appledoc</string>
+	<key>DocSetPublisherIdentifier</key>
+	<string>org.cocoapods.documentation</string>
+	<key>DocSetPublisherName</key>
+	<string>Jeremy Knope</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Jeremy Knope</string>
+</dict>
+</plist>

@@ -13,45 +13,18 @@
 
 
 @implementation LaunchGroupController
-@synthesize appGroup;
-@synthesize iconListView;
 
 - (id)initWithAppGroup:(NSDictionary *)appG
 {
-  self = [self init];
+  self = [super initWithAppGroup:appG];
   if (self) {
-    appGroup = appG;
-    [NSBundle loadNibNamed:@"AppGroupView" owner:self];
-    
-    CGRect newFrame = self.view.frame;
-    newFrame.origin.y = BOTTOM_PADDING;
-    self.view.frame = newFrame;
-    [self.nameField setStringValue:[appGroup valueForKey:@"name"]];
-    [iconListView showAppIcons];
-  }
-  
+    [self.nameField setStringValue:[self.appGroup valueForKey:@"name"]];
+  }  
   return self;
 }
 
-- (void) addApps:(NSArray *)appsToAdd {
-  for (NSString *app in appsToAdd) {
-    if (![[appGroup valueForKey:@"apps"] containsObject:app]) {
-      [[appGroup valueForKey:@"apps"] addObject: app];
-    }
-  }
-  [iconListView showAppIcons];
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"addApp" object:self userInfo:NULL];
-}
-
-- (void) removeAppGroup:(id)sender {
-  [(AppDelegate *)[[NSApplication sharedApplication] delegate] removeAppGroup: self];
-}
-
-- (void) removeApp:(NSString *)app {
-  NSLog(@"removing app appgroupcontroller");
-  [[appGroup valueForKey:@"apps"] removeObject:app];
-  [iconListView showAppIcons];
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"addApp" object:self userInfo:NULL];
+- (void) mouseUp {
+  [self launchApps];
 }
 
 - (void) launchApps {
@@ -65,7 +38,7 @@
   
   NSLog(@"open apps: %@", openApps);
   
-  for (NSString *app in [appGroup valueForKey:@"apps"]) {
+  for (NSString *app in [self.appGroup valueForKey:@"apps"]) {
     if (![openApps containsObject:app]) {
       [[NSWorkspace sharedWorkspace] launchApplication:app];
     }
@@ -93,7 +66,7 @@
           [[info valueForKey:@"LSUIElement"] intValue] != 1 &&
           bundlePath &&
           ![bundlePath hasPrefix:@"/System"] &&
-          ![[appGroup valueForKey:@"apps"] containsObject:bundlePath]
+          ![[self.appGroup valueForKey:@"apps"] containsObject:bundlePath]
           ) {
         
         [appsToClose addObject:bundlePath];
@@ -112,10 +85,18 @@
   [currentApplication hide];
 }
 
+- (NSString *)viewName {
+  return @"LaunchGroupView";
+}
+
+- (void) removeAppGroup:(id)sender {
+  [(AppDelegate *)[[NSApplication sharedApplication] delegate] removeAppGroup: self];
+}
+
 #pragma mark NSTextField Delegate
 
 - (void)saveName {
-  [appGroup setValue: self.nameField.stringValue forKey:@"name"];
+  [self.appGroup setValue: self.nameField.stringValue forKey:@"name"];
   [[NSNotificationCenter defaultCenter] postNotificationName:@"updateAppGroup" object:self userInfo:NULL];
 }
 

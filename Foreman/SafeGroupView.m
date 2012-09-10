@@ -10,9 +10,4 @@
 #import "SafeGroupViewController.h"
 
 @implementation SafeGroupView
-- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
-{
-  [self.controller addApps:[[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
-  return YES;
-}
 @end

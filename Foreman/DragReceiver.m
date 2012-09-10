@@ -23,7 +23,9 @@
 }
 
 - (void)mouseUp:(NSEvent *)theEvent {
-  [controller launchApps];
+  if ([self.controller respondsToSelector:@selector(mouseUp)]) {
+    [self.controller mouseUp];
+  }
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "AppGroupController.h"
 
-@interface SafeGroupViewController : NSViewController
-- (void) addApps:(NSArray *)apps;
+@interface SafeGroupViewController : AppGroupController
 @end

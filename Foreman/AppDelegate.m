@@ -22,6 +22,7 @@
 }
 @synthesize appGroups;
 @synthesize safeGroup;
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
   if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForDataFile]]) {
@@ -74,6 +75,7 @@
 
 }
 
+// Used when the app first launches to display the saved app groups
 - (void) setFreshWindow {
   NSView * v = self.window.contentView;
   int adjust = (50 + BOTTOM_PADDING) - v.frame.size.height;
@@ -97,6 +99,8 @@
 //	[[statusItem view] registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]];
 }
 
+#pragma mark AppGroupManagement
+
 - (void)addAppGroup:(NSNotification *)notification
 {
   NSMutableDictionary* group = [[NSMutableDictionary alloc] initWithDictionary:[notification userInfo]];
@@ -117,7 +121,6 @@
   
   NSView* mainView = self.window.contentView;
   [mainView addSubview: controller.view];
-  NSLog(@"%f", controller.view.frame.origin.y);
 }
 
 - (void)saveAppGroups {

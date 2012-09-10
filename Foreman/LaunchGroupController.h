@@ -7,20 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "AppGroupController.h"
 @class DragReceiver;
 @class IconListView;
 
-@interface LaunchGroupController : NSViewController <NSTextFieldDelegate>
+@interface LaunchGroupController : AppGroupController <NSTextFieldDelegate>
 
-@property (strong) NSDictionary* appGroup;
-@property (assign) IBOutlet DragReceiver *dragReceiver;
-@property (assign) IBOutlet IconListView *iconListView;
 @property (assign) IBOutlet NSTextField *nameField;
-
-- (void) addApps: (NSArray *) app;
 - (void) launchApps;
+- (void) mouseUp;
 - (IBAction)removeAppGroup:(id)sender;
-- (void)removeApp:(id)app;
-- (LaunchGroupController *) initWithAppGroup: (NSDictionary *) appGroup;
-
 @end

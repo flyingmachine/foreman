@@ -19,6 +19,7 @@
 		6517C11815E149BE00135B11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6517C11615E149BE00135B11 /* InfoPlist.strings */; };
 		6517C11B15E149BE00135B11 /* ForemanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C11A15E149BE00135B11 /* ForemanTests.m */; };
 		6517C12E15E1563E00135B11 /* DragReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6517C12D15E1563E00135B11 /* DragReceiver.m */; };
+		651B1F0B15FE0C7200802EDC /* AppGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B1F0A15FE0C7200802EDC /* AppGroupController.m */; };
 		651CDD8A15E7943200461C13 /* LaunchGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651CDD8915E7943200461C13 /* LaunchGroupView.xib */; };
 		654CA53315F80C5E00779BE9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 654CA53215F80C5E00779BE9 /* icon.icns */; };
 		655AB71E15F0CA0F00C842BA /* LaunchGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */; };
@@ -78,6 +79,8 @@
 		6517C11A15E149BE00135B11 /* ForemanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForemanTests.m; sourceTree = "<group>"; };
 		6517C12C15E1563E00135B11 /* DragReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragReceiver.h; sourceTree = "<group>"; };
 		6517C12D15E1563E00135B11 /* DragReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragReceiver.m; sourceTree = "<group>"; };
+		651B1F0915FE0C7200802EDC /* AppGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGroupController.h; sourceTree = "<group>"; };
+		651B1F0A15FE0C7200802EDC /* AppGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGroupController.m; sourceTree = "<group>"; };
 		651CDD8915E7943200461C13 /* LaunchGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchGroupView.xib; sourceTree = "<group>"; };
 		654CA53215F80C5E00779BE9 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		655AB71C15F0CA0F00C842BA /* LaunchGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchGroupView.h; sourceTree = "<group>"; };
@@ -190,13 +193,13 @@
 		6517C0F615E149BD00135B11 /* Foreman */ = {
 			isa = PBXGroup;
 			children = (
-				657A5B1F15FE0AA7000FA519 /* Launcher */,
 				65DE63BB15F17192007BF140 /* Resources */,
 				651CDD8B15E794F400461C13 /* nibs */,
 				6576BB4B15E8005500FB5A98 /* Super */,
 				65F05F4F15FD6F3300556F80 /* SafeGroup */,
 				6576BB4115E7FC8400FB5A98 /* NewAppGroup */,
-				6576BB3F15E7FC5000FB5A98 /* AppGroup */,
+				657A5B1F15FE0AA7000FA519 /* AppGroup */,
+				6576BB3F15E7FC5000FB5A98 /* LaunchGroup */,
 				6517C10215E149BD00135B11 /* AppDelegate.h */,
 				6517C10315E149BD00135B11 /* AppDelegate.m */,
 				E591300D15FA748800DF4389 /* StatusItemView.h */,
@@ -250,20 +253,15 @@
 			name = nibs;
 			sourceTree = "<group>";
 		};
-		6576BB3F15E7FC5000FB5A98 /* AppGroup */ = {
+		6576BB3F15E7FC5000FB5A98 /* LaunchGroup */ = {
 			isa = PBXGroup;
 			children = (
-				65F8FEE615F39FAF00362DB0 /* icon */,
 				65D663AB15E5A4FD00C41FEA /* LaunchGroupController.h */,
 				65D663AC15E5A4FD00C41FEA /* LaunchGroupController.m */,
-				6517C12C15E1563E00135B11 /* DragReceiver.h */,
-				6517C12D15E1563E00135B11 /* DragReceiver.m */,
-				65D663AF15E5A61800C41FEA /* IconListView.h */,
-				65D663B015E5A61800C41FEA /* IconListView.m */,
 				655AB71C15F0CA0F00C842BA /* LaunchGroupView.h */,
 				655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */,
 			);
-			name = AppGroup;
+			name = LaunchGroup;
 			sourceTree = "<group>";
 		};
 		6576BB4115E7FC8400FB5A98 /* NewAppGroup */ = {
@@ -287,11 +285,18 @@
 			name = Super;
 			sourceTree = "<group>";
 		};
-		657A5B1F15FE0AA7000FA519 /* Launcher */ = {
+		657A5B1F15FE0AA7000FA519 /* AppGroup */ = {
 			isa = PBXGroup;
 			children = (
+				65F8FEE615F39FAF00362DB0 /* icon */,
+				6517C12C15E1563E00135B11 /* DragReceiver.h */,
+				6517C12D15E1563E00135B11 /* DragReceiver.m */,
+				65D663AF15E5A61800C41FEA /* IconListView.h */,
+				65D663B015E5A61800C41FEA /* IconListView.m */,
+				651B1F0915FE0C7200802EDC /* AppGroupController.h */,
+				651B1F0A15FE0C7200802EDC /* AppGroupController.m */,
 			);
-			name = Launcher;
+			name = AppGroup;
 			sourceTree = "<group>";
 		};
 		65DE63BB15F17192007BF140 /* Resources */ = {
@@ -480,6 +485,7 @@
 				E591300F15FA748800DF4389 /* StatusItemView.m in Sources */,
 				65F05F5315FD6F7800556F80 /* SafeGroupViewController.m in Sources */,
 				65F05F5615FD6F8A00556F80 /* SafeGroupView.m in Sources */,
+				651B1F0B15FE0C7200802EDC /* AppGroupController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

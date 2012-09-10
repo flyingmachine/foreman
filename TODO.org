@@ -1,0 +1,6 @@
+* Refactor drag receiver and icon list view
+Consolidate common safe group and app group parts
+** Come up with better UI for safe group. Soon!
+* The first time the app is run, indicate that it will close apps
+* Is there a less agressive way to close apps?
+* "Preview" changes to be made - what will be opened, what will be closed, what will stay open

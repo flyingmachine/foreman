@@ -41,6 +41,7 @@
 		E591300915FA70E700DF4389 /* status-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = E591300715FA70E700DF4389 /* status-selected.png */; };
 		E591300A15FA70E700DF4389 /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = E591300815FA70E700DF4389 /* status.png */; };
 		E591300F15FA748800DF4389 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E591300E15FA748800DF4389 /* StatusItemView.m */; };
+		E5C01F8215FB871500C2E4EA /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C01F8115FB871500C2E4EA /* ScriptingBridge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		E591300815FA70E700DF4389 /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
 		E591300D15FA748800DF4389 /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
 		E591300E15FA748800DF4389 /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
+		E5C01F7F15FB858600C2E4EA /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
+		E5C01F8115FB871500C2E4EA /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C01F8215FB871500C2E4EA /* ScriptingBridge.framework in Frameworks */,
 				6517C0F115E149BD00135B11 /* Cocoa.framework in Frameworks */,
 				63E94952D8E34BA29690C9D6 /* libPods.a in Frameworks */,
 			);
@@ -137,10 +141,12 @@
 		6517C0E115E149BD00135B11 = {
 			isa = PBXGroup;
 			children = (
+				E5C01F8115FB871500C2E4EA /* ScriptingBridge.framework */,
 				65FD49FB15F8B23A0035C8C4 /* icons.icns */,
 				654CA53215F80C5E00779BE9 /* icon.icns */,
 				E591300715FA70E700DF4389 /* status-selected.png */,
 				E591300815FA70E700DF4389 /* status.png */,
+				E5C01F7F15FB858600C2E4EA /* Finder.h */,
 				6517C0F615E149BD00135B11 /* Foreman */,
 				6517C11315E149BE00135B11 /* ForemanTests */,
 				6517C0EF15E149BD00135B11 /* Frameworks */,

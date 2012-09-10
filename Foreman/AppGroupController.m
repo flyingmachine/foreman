@@ -10,7 +10,7 @@
 #import "Headers.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
-
+#import "Finder.h"
 
 @implementation AppGroupController
 @synthesize appGroup;
@@ -110,6 +110,12 @@
     }
   }
   [currentApplication hide];
+  FinderApplication *finder = [SBApplication applicationWithBundleIdentifier:@"com.apple.Finder"];
+  [[finder FinderWindows] enumerateObjectsUsingBlock:^(FinderWindow *window, NSUInteger idx, BOOL *stop) {
+    if (window.closeable) {
+      [window close];
+    }
+  }];
 }
 
 #pragma mark NSTextField Delegate

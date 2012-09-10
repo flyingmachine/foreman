@@ -7,7 +7,7 @@
 //
 
 #import "IconViewController.h"
-#import "LaunchGroupController.h"
+#import "AppGroupController.h"
 
 @interface IconViewController ()
 
@@ -25,7 +25,7 @@
     return self;
 }
 
-- (void)setup:(float)leftMargin app:(NSString *)myApp appGroupController:(LaunchGroupController *)agc {
+- (void)setup:(float)leftMargin app:(NSString *)myApp appGroupController:(AppGroupController *)agc {
   self.appGroupController = agc;
   self.app = myApp;
   NSRect f = self.view.frame;

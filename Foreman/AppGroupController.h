@@ -16,9 +16,10 @@
 @property (assign) IBOutlet DragReceiver *dragReceiver;
 @property (assign) IBOutlet IconListView *iconListView;
 
-- (void) addApps: (NSArray *) app;
-- (void)removeApp:(id)app;
 - (AppGroupController *) initWithAppGroup: (NSDictionary *) appGroup;
 - (NSString *)viewName;
 
+- (void) addApps: (NSArray *) app;
+- (void)removeApp:(id)app;
+- (void) mouseUp;
 @end

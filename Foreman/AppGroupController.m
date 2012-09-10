@@ -51,4 +51,8 @@
   return nil;
 }
 
+- (void)mouseUp {
+  
+}
+
 @end

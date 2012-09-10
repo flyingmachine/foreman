@@ -27,6 +27,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
   [self loadLaunchGroups];
+  [self loadSafeGroup];
   groupControllers = [NSMutableArray new];
   
   [self createObservers];
@@ -60,6 +61,7 @@
     self.safeGroup = [NSMutableDictionary dictionaryWithContentsOfFile:[self pathForSafeGroup]];
   } else {
     self.safeGroup = [NSMutableDictionary dictionary];
+    [self.safeGroup setObject:[NSMutableArray array] forKey:@"apps"];
   }
 }
 

@@ -7,14 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#define FILE_LOCATION @"app_groups"
+#define LAUNCH_GROUPS_FILENAME @"app_groups"
+#define SAFE_GROUP_FILENAME @"safe_group"
 @class LaunchGroupController;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSMenu *statusMenu;
 @property (strong) NSMutableArray* appGroups;
-@property (strong) NSMutableArray* safeGroup;
+@property (strong) NSMutableDictionary* safeGroup;
 
 - (void) removeAppGroup: (LaunchGroupController *)appGroup;
 

@@ -25,11 +25,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForDataFile]]) {
-    appGroups = [NSMutableArray arrayWithContentsOfFile:[self pathForDataFile]];
-  } else {
-    appGroups = [[NSMutableArray alloc] init];
-  }
+  [self loadLaunchGroups];
   groupControllers = [NSMutableArray new];
   
   [self createObservers];
@@ -50,6 +46,21 @@
 	return YES;
 }
 
+- (void)loadLaunchGroups {
+  if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForLaunchGroups]]) {
+    appGroups = [NSMutableArray arrayWithContentsOfFile:[self pathForLaunchGroups]];
+  } else {
+    appGroups = [NSMutableArray array];
+  }
+}
+
+- (void)loadSafeGroup {
+  if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForSafeGroup]]) {
+    self.safeGroup = [NSMutableDictionary dictionaryWithContentsOfFile:[self pathForSafeGroup]];
+  } else {
+    self.safeGroup = [NSMutableDictionary dictionary];
+  }
+}
 
 
 - (void) createObservers {
@@ -80,6 +91,7 @@
   NSView * v = self.window.contentView;
   int adjust = (50 + BOTTOM_PADDING) - v.frame.size.height;
   [self resize:adjust animate:NO];
+  [self displaySafeGroup];
   for(NSDictionary *appGroup in appGroups) {
     [self displayAppGroup:appGroup animate:NO];
   }
@@ -97,6 +109,12 @@
 	[_statusItem setAlternateImage:[NSImage imageNamed:@"status-selected"]];
 	[_statusItem setViewDelegate:self];
 //	[[statusItem view] registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]];
+}
+
+#pragma mark SafeGroup
+
+- (void)displaySafeGroup {
+  
 }
 
 #pragma mark AppGroupManagement
@@ -124,7 +142,7 @@
 }
 
 - (void)saveAppGroups {
-  [appGroups writeToFile:[self pathForDataFile] atomically:YES];
+  [appGroups writeToFile:[self pathForLaunchGroups] atomically:YES];
 }
 
 - (void)resize: (int) heightAdjust animate:(BOOL)animate{
@@ -166,7 +184,7 @@
 
 #pragma mark storage
 
-- (NSString *) pathForDataFile
+- (NSString *) pathForDataFile:(NSString *)filename
 {
   NSFileManager *fileManager = [NSFileManager defaultManager];
   
@@ -182,7 +200,16 @@
                             attributes:nil
                                  error:&error];
   }
-  return [folder stringByAppendingPathComponent: FILE_LOCATION];
+  return [folder stringByAppendingPathComponent: filename];
+}
+
+- (NSString *)pathForLaunchGroups {
+  return [self pathForDataFile:LAUNCH_GROUPS_FILENAME];
+}
+
+- (NSString *)pathForSafeGroup
+{
+  return [self pathForDataFile:SAFE_GROUP_FILENAME];
 }
 
 #pragma mark StatusItemViewDataProvier

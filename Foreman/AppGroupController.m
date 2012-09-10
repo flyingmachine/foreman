@@ -19,8 +19,8 @@
 {
   self = [self init];
   if (self) {
-    appGroup = appG;
-    [NSBundle loadNibNamed:[self viewName] owner:self];
+    self.appGroup = appG;
+    [NSBundle loadNibNamed:self.viewName owner:self];
     
     CGRect newFrame = self.view.frame;
     newFrame.origin.y = BOTTOM_PADDING;

@@ -12,6 +12,7 @@
 #import "Headers.h"
 #import "NSStatusItem+BCStatusItem.h"
 #import "StatusItemView.h"
+#import "SafeGroupViewController.h"
 
 @interface AppDelegate () <StatusItemViewDataProvier>
 @end
@@ -114,7 +115,9 @@
 #pragma mark SafeGroup
 
 - (void)displaySafeGroup {
-  
+  SafeGroupViewController* controller = [[SafeGroupViewController alloc] initWithAppGroup:self.safeGroup];
+  [self resize: controller.view.frame.size.height animate:NO];
+  [self.window.contentView addSubview: controller.view];
 }
 
 #pragma mark AppGroupManagement

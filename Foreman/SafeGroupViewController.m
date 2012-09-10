@@ -12,7 +12,7 @@
 @implementation SafeGroupViewController
 
 - (NSString *)viewName {
-  return @"LaunchGroupView";
+  return @"SafeGroupView";
 }
 
 @end

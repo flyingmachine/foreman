@@ -17,13 +17,13 @@
 }
 
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
-{  
-  [controller addApps: [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
+{
+  [self.controller addApps: [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType]];
   return YES;
 }
 
 - (void)mouseUp:(NSEvent *)theEvent {
-  [controller launchApps];
+  [self.controller mouseUp];
 }
 
 @end

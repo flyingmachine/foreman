@@ -10,11 +10,7 @@
 #import "NewAppGroupViewController.h"
 
 @implementation NewAppGroupView
-{
-  NSImage *_bg;
-}
 @synthesize controller;
-
 
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender
 {

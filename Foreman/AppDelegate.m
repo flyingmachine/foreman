@@ -7,11 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "AppGroupController.h"
-#import "AppGroupView.h"
+#import "LaunchGroupController.h"
+#import "LaunchGroupView.h"
 #import "Headers.h"
 #import "NSStatusItem+BCStatusItem.h"
 #import "StatusItemView.h"
+#import "SafeGroupViewController.h"
 
 @interface AppDelegate () <StatusItemViewDataProvier>
 @end
@@ -21,13 +22,12 @@
   NSMutableArray *groupControllers;
 }
 @synthesize appGroups;
+@synthesize safeGroup;
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-  if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForDataFile]]) {
-    appGroups = [NSMutableArray arrayWithContentsOfFile:[self pathForDataFile]];
-  } else {
-    appGroups = [[NSMutableArray alloc] init];
-  }
+  [self loadLaunchGroups];
+  [self loadSafeGroup];
   groupControllers = [NSMutableArray new];
   
   [self createObservers];
@@ -48,6 +48,22 @@
 	return YES;
 }
 
+- (void)loadLaunchGroups {
+  if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForLaunchGroups]]) {
+    appGroups = [NSMutableArray arrayWithContentsOfFile:[self pathForLaunchGroups]];
+  } else {
+    appGroups = [NSMutableArray array];
+  }
+}
+
+- (void)loadSafeGroup {
+  if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForSafeGroup]]) {
+    self.safeGroup = [NSMutableDictionary dictionaryWithContentsOfFile:[self pathForSafeGroup]];
+  } else {
+    self.safeGroup = [NSMutableDictionary dictionary];
+    [self.safeGroup setObject:[NSMutableArray array] forKey:@"apps"];
+  }
+}
 
 
 - (void) createObservers {
@@ -65,13 +81,20 @@
                                            selector: @selector(saveAppGroups)
                                                name: @"updateAppGroup"
                                              object: nil];
+  
+  [[NSNotificationCenter defaultCenter] addObserver: self
+                                           selector: @selector(saveSafeGroup)
+                                               name: @"updateSafeGroup"
+                                             object: nil];
 
 }
 
+// Used when the app first launches to display the saved app groups
 - (void) setFreshWindow {
   NSView * v = self.window.contentView;
   int adjust = (50 + BOTTOM_PADDING) - v.frame.size.height;
   [self resize:adjust animate:NO];
+  [self displaySafeGroup];
   for(NSDictionary *appGroup in appGroups) {
     [self displayAppGroup:appGroup animate:NO];
   }
@@ -91,6 +114,16 @@
 //	[[statusItem view] registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]];
 }
 
+#pragma mark SafeGroup
+
+- (void)displaySafeGroup {
+  SafeGroupViewController* controller = [[SafeGroupViewController alloc] initWithAppGroup:self.safeGroup];
+  [self resize: controller.view.frame.size.height animate:NO];
+  [self.window.contentView addSubview: controller.view];
+}
+
+#pragma mark AppGroupManagement
+
 - (void)addAppGroup:(NSNotification *)notification
 {
   NSMutableDictionary* group = [[NSMutableDictionary alloc] initWithDictionary:[notification userInfo]];
@@ -105,17 +138,17 @@
 
 - (void)displayAppGroup:(NSDictionary *)group animate:(BOOL)shouldAnimate {
   // Todo this should be extracted to better ensure the sync with appGrouns
-  AppGroupController* controller = [[AppGroupController alloc] initWithAppGroup:group];
+  LaunchGroupController* controller = [[LaunchGroupController alloc] initWithAppGroup:group];
   [groupControllers addObject:controller];
   [self resize:controller.view.frame.size.height animate:shouldAnimate];
   
   NSView* mainView = self.window.contentView;
   [mainView addSubview: controller.view];
-  NSLog(@"%f", controller.view.frame.origin.y);
 }
 
 - (void)saveAppGroups {
-  [appGroups writeToFile:[self pathForDataFile] atomically:YES];
+  [self.appGroups writeToFile:[self pathForLaunchGroups] atomically:YES];
+  [self.safeGroup writeToFile:[self pathForSafeGroup] atomically:YES];
 }
 
 - (void)resize: (int) heightAdjust animate:(BOOL)animate{
@@ -129,7 +162,7 @@
   [mainView setFrame:newFrame];
 }
 
-- (void)removeAppGroup:(AppGroupController *)appGroupController {
+- (void)removeAppGroup:(LaunchGroupController *)appGroupController {
   [appGroups removeObject:appGroupController.appGroup];
   
   NSMutableArray * toShift = [[NSMutableArray alloc] init];
@@ -140,13 +173,13 @@
       isAfter = YES;
     }
     
-    if ([subv class] == [AppGroupView class] && isAfter) {
+    if ([subv class] == [LaunchGroupView class] && isAfter) {
       [toShift addObject:subv];
     }
   }
   
   [appGroupController.view removeFromSuperview];
-  for (AppGroupView * subv in toShift) {
+  for (LaunchGroupView * subv in toShift) {
     [subv shiftUp];
   }
   
@@ -157,7 +190,7 @@
 
 #pragma mark storage
 
-- (NSString *) pathForDataFile
+- (NSString *) pathForDataFile:(NSString *)filename
 {
   NSFileManager *fileManager = [NSFileManager defaultManager];
   
@@ -173,7 +206,16 @@
                             attributes:nil
                                  error:&error];
   }
-  return [folder stringByAppendingPathComponent: FILE_LOCATION];
+  return [folder stringByAppendingPathComponent: filename];
+}
+
+- (NSString *)pathForLaunchGroups {
+  return [self pathForDataFile:LAUNCH_GROUPS_FILENAME];
+}
+
+- (NSString *)pathForSafeGroup
+{
+  return [self pathForDataFile:SAFE_GROUP_FILENAME];
 }
 
 #pragma mark StatusItemViewDataProvier
@@ -187,7 +229,7 @@
 }
 
 - (void)statusItemView:(StatusItemView *)view didSelectGroupAtIndex:(NSInteger)index {
-  AppGroupController *controller = groupControllers[index];
+  LaunchGroupController *controller = groupControllers[index];
   [controller launchApps];
 }
 

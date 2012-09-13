@@ -13,6 +13,7 @@
 #import "NSStatusItem+BCStatusItem.h"
 #import "StatusItemView.h"
 #import "SafeGroupViewController.h"
+#import "BaseAppView.h"
 
 @interface AppDelegate () <StatusItemViewDataProvier>
 @end
@@ -91,8 +92,7 @@
 
 // Used when the app first launches to display the saved app groups
 - (void) setFreshWindow {
-  NSView * v = self.window.contentView;
-  int adjust = (50 + BOTTOM_PADDING) - v.frame.size.height;
+  int adjust = 50  - self.baseAppView.frame.size.height;
   [self resize:adjust animate:NO];
   [self displaySafeGroup];
   for(NSDictionary *appGroup in appGroups) {
@@ -119,7 +119,7 @@
 - (void)displaySafeGroup {
   SafeGroupViewController* controller = [[SafeGroupViewController alloc] initWithAppGroup:self.safeGroup];
   [self resize: controller.view.frame.size.height animate:NO];
-  [self.window.contentView addSubview: controller.view];
+  [self.baseAppView addSubview: controller.view];
 }
 
 #pragma mark AppGroupManagement
@@ -142,8 +142,7 @@
   [groupControllers addObject:controller];
   [self resize:controller.view.frame.size.height animate:shouldAnimate];
   
-  NSView* mainView = self.window.contentView;
-  [mainView addSubview: controller.view];
+  [self.baseAppView addSubview: controller.view];
 }
 
 - (void)saveAppGroups {
@@ -157,9 +156,8 @@
   newWinFrame.origin.y -= heightAdjust;
   [self.window setFrame:newWinFrame display:NO animate:animate];
   
-  NSView* mainView = self.window.contentView;
-  NSRect newFrame = NSMakeRect(mainView.frame.origin.x, mainView.frame.origin.y, mainView.frame.size.width, mainView.frame.size.height);
-  [mainView setFrame:newFrame];
+  NSRect newFrame = NSMakeRect(15, 15, self.baseAppView.frame.size.width, self.baseAppView.frame.size.height + heightAdjust);
+  [self.baseAppView setFrame:newFrame];
 }
 
 - (void)removeAppGroup:(LaunchGroupController *)appGroupController {
@@ -168,7 +166,7 @@
   NSMutableArray * toShift = [[NSMutableArray alloc] init];
   
   BOOL isAfter = NO;
-  for (NSView * subv in [self.window.contentView subviews]) {
+  for (NSView * subv in [self.baseAppView subviews]) {
     if (subv == appGroupController.view) {
       isAfter = YES;
     }

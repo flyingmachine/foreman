@@ -10,12 +10,14 @@
 #define LAUNCH_GROUPS_FILENAME @"app_groups"
 #define SAFE_GROUP_FILENAME @"safe_group"
 @class LaunchGroupController;
+@class BaseAppView;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSMenu *statusMenu;
-@property (strong) NSMutableArray* appGroups;
-@property (strong) NSMutableDictionary* safeGroup;
+@property (strong) NSMutableArray *appGroups;
+@property (strong) NSMutableDictionary *safeGroup;
+@property (assign) IBOutlet BaseAppView *baseAppView;
 
 - (void) removeAppGroup: (LaunchGroupController *)appGroup;
 

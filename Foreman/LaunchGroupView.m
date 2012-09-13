@@ -39,6 +39,9 @@
   [self setNeedsDisplay:YES];
 }
 
+- (void)mouseDown:(NSEvent *)theEvent {
+  
+}
 
 
 - (void)drawRect:(NSRect)dirtyRect

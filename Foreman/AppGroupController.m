@@ -23,7 +23,6 @@
     [NSBundle loadNibNamed:self.viewName owner:self];
     
     CGRect newFrame = self.view.frame;
-    newFrame.origin.y = BOTTOM_PADDING;
     self.view.frame = newFrame;
     [self.iconListView showAppIcons];
   }

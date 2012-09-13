@@ -1294,7 +1294,7 @@
 				<string key="NSName">_NSMainMenu</string>
 			</object>
 			<object class="NSWindowTemplate" id="972006081">
-				<int key="NSWindowStyleMask">7</int>
+				<int key="NSWindowStyleMask">6</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{447, 1121}, {637, 80}}</string>
 				<int key="NSWTFlags">1954021376</int>
@@ -1308,21 +1308,21 @@
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
-						<object class="NSCustomView" id="226824491">
+						<object class="NSCustomView" id="22811421">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
 							<array class="NSMutableArray" key="NSSubviews">
 								<object class="NSCustomView" id="703243050">
-									<reference key="NSNextResponder" ref="226824491"/>
+									<reference key="NSNextResponder" ref="22811421"/>
 									<int key="NSvFlags">269</int>
 									<array class="NSMutableArray" key="NSSubviews">
 										<object class="NSBox" id="887515462">
 											<reference key="NSNextResponder" ref="703243050"/>
 											<int key="NSvFlags">12</int>
+											<array class="NSMutableArray" key="NSSubviews"/>
 											<string key="NSFrame">{{0, -2}, {607, 5}}</string>
 											<reference key="NSSuperview" ref="703243050"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<string key="NSOffsets">{0, 0}</string>
 											<object class="NSTextFieldCell" key="NSTitleCell">
@@ -1382,7 +1382,7 @@
 													<int key="NSColorSpace">6</int>
 													<string key="NSCatalogName">System</string>
 													<string key="NSColorName">controlTextColor</string>
-													<object class="NSColor" key="NSColor">
+													<object class="NSColor" key="NSColor" id="659017708">
 														<int key="NSColorSpace">3</int>
 														<bytes key="NSWhite">MAA</bytes>
 													</object>
@@ -1392,14 +1392,14 @@
 										</object>
 									</array>
 									<string key="NSFrameSize">{607, 50}</string>
-									<reference key="NSSuperview" ref="226824491"/>
+									<reference key="NSSuperview" ref="22811421"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="449138400"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<string key="NSClassName">NewAppGroupView</string>
 								</object>
 							</array>
-							<string key="NSFrame">{{20, 15}, {607, 50}}</string>
+							<string key="NSFrame">{{15, 15}, {607, 50}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="703243050"/>
@@ -1410,11 +1410,11 @@
 					<string key="NSFrameSize">{637, 80}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
-					<reference key="NSNextKeyView" ref="226824491"/>
+					<reference key="NSNextKeyView" ref="22811421"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
-				<string key="NSMinSize">{637, 102}</string>
-				<string key="NSMaxSize">{637, 322}</string>
+				<string key="NSMinSize">{637, 80}</string>
+				<string key="NSMaxSize">{637, 300}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomObject" id="976324537">
@@ -2169,7 +2169,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">baseAppView</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="226824491"/>
+						<reference key="destination" ref="22811421"/>
 					</object>
 					<int key="connectionID">1160</int>
 				</object>
@@ -2714,7 +2714,7 @@
 						<int key="objectID">372</int>
 						<reference key="object" ref="439893737"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="226824491"/>
+							<reference ref="22811421"/>
 						</array>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -3229,7 +3229,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1159</int>
-						<reference key="object" ref="226824491"/>
+						<reference key="object" ref="22811421"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="703243050"/>
 						</array>
@@ -3242,7 +3242,7 @@
 							<reference ref="887515462"/>
 							<reference ref="449138400"/>
 						</array>
-						<reference key="parent" ref="226824491"/>
+						<reference key="parent" ref="22811421"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1122</int>
@@ -3341,7 +3341,12 @@
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="371.IBWindowTemplateEditedContentRect">{{380, 496}, {480, 360}}</string>
 				<integer value="1" key="371.NSWindowTemplate.visibleAtLaunch"/>
+				<string key="372.CustomClassName">BackgroundView</string>
 				<string key="372.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<real value="0.0" key="372.IBViewIntegration.shadowBlurRadius"/>
+				<reference key="372.IBViewIntegration.shadowColor" ref="659017708"/>
+				<real value="0.0" key="372.IBViewIntegration.shadowOffsetHeight"/>
+				<real value="0.0" key="372.IBViewIntegration.shadowOffsetWidth"/>
 				<string key="375.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="376.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="377.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3474,6 +3479,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/AppReceiver.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">BackgroundView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/BackgroundView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

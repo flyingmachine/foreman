@@ -10,8 +10,13 @@
 
 @implementation BackgroundView
 
-- (BOOL)mouseDownCanMoveWindow {
-  return YES;
+- (id)initWithFrame:(NSRect)frame
+{
+  self = [super initWithFrame:frame];
+  if (self) {
+  }
+  
+  return self;
 }
 
 @end

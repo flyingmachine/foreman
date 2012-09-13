@@ -25,8 +25,8 @@
                               defer:NO];
   if (self != nil) {
     [self setAcceptsMouseMovedEvents:YES];
-    [self setOpaque:YES];
-    //self.backgroundColor = [NSColor clearColor];
+    [self setOpaque:NO];
+    self.backgroundColor = [NSColor clearColor];
   }
   return self;
 }

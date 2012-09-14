@@ -9,5 +9,12 @@
 #import "BaseAppView.h"
 
 @implementation BaseAppView
-
+- (id)initWithFrame:(NSRect)frame
+{
+  self = [super initWithFrame:frame];
+  if (self) {
+  }
+  
+  return self;
+}
 @end

@@ -62,8 +62,8 @@
 {
   [NSGraphicsContext saveGraphicsState];
   
-  CGFloat yOffset = NSMaxY([self convertRect:self.bounds toView:nil]);
-  CGFloat xOffset = NSMinX([self convertRect:self.bounds toView:nil]);
+  CGFloat yOffset = 65;
+  CGFloat xOffset = 65;
   [[NSGraphicsContext currentContext] setPatternPhase:NSMakePoint(xOffset, yOffset)];
   
   [patternColor set];

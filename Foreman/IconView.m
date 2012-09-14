@@ -9,6 +9,10 @@
 #import "IconView.h"
 
 @implementation IconView
+{
+  NSImage *_image;
+}
+@synthesize btn;
 - (id)initWithFrame:(NSRect)frame
 {
   self = [super initWithFrame:frame];
@@ -24,9 +28,8 @@
 }
 
 - (void)enableDeleteBtn {
-  NSButton* btn = [self.subviews objectAtIndex:0];
-  [btn setEnabled:YES];
-  [btn setTransparent:NO];
+  [self.btn setEnabled:YES];
+  [self.btn setTransparent:NO];
 }
 
 - (void)mouseEntered:(NSEvent *)theEvent {
@@ -40,9 +43,27 @@
 }
 
 - (void)mouseExited:(NSEvent *)theEvent {
-  NSButton* btn = [self.subviews objectAtIndex:0];
-  [btn setEnabled:NO];
-  [btn setTransparent:YES];
+  [self.btn setEnabled:NO];
+  [self.btn setTransparent:YES];
+}
+
+- (void)setIcon:(NSImage *)image {
+  // create the image somehow, load from file, draw into it...
+  _image = image;
+  [self setNeedsDisplay:YES];
+//  NSRect rect = self.frame;
+//  rect.origin = NSMakePoint(0, 0);
+//  CALayer *imageLayer = [CALayer layer];
+//  imageLayer.frame = NSMakeRect(0, 0, 50, 50);
+//  imageLayer.contents = (id)[image CGImageForProposedRect:&rect context:nil hints:nil];
+//  NSLog(@"set icon: %@", image);
+//  
+//  [self.layer.contents insertSublayer:imageLayer above:self.layer];
+//  [self setNeedsDisplay:YES];
+}
+
+- (void)drawRect:(NSRect)dirtyRect {
+  [_image drawInRect:[self bounds] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
 }
 
 @end

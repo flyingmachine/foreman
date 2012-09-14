@@ -92,6 +92,9 @@
 
 // Used when the app first launches to display the saved app groups
 - (void) setFreshWindow {
+  NSView *parentView = self.baseAppView.superview;
+  [self.baseAppView removeFromSuperview];
+  [parentView addSubview:self.baseAppView positioned:NSWindowAbove relativeTo:nil];
   int adjust = 50  - self.baseAppView.frame.size.height;
   [self resize:adjust animate:NO];
   [self displaySafeGroup];

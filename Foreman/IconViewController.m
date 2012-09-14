@@ -8,6 +8,7 @@
 
 #import "IconViewController.h"
 #import "AppGroupController.h"
+#import "IconView.h"
 
 @interface IconViewController ()
 
@@ -33,7 +34,7 @@
   self.view.frame = f;
   NSImage* img = [[NSWorkspace sharedWorkspace] iconForFile:self.app];
   [img setSize:NSMakeSize(50, 50)];
-  [self.imgView setImage:img];
+  [(IconView *)self.view setIcon:img];
   [self.view setNeedsDisplay:YES];
 }
 

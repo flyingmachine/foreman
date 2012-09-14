@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface IconView : NSImageView
-
+@interface IconView : NSView
+@property (strong) IBOutlet NSButton* btn;
+- (void) setIcon:(NSImage *)image;
 @end

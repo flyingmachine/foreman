@@ -1409,7 +1409,7 @@
 									<reference key="NSNextKeyView" ref="703243050"/>
 									<object class="NSShadow" key="NSViewShadow">
 										<double key="NSShadowBlurRadius">1</double>
-										<object class="NSColor" key="NSShadowColor" id="325584137">
+										<object class="NSColor" key="NSShadowColor" id="786466171">
 											<int key="NSColorSpace">3</int>
 											<bytes key="NSWhite">MCAwLjY2AA</bytes>
 										</object>
@@ -3309,7 +3309,7 @@
 				<string key="1132.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1159.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<real value="1" key="1159.IBViewIntegration.shadowBlurRadius"/>
-				<reference key="1159.IBViewIntegration.shadowColor" ref="325584137"/>
+				<reference key="1159.IBViewIntegration.shadowColor" ref="786466171"/>
 				<real value="0.0" key="1159.IBViewIntegration.shadowOffsetHeight"/>
 				<real value="0.0" key="1159.IBViewIntegration.shadowOffsetWidth"/>
 				<string key="1161.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3475,7 +3475,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1161</int>
+			<int key="maxID">1163</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

@@ -28,7 +28,6 @@
 }
 
 - (void)enableDeleteBtn {
-  NSLog(@"btn: %@", self.btn);
   [self.btn setEnabled:YES];
   [self.btn setHidden:NO];
 }

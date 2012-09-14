@@ -1326,6 +1326,7 @@
 													<string key="NSFrame">{{0, -2}, {607, 5}}</string>
 													<reference key="NSSuperview" ref="703243050"/>
 													<reference key="NSWindow"/>
+													<reference key="NSNextKeyView"/>
 													<string key="NSReuseIdentifierKey">_NS:9</string>
 													<string key="NSOffsets">{0, 0}</string>
 													<object class="NSTextFieldCell" key="NSTitleCell">
@@ -1402,18 +1403,26 @@
 											<string key="NSClassName">NewAppGroupView</string>
 										</object>
 									</array>
-									<string key="NSFrame">{{15, 15}, {607, 50}}</string>
+									<string key="NSFrame">{{15, 12}, {607, 50}}</string>
 									<reference key="NSSuperview" ref="551198764"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="703243050"/>
+									<object class="NSShadow" key="NSViewShadow">
+										<double key="NSShadowBlurRadius">1</double>
+										<object class="NSColor" key="NSShadowColor" id="325584137">
+											<int key="NSColorSpace">3</int>
+											<bytes key="NSWhite">MCAwLjY2AA</bytes>
+										</object>
+									</object>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<string key="NSClassName">BaseAppView</string>
 								</object>
 							</array>
-							<string key="NSFrameSize">{637, 80}</string>
+							<string key="NSFrame">{{0, 3}, {636, 77}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="511231422"/>
+							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">BackgroundView</string>
 						</object>
@@ -3299,6 +3308,10 @@
 				<string key="1128.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1132.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="1159.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<real value="1" key="1159.IBViewIntegration.shadowBlurRadius"/>
+				<reference key="1159.IBViewIntegration.shadowColor" ref="325584137"/>
+				<real value="0.0" key="1159.IBViewIntegration.shadowOffsetHeight"/>
+				<real value="0.0" key="1159.IBViewIntegration.shadowOffsetWidth"/>
 				<string key="1161.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="124.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="125.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>

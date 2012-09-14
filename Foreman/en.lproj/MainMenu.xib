@@ -1310,6 +1310,7 @@
 						<object class="NSCustomView" id="551198764">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">274</int>
+							<array class="NSMutableArray" key="NSSubviews"/>
 							<string key="NSFrameSize">{637, 80}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
@@ -3255,11 +3256,6 @@
 						<reference key="parent" ref="511231422"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">1122</int>
-						<reference key="object" ref="887515462"/>
-						<reference key="parent" ref="703243050"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">1123</int>
 						<reference key="object" ref="449138400"/>
 						<array class="NSMutableArray" key="children">
@@ -3271,6 +3267,11 @@
 						<int key="objectID">1124</int>
 						<reference key="object" ref="422461900"/>
 						<reference key="parent" ref="449138400"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">1122</int>
+						<reference key="object" ref="887515462"/>
+						<reference key="parent" ref="703243050"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1161</int>
@@ -3357,6 +3358,7 @@
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="371.IBWindowTemplateEditedContentRect">{{380, 496}, {480, 360}}</string>
 				<integer value="1" key="371.NSWindowTemplate.visibleAtLaunch"/>
+				<string key="372.CustomClassName">BackgroundView</string>
 				<string key="372.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<real value="0.0" key="372.IBViewIntegration.shadowBlurRadius"/>
 				<reference key="372.IBViewIntegration.shadowColor" ref="288228400"/>

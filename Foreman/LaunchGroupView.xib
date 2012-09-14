@@ -37,7 +37,7 @@
 				<string key="NSClassName">NSApplication</string>
 			</object>
 			<object class="NSCustomView" id="1005">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSBox" id="124223351">
@@ -45,6 +45,7 @@
 						<int key="NSvFlags">12</int>
 						<string key="NSFrame">{{0, -2}, {607, 5}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSOffsets">{0, 0}</string>
 						<object class="NSTextFieldCell" key="NSTitleCell">
@@ -85,7 +86,8 @@
 								<array class="NSMutableArray" key="NSSubviews"/>
 								<string key="NSFrame">{{117, 0}, {490, 50}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
-								<reference key="NSNextKeyView" ref="325517153"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<string key="NSClassName">IconListView</string>
 							</object>
@@ -94,6 +96,7 @@
 								<int key="NSvFlags">268</int>
 								<string key="NSFrame">{{564, 7}, {30, 30}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="124223351"/>
 								<string key="NSReuseIdentifierKey">_NS:1574</string>
 								<bool key="NSEnabled">YES</bool>
@@ -126,6 +129,7 @@
 								<int key="NSvFlags">268</int>
 								<string key="NSFrame">{{13, 14}, {96, 22}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="382143532"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="NSEnabled">YES</bool>
@@ -155,6 +159,7 @@
 						</array>
 						<string key="NSFrame">{{0, 7}, {607, 50}}</string>
 						<reference key="NSSuperview" ref="1005"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="828279234"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSHuggingPriority">{250, 250}</string>
@@ -162,6 +167,8 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{607, 65}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="639661446"/>
 				<string key="NSClassName">LaunchGroupView</string>
 			</object>
@@ -312,6 +319,7 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">3</int>
 						<reference key="object" ref="382143532"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="639661446"/>
 					</object>
 				</array>
@@ -333,28 +341,16 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">45</int>
+			<int key="maxID">46</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">AppGroupController</string>
 					<string key="superclassName">NSViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">removeAppGroup:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">removeAppGroup:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">removeAppGroup:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="dragReceiver">DragReceiver</string>
 						<string key="iconListView">IconListView</string>
-						<string key="nameField">NSTextField</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="dragReceiver">
@@ -364,10 +360,6 @@
 						<object class="IBToOneOutletInfo" key="iconListView">
 							<string key="name">iconListView</string>
 							<string key="candidateClassName">IconListView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="nameField">
-							<string key="name">nameField</string>
-							<string key="candidateClassName">NSTextField</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -419,6 +411,44 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/IconListView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">LaunchGroupController</string>
+					<string key="superclassName">AppGroupController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">removeAppGroup:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">removeAppGroup:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">removeAppGroup:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">nameField</string>
+						<string key="NS.object.0">NSTextField</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">nameField</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">nameField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/LaunchGroupController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">LaunchGroupView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/LaunchGroupView.h</string>
 					</object>
 				</object>
 			</array>

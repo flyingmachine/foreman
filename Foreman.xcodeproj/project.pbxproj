@@ -27,6 +27,7 @@
 		6576BB4415E7FD0600FB5A98 /* NewAppGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6576BB4315E7FD0600FB5A98 /* NewAppGroupViewController.m */; };
 		6576BB4A15E7FF8500FB5A98 /* NewAppGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6576BB4915E7FF8500FB5A98 /* NewAppGroupView.m */; };
 		6576BB4E15E8007000FB5A98 /* AppReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6576BB4D15E8007000FB5A98 /* AppReceiver.m */; };
+		657DC66216035ABB00E326CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657DC66116035ABB00E326CA /* QuartzCore.framework */; };
 		658EC50A1602963400DEB218 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658EC5091602963400DEB218 /* BackgroundView.m */; };
 		658EC5131602979800DEB218 /* ForemainMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 658EC5121602979800DEB218 /* ForemainMainWindow.m */; };
 		65D663AD15E5A4FD00C41FEA /* LaunchGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663AC15E5A4FD00C41FEA /* LaunchGroupController.m */; };
@@ -95,6 +96,7 @@
 		6576BB4915E7FF8500FB5A98 /* NewAppGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAppGroupView.m; sourceTree = "<group>"; };
 		6576BB4C15E8007000FB5A98 /* AppReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppReceiver.h; sourceTree = "<group>"; };
 		6576BB4D15E8007000FB5A98 /* AppReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppReceiver.m; sourceTree = "<group>"; };
+		657DC66116035ABB00E326CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		658EC5081602963400DEB218 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		658EC5091602963400DEB218 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
 		658EC5111602979800DEB218 /* ForemainMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForemainMainWindow.h; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657DC66216035ABB00E326CA /* QuartzCore.framework in Frameworks */,
 				6517C0F115E149BD00135B11 /* Cocoa.framework in Frameworks */,
 				63E94952D8E34BA29690C9D6 /* libPods.a in Frameworks */,
 			);
@@ -154,6 +157,7 @@
 		6517C0E115E149BD00135B11 = {
 			isa = PBXGroup;
 			children = (
+				657DC66116035ABB00E326CA /* QuartzCore.framework */,
 				65FD49FB15F8B23A0035C8C4 /* icons.icns */,
 				654CA53215F80C5E00779BE9 /* icon.icns */,
 				E591300715FA70E700DF4389 /* status-selected.png */,

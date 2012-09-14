@@ -28,8 +28,9 @@
 }
 
 - (void)enableDeleteBtn {
+  NSLog(@"btn: %@", self.btn);
   [self.btn setEnabled:YES];
-  [self.btn setTransparent:NO];
+  [self.btn setHidden:NO];
 }
 
 - (void)mouseEntered:(NSEvent *)theEvent {
@@ -44,7 +45,7 @@
 
 - (void)mouseExited:(NSEvent *)theEvent {
   [self.btn setEnabled:NO];
-  [self.btn setTransparent:YES];
+  [self.btn setHidden:YES];
 }
 
 - (void)setIcon:(NSImage *)image {

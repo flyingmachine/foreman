@@ -29,6 +29,7 @@
 		6576BB4E15E8007000FB5A98 /* AppReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6576BB4D15E8007000FB5A98 /* AppReceiver.m */; };
 		657DC66216035ABB00E326CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657DC66116035ABB00E326CA /* QuartzCore.framework */; };
 		657DC6BA1603C13200E326CA /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 657DC6B91603C13200E326CA /* ContentView.m */; };
+		657DC6C41603E79600E326CA /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 657DC6C31603E79600E326CA /* App.m */; };
 		658EC50A1602963400DEB218 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658EC5091602963400DEB218 /* BackgroundView.m */; };
 		658EC5131602979800DEB218 /* ForemainMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 658EC5121602979800DEB218 /* ForemainMainWindow.m */; };
 		65D663AD15E5A4FD00C41FEA /* LaunchGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663AC15E5A4FD00C41FEA /* LaunchGroupController.m */; };
@@ -100,6 +101,8 @@
 		657DC66116035ABB00E326CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		657DC6B81603C13200E326CA /* ContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentView.h; sourceTree = "<group>"; };
 		657DC6B91603C13200E326CA /* ContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentView.m; sourceTree = "<group>"; };
+		657DC6C21603E79600E326CA /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		657DC6C31603E79600E326CA /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
 		658EC5081602963400DEB218 /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		658EC5091602963400DEB218 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
 		658EC5111602979800DEB218 /* ForemainMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForemainMainWindow.h; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 				6576BB4C15E8007000FB5A98 /* AppReceiver.h */,
 				6576BB4D15E8007000FB5A98 /* AppReceiver.m */,
 				65DE63BC15F17855007BF140 /* Headers.h */,
+				657DC6C21603E79600E326CA /* App.h */,
+				657DC6C31603E79600E326CA /* App.m */,
 			);
 			name = Super;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				658EC50A1602963400DEB218 /* BackgroundView.m in Sources */,
 				658EC5131602979800DEB218 /* ForemainMainWindow.m in Sources */,
 				657DC6BA1603C13200E326CA /* ContentView.m in Sources */,
+				657DC6C41603E79600E326CA /* App.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

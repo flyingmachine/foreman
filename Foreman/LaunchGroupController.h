@@ -14,7 +14,11 @@
 @interface LaunchGroupController : AppGroupController <NSTextFieldDelegate>
 
 @property (assign) IBOutlet NSTextField *nameField;
+
 - (void) launchApps;
 - (void) mouseUp;
+- (BOOL) selected;
+- (void) select;
+- (void) deselect;
 - (IBAction)removeAppGroup:(id)sender;
 @end

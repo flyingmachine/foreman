@@ -30,6 +30,7 @@ extern OSStatus CGSNewConnection(const void **attributes, CGSConnection * id);
     [self setAcceptsMouseMovedEvents:YES];
     [self setOpaque:NO];
     [self enableBlurForWindow:self];
+
   }
   return self;
 }

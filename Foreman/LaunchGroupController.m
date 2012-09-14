@@ -6,6 +6,7 @@
 //
 
 #import "LaunchGroupController.h"
+#import "LaunchGroupView.h"
 #import "IconListView.h"
 #import "Headers.h"
 #import <QuartzCore/QuartzCore.h>
@@ -115,5 +116,20 @@
     return NO;
   }
 }
+
+#pragma mark Selection
+
+- (BOOL) selected {
+  return [(LaunchGroupView *)self.view selected];
+}
+
+- (void) select {
+  [(LaunchGroupView *)self.view setSelected:YES];
+}
+
+- (void) deselect {
+  [(LaunchGroupView *)self.view setSelected:NO];
+}
+
 
 @end

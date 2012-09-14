@@ -20,5 +20,9 @@
 @property (assign) IBOutlet BaseAppView *baseAppView;
 
 - (void) removeAppGroup: (LaunchGroupController *)appGroup;
+- (void) selectNextLaunchGroup;
+- (void) selectPreviousLaunchGroup;
+- (void) launchSelectedLaunchGroup;
+
 
 @end

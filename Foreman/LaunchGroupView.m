@@ -11,7 +11,7 @@
 
 @implementation LaunchGroupView
 {
-  BOOL _hasMouse;
+  BOOL _selected;
 }
 
 - (id)initWithFrame:(NSRect)frame
@@ -30,13 +30,11 @@
 
 
 - (void)mouseEntered:(NSEvent *)theEvent {
-  _hasMouse = YES;
-  [self setNeedsDisplay:YES];
+  self.selected = YES;
 }
 
 - (void)mouseExited:(NSEvent *)theEvent {
-  _hasMouse = NO;
-  [self setNeedsDisplay:YES];
+  self.selected = NO;
 }
 
 - (void)mouseDown:(NSEvent *)theEvent {
@@ -46,7 +44,7 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-  if (_hasMouse) {
+  if (self.selected) {
     [self rk_drawPatternImage:[NSColor colorWithPatternImage:[NSImage imageNamed:@"app-group-bg-highlighted.png"]] inRect:self.bounds];
   } else {
     [self rk_drawPatternImage:[NSColor colorWithPatternImage:[NSImage imageNamed:@"app-group-bg.png"]] inRect:self.bounds];
@@ -75,6 +73,15 @@
   NSRect frameRect = self.frame;
   frameRect.origin.y += frameRect.size.height;
   self.frame = frameRect;
+}
+
+-(BOOL)selected {
+  return _selected;
+}
+
+-(void)setSelected:(BOOL)sel {
+  _selected = sel;
+  [self setNeedsDisplay:YES];
 }
 
 

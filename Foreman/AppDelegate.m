@@ -22,6 +22,7 @@
   NSStatusItem * _statusItem;
   NSMutableArray *groupControllers;
 }
+
 @synthesize appGroups;
 @synthesize safeGroup;
 
@@ -101,6 +102,7 @@
   for(NSDictionary *appGroup in appGroups) {
     [self displayAppGroup:appGroup animate:NO];
   }
+  [self.baseAppView.window makeFirstResponder:self.baseAppView];
 }
 
 - (void)createStatusItem {
@@ -234,6 +236,43 @@
   [controller launchApps];
 }
 
+#pragma mark LaunchGroupSelection
+- (NSInteger)indexOfSelectedLaunchGroup {
+  return [groupControllers indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+    return [(LaunchGroupController *)obj selected];
+  }];
+}
 
+- (void)selectNextLaunchGroup {
+  NSInteger index = [self indexOfSelectedLaunchGroup];
+  if ((index == NSNotFound) || (index > ([groupControllers count] - 2))) {
+    [self selectLaunchGroupWithIndex:0];
+  } else  {
+    [self selectLaunchGroupWithIndex: index + 1];
+  }
+}
+
+- (void)selectPreviousLaunchGroup {
+  NSInteger index = [self indexOfSelectedLaunchGroup];
+  if (index == 0 || index == NSNotFound)  {
+    [self selectLaunchGroupWithIndex: [groupControllers count] - 1];
+  } else {
+    [self selectLaunchGroupWithIndex: index - 1];
+  }
+}
+
+- (void)selectLaunchGroupWithIndex:(NSInteger)index {
+  for (LaunchGroupController *lgc in groupControllers) {
+    [lgc deselect];
+  }
+  [(LaunchGroupController *)[groupControllers objectAtIndex:index] select];
+}
+
+- (void)launchSelectedLaunchGroup {
+  NSInteger index = [self indexOfSelectedLaunchGroup];
+  if (index != NSNotFound) {
+    [[groupControllers objectAtIndex:index] launchApps];
+  }
+}
 
 @end

@@ -52,4 +52,8 @@
   }
 }
 
+- (void)cancelOperation:(id)sender {
+  [self.window close];
+}
+
 @end

@@ -18,7 +18,7 @@
     self.wantsLayer = YES;
     self.layer.cornerRadius = 10.0f;
     self.layer.masksToBounds = YES;
-    self.layer.borderWidth = 2;
+    self.layer.borderWidth = 1;
     self.layer.borderColor = [[NSColor colorWithCalibratedRed:0.33f
                                                         green:0.40f
                                                          blue:0.48f

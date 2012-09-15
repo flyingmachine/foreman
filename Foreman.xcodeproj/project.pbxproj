@@ -33,6 +33,7 @@
 		657DC6C41603E79600E326CA /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 657DC6C31603E79600E326CA /* App.m */; };
 		658EC50A1602963400DEB218 /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658EC5091602963400DEB218 /* BackgroundView.m */; };
 		658EC5131602979800DEB218 /* ForemainMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 658EC5121602979800DEB218 /* ForemainMainWindow.m */; };
+		65956E6D1604BBF300FC6A70 /* ForemanDrawerContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65956E6C1604BBF300FC6A70 /* ForemanDrawerContentView.m */; };
 		65D663AD15E5A4FD00C41FEA /* LaunchGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663AC15E5A4FD00C41FEA /* LaunchGroupController.m */; };
 		65D663B115E5A61800C41FEA /* IconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D663B015E5A61800C41FEA /* IconListView.m */; };
 		65DE63B915F1718C007BF140 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DE63B815F1718C007BF140 /* bg.png */; };
@@ -109,6 +110,8 @@
 		658EC5091602963400DEB218 /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
 		658EC5111602979800DEB218 /* ForemainMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForemainMainWindow.h; sourceTree = "<group>"; };
 		658EC5121602979800DEB218 /* ForemainMainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForemainMainWindow.m; sourceTree = "<group>"; };
+		65956E6B1604BBF300FC6A70 /* ForemanDrawerContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForemanDrawerContentView.h; sourceTree = "<group>"; };
+		65956E6C1604BBF300FC6A70 /* ForemanDrawerContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForemanDrawerContentView.m; sourceTree = "<group>"; };
 		65D663AB15E5A4FD00C41FEA /* LaunchGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchGroupController.h; sourceTree = "<group>"; };
 		65D663AC15E5A4FD00C41FEA /* LaunchGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchGroupController.m; sourceTree = "<group>"; };
 		65D663AF15E5A61800C41FEA /* IconListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconListView.h; sourceTree = "<group>"; };
@@ -212,9 +215,10 @@
 		6517C0F615E149BD00135B11 /* Foreman */ = {
 			isa = PBXGroup;
 			children = (
-				658EC5101602970F00DEB218 /* BaseViews */,
 				65DE63BB15F17192007BF140 /* Resources */,
 				651CDD8B15E794F400461C13 /* nibs */,
+				65956E691604BBD800FC6A70 /* Drawer */,
+				658EC5101602970F00DEB218 /* BaseViews */,
 				6576BB4B15E8005500FB5A98 /* Super */,
 				65F05F4F15FD6F3300556F80 /* SafeGroup */,
 				6576BB4115E7FC8400FB5A98 /* NewAppGroup */,
@@ -332,6 +336,15 @@
 				657DC6B91603C13200E326CA /* ContentView.m */,
 			);
 			name = BaseViews;
+			sourceTree = "<group>";
+		};
+		65956E691604BBD800FC6A70 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				65956E6B1604BBF300FC6A70 /* ForemanDrawerContentView.h */,
+				65956E6C1604BBF300FC6A70 /* ForemanDrawerContentView.m */,
+			);
+			name = Drawer;
 			sourceTree = "<group>";
 		};
 		65DE63BB15F17192007BF140 /* Resources */ = {
@@ -526,6 +539,7 @@
 				658EC5131602979800DEB218 /* ForemainMainWindow.m in Sources */,
 				657DC6BA1603C13200E326CA /* ContentView.m in Sources */,
 				657DC6C41603E79600E326CA /* App.m in Sources */,
+				65956E6D1604BBF300FC6A70 /* ForemanDrawerContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

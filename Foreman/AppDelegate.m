@@ -278,6 +278,8 @@
   [[self selectedLaunchGroup] launchApps];
 }
 
+#pragma mark appSelection
+
 - (void)selectNextApp {
   [[self selectedLaunchGroup] selectNextApp];
 }

@@ -1326,7 +1326,6 @@
 													<string key="NSFrame">{{0, -2}, {607, 5}}</string>
 													<reference key="NSSuperview" ref="703243050"/>
 													<reference key="NSWindow"/>
-													<reference key="NSNextKeyView"/>
 													<string key="NSReuseIdentifierKey">_NS:9</string>
 													<string key="NSOffsets">{0, 0}</string>
 													<object class="NSTextFieldCell" key="NSTitleCell">
@@ -1398,7 +1397,7 @@
 											<string key="NSFrameSize">{607, 50}</string>
 											<reference key="NSSuperview" ref="511231422"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="449138400"/>
+											<reference key="NSNextKeyView"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<string key="NSClassName">NewAppGroupView</string>
 										</object>
@@ -3475,7 +3474,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1163</int>
+			<int key="maxID">1188</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

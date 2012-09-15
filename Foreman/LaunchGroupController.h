@@ -11,10 +11,12 @@
 @class DragReceiver;
 @class IconListView;
 @class IconViewController;
+@class LaunchGroupView;
 
 @interface LaunchGroupController : AppGroupController <NSTextFieldDelegate>
 
 @property (assign) IBOutlet NSTextField *nameField;
+@property (assign) IBOutlet LaunchGroupView *launchGroupView;
 
 - (void) launchApps;
 - (void) launchSelectedApp;

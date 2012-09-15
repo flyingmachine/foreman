@@ -1295,7 +1295,7 @@
 			</object>
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{447, 1121}, {637, 80}}</string>
+				<string key="NSWindowRect">{{447, 1210}, {637, 80}}</string>
 				<int key="NSWTFlags">1954025472</int>
 				<string key="NSWindowTitle">Foreman</string>
 				<string key="NSWindowClass">ForemainMainWindow</string>

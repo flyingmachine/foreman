@@ -23,6 +23,13 @@
                                     options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
                                     owner:self userInfo:nil];
     [self addTrackingArea:trackingArea];
+    [self setLayer:[CALayer layer]];
+    self.wantsLayer = YES;
+    self.layer.backgroundColor = [[NSColor colorWithCalibratedRed:0.43f
+                                                            green:0.50f
+                                                             blue:0.58f
+                                                            alpha:0.25f] CGColor];
+
   }
   
   return self;
@@ -41,34 +48,6 @@
   
 }
 
-
-- (void)drawRect:(NSRect)dirtyRect
-{
-  if (self.selected) {
-    [self rk_drawPatternImage:[NSColor colorWithPatternImage:[NSImage imageNamed:@"app-group-bg-highlighted.png"]] inRect:self.bounds];
-  } else {
-    [self rk_drawPatternImage:[NSColor colorWithPatternImage:[NSImage imageNamed:@"app-group-bg.png"]] inRect:self.bounds];
-  }
-}
-
-- (void)rk_drawPatternImage:(NSColor*)patternColor inRect:(NSRect)rect
-{
-  [self rk_drawPatternImage:patternColor inBezierPath:[NSBezierPath bezierPathWithRect:rect]];
-}
-
-- (void)rk_drawPatternImage:(NSColor*)patternColor inBezierPath:(NSBezierPath*)path
-{
-  [NSGraphicsContext saveGraphicsState];
-  
-  CGFloat yOffset = 65;
-  CGFloat xOffset = 65;
-  [[NSGraphicsContext currentContext] setPatternPhase:NSMakePoint(xOffset, yOffset)];
-  
-  [patternColor set];
-  [path fill];
-  [NSGraphicsContext restoreGraphicsState];
-}
-
 -(void)shiftUp {
   NSRect frameRect = self.frame;
   frameRect.origin.y += frameRect.size.height;
@@ -81,7 +60,17 @@
 
 -(void)setSelected:(BOOL)sel {
   _selected = sel;
-  [self setNeedsDisplay:YES];
+  if (_selected) {
+    self.layer.backgroundColor = [[NSColor colorWithCalibratedRed:0.33f
+                                                            green:0.75f
+                                                             blue:0.46f
+                                                            alpha:0.5f] CGColor];
+  } else {
+    self.layer.backgroundColor = [[NSColor colorWithCalibratedRed:0.43f
+                                                            green:0.50f
+                                                             blue:0.58f
+                                                            alpha:0.25f] CGColor];
+  }
 }
 
 

@@ -23,10 +23,11 @@
                                                         green:0.40f
                                                          blue:0.48f
                                                         alpha:1.0f] CGColor];
+
     self.layer.backgroundColor = [[NSColor colorWithCalibratedRed:0.43f
                                                             green:0.50f
                                                              blue:0.58f
-                                                            alpha:0.7f] CGColor];
+                                                            alpha:0.25f] CGColor];
   }
   
   return self;

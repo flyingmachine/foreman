@@ -22,8 +22,6 @@
     self.appGroup = appG;
     [NSBundle loadNibNamed:self.viewName owner:self];
     
-    CGRect newFrame = self.view.frame;
-    self.view.frame = newFrame;
     [self.iconListView showAppIcons];
   }
   

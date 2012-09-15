@@ -18,15 +18,15 @@
     self.wantsLayer = YES;
     self.layer.cornerRadius = 10.0f;
     self.layer.masksToBounds = YES;
-    self.layer.borderWidth = 2;
-    self.layer.borderColor = [[NSColor colorWithCalibratedRed:0.33f
-                                                        green:0.40f
-                                                         blue:0.48f
-                                                        alpha:1.0f] CGColor];
+    self.layer.borderWidth = 1;
+    self.layer.borderColor = [[NSColor colorWithCalibratedRed:0.14f
+                                                        green:0.22f
+                                                         blue:0.24f
+                                                        alpha:1] CGColor];
     self.layer.backgroundColor = [[NSColor colorWithCalibratedRed:0.43f
                                                             green:0.50f
                                                              blue:0.58f
-                                                            alpha:0.7f] CGColor];
+                                                            alpha:0.25f] CGColor];
   }
   
   return self;

@@ -122,16 +122,16 @@
 #pragma mark Selection
 
 - (BOOL) selected {
-  return [(LaunchGroupView *)self.view selected];
+  return [(LaunchGroupView *)self.launchGroupView selected];
 }
 
 - (void) select {
-  [(LaunchGroupView *)self.view setSelected:YES];
+  [(LaunchGroupView *)self.launchGroupView setSelected:YES];
   [self.iconListView.iconViewControllers[0] select];
 }
 
 - (void) deselect {
-  [(LaunchGroupView *)self.view setSelected:NO];
+  [(LaunchGroupView *)self.launchGroupView setSelected:NO];
   [self.iconListView.iconViewControllers makeObjectsPerformSelector:@selector(deselect)];
 
 }

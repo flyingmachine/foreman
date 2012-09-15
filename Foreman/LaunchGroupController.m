@@ -131,5 +131,8 @@
   [(LaunchGroupView *)self.view setSelected:NO];
 }
 
+- (int) selectedApp {
+  return 0;
+}
 
 @end

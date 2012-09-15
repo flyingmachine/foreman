@@ -88,7 +88,6 @@
                                            selector: @selector(saveSafeGroup)
                                                name: @"updateSafeGroup"
                                              object: nil];
-
 }
 
 // Used when the app first launches to display the saved app groups
@@ -275,4 +274,8 @@
   }
 }
 
+#pragma mark systemEvents
+- (void)applicationWillBecomeActive:(NSNotification *)notification {
+  [_window makeKeyAndOrderFront:self];
+}
 @end

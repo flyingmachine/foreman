@@ -20,5 +20,6 @@
 - (BOOL) selected;
 - (void) select;
 - (void) deselect;
+- (int) selectedApp;
 - (IBAction)removeAppGroup:(id)sender;
 @end

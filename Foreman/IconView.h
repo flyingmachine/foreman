@@ -11,4 +11,6 @@
 @interface IconView : NSView
 @property (strong) IBOutlet NSButton* btn;
 - (void) setIcon:(NSImage *)image;
+- (BOOL)selected;
+- (void)setSelected:(BOOL)selected;
 @end

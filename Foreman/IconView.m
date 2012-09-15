@@ -11,6 +11,7 @@
 @implementation IconView
 {
   NSImage *_image;
+  BOOL _selected;
 }
 @synthesize btn;
 - (id)initWithFrame:(NSRect)frame
@@ -64,6 +65,16 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
   [_image drawInRect:[self bounds] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+}
+
+#pragma mark selection
+-(BOOL)selected {
+  return _selected;
+}
+
+-(void)setSelected:(BOOL)sel {
+  _selected = sel;
+  [self setNeedsDisplay:YES];
 }
 
 @end

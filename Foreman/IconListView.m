@@ -40,5 +40,4 @@
   [self setSubviews:newSubViews];
   [self setNeedsDisplay:YES];
 }
-
 @end

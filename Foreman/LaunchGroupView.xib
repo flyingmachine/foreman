@@ -46,6 +46,7 @@
 						<string key="NSFrame">{{0, -2}, {607, 5}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="NSOffsets">{0, 0}</string>
 						<object class="NSTextFieldCell" key="NSTitleCell">
@@ -84,16 +85,17 @@
 								<reference key="NSNextResponder" ref="639661446"/>
 								<int key="NSvFlags">297</int>
 								<array class="NSMutableArray" key="NSSubviews"/>
-								<string key="NSFrame">{{117, 0}, {490, 50}}</string>
+								<string key="NSFrame">{{117, 0}, {490, 65}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="325517153"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<string key="NSClassName">IconListView</string>
 							</object>
 							<object class="NSButton" id="325517153">
 								<reference key="NSNextResponder" ref="639661446"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{564, 7}, {30, 30}}</string>
+								<string key="NSFrame">{{564, 22}, {30, 30}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="124223351"/>
@@ -126,7 +128,7 @@
 							<object class="NSTextField" id="828279234">
 								<reference key="NSNextResponder" ref="639661446"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{13, 14}, {96, 22}}</string>
+								<string key="NSFrame">{{13, 21}, {96, 22}}</string>
 								<reference key="NSSuperview" ref="639661446"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="382143532"/>
@@ -156,7 +158,7 @@
 								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrame">{{0, 7}, {607, 50}}</string>
+						<string key="NSFrameSize">{607, 65}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="828279234"/>
@@ -279,8 +281,8 @@
 						<reference key="object" ref="639661446"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="325517153"/>
-							<reference ref="828279234"/>
 							<reference ref="382143532"/>
+							<reference ref="828279234"/>
 						</array>
 						<reference key="parent" ref="1005"/>
 					</object>

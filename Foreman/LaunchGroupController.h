@@ -10,16 +10,21 @@
 #import "AppGroupController.h"
 @class DragReceiver;
 @class IconListView;
+@class IconViewController;
 
 @interface LaunchGroupController : AppGroupController <NSTextFieldDelegate>
 
 @property (assign) IBOutlet NSTextField *nameField;
 
 - (void) launchApps;
+- (void) launchSelectedApp;
 - (void) mouseUp;
 - (BOOL) selected;
 - (void) select;
 - (void) deselect;
-- (int) selectedApp;
+
+- (void) selectNextApp;
+- (void) selectPreviousApp;
+- (IconViewController *) selectedApp;
 - (IBAction)removeAppGroup:(id)sender;
 @end

@@ -244,7 +244,7 @@
 
 - (void)selectNextLaunchGroup {
   NSInteger index = [self indexOfSelectedLaunchGroup];
-  if ((index == NSNotFound) || (index > ([groupControllers count] - 2))) {
+  if ((index == NSNotFound) || (index >= ([groupControllers count] - 1))) {
     [self selectLaunchGroupWithIndex:0];
   } else  {
     [self selectLaunchGroupWithIndex: index + 1];
@@ -261,17 +261,35 @@
 }
 
 - (void)selectLaunchGroupWithIndex:(NSInteger)index {
-  for (LaunchGroupController *lgc in groupControllers) {
-    [lgc deselect];
-  }
+  [groupControllers makeObjectsPerformSelector:@selector(deselect)];
   [(LaunchGroupController *)[groupControllers objectAtIndex:index] select];
 }
 
-- (void)launchSelectedLaunchGroup {
+- (LaunchGroupController *)selectedLaunchGroup {
   NSInteger index = [self indexOfSelectedLaunchGroup];
   if (index != NSNotFound) {
-    [[groupControllers objectAtIndex:index] launchApps];
+    return [groupControllers objectAtIndex:index];
+  } else {
+    return nil;
   }
+}
+
+- (void)launchSelectedLaunchGroup {
+  [[self selectedLaunchGroup] launchApps];
+}
+
+- (void)selectNextApp {
+  [[self selectedLaunchGroup] selectNextApp];
+}
+
+- (void)selectPreviousApp {
+  [[self selectedLaunchGroup] selectPreviousApp];
+}
+
+
+
+- (void)launchSelectedApp {
+  [[self selectedLaunchGroup] launchSelectedApp];
 }
 
 #pragma mark systemEvents

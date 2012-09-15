@@ -22,7 +22,9 @@
 - (void) removeAppGroup: (LaunchGroupController *)appGroup;
 - (void) selectNextLaunchGroup;
 - (void) selectPreviousLaunchGroup;
+- (void) selectNextApp;
+- (void) selectPreviousApp;
 - (void) launchSelectedLaunchGroup;
-
+- (void) launchSelectedApp;
 
 @end

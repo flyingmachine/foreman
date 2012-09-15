@@ -11,6 +11,10 @@
 #import "AppDelegate.h"
 
 @implementation BaseAppView
+{
+  BOOL _shiftHeld;
+}
+
 - (id)initWithFrame:(NSRect)frame
 {
   self = [super initWithFrame:frame];
@@ -24,6 +28,11 @@
 #pragma mark keyboardEvents
 
 - (void)keyDown:(NSEvent *)theEvent {
+  if (NSShiftKeyMask & [theEvent modifierFlags]) {
+    _shiftHeld = YES;
+  } else {
+    _shiftHeld = NO;
+  }
   [self interpretKeyEvents:[NSArray arrayWithObject:theEvent]];
 
 }
@@ -40,15 +49,21 @@
 
 -(IBAction)moveLeft:(id)sender
 {
+  [[App delegate] selectPreviousApp];
 }
 
 -(IBAction)moveRight:(id)sender
 {
+  [[App delegate] selectNextApp];
 }
 
 - (void)insertNewline:(id)sender {
   if ([[self window] firstResponder] == self) {
-    [[App delegate] launchSelectedLaunchGroup];
+    if (_shiftHeld) {
+      [[App delegate] launchSelectedApp];
+    } else {
+      [[App delegate] launchSelectedLaunchGroup];
+    }
   }
 }
 

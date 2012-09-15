@@ -8,6 +8,7 @@
 #import "LaunchGroupController.h"
 #import "LaunchGroupView.h"
 #import "IconListView.h"
+#import "IconViewController.h"
 #import "Headers.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
@@ -115,6 +116,7 @@
   } else {
     return NO;
   }
+  
 }
 
 #pragma mark Selection
@@ -125,14 +127,52 @@
 
 - (void) select {
   [(LaunchGroupView *)self.view setSelected:YES];
+  [self.iconListView.iconViewControllers[0] select];
 }
 
 - (void) deselect {
   [(LaunchGroupView *)self.view setSelected:NO];
+  [self.iconListView.iconViewControllers makeObjectsPerformSelector:@selector(deselect)];
+
 }
 
-- (int) selectedApp {
-  return 0;
+- (IconViewController *) selectedApp {
+  return (IconViewController *)self.iconListView.iconViewControllers[[self indexOfSelectedApp]];
+}
+
+
+- (NSInteger)indexOfSelectedApp {
+  return [self.iconListView.iconViewControllers indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+    return [(LaunchGroupController *)obj selected];
+  }];
+}
+
+
+- (void)selectNextApp {
+  NSInteger index = [self indexOfSelectedApp];
+  if ((index == NSNotFound) || (index >= ([self.iconListView.iconViewControllers count] - 1))) {
+    [self selectAppWithIndex: 0];
+  } else  {
+    [self selectAppWithIndex: index + 1];
+  }
+}
+
+- (void)selectPreviousApp {
+  NSInteger index = [self indexOfSelectedApp];
+  if (index == 0 || index == NSNotFound)  {
+    [self selectAppWithIndex: [self.iconListView.iconViewControllers count] - 1];
+  } else {
+    [self selectAppWithIndex: index - 1];
+  }
+}
+
+- (void)selectAppWithIndex:(NSInteger)index {
+  [self.iconListView.iconViewControllers makeObjectsPerformSelector:@selector(deselect)];
+  [[self.iconListView.iconViewControllers objectAtIndex:index] select];
+}
+
+- (void)launchSelectedApp {
+  [[self selectedApp] launch];
 }
 
 @end

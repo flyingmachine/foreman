@@ -42,4 +42,20 @@
   [appGroupController removeApp:app];
 }
 
+- (BOOL) selected {
+  return [(IconView *)self.view selected];
+}
+
+- (void) select {
+  [(IconView *)self.view setSelected:YES];
+}
+
+- (void) deselect {
+  [(IconView *)self.view setSelected:NO];
+}
+
+- (void) launch {
+  [[NSWorkspace sharedWorkspace] launchApplication:app];
+}
+
 @end

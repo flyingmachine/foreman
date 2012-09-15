@@ -41,10 +41,9 @@
 						<reference key="NSNextResponder" ref="273050529"/>
 						<int key="NSvFlags">-2147483380</int>
 						<array class="NSMutableArray" key="NSSubviews"/>
-						<string key="NSFrame">{{23, 21}, {30, 30}}</string>
+						<string key="NSFrame">{{38, 35}, {30, 30}}</string>
 						<reference key="NSSuperview" ref="273050529"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:1574</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="528202740">
@@ -72,7 +71,7 @@
 						<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 					</object>
 				</array>
-				<string key="NSFrameSize">{50, 50}</string>
+				<string key="NSFrameSize">{65, 65}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="365249558"/>

@@ -15,4 +15,8 @@
 
 - (IBAction)removeApp:(id)sender;
 - (void)setup:(float)leftMargin app:(NSString *)app appGroupController:(AppGroupController *)agc;
+- (BOOL) selected;
+- (void) select;
+- (void) deselect;
+- (void) launch;
 @end

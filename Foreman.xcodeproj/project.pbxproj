@@ -24,6 +24,7 @@
 		654CA53315F80C5E00779BE9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 654CA53215F80C5E00779BE9 /* icon.icns */; };
 		655AB71E15F0CA0F00C842BA /* LaunchGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */; };
 		655AB72A15F0D27600C842BA /* BaseAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB72915F0D27600C842BA /* BaseAppView.m */; };
+		656F460A1603FF060090E467 /* icon-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 656F46091603FF060090E467 /* icon-glow.png */; };
 		6576BB4415E7FD0600FB5A98 /* NewAppGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6576BB4315E7FD0600FB5A98 /* NewAppGroupViewController.m */; };
 		6576BB4A15E7FF8500FB5A98 /* NewAppGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6576BB4915E7FF8500FB5A98 /* NewAppGroupView.m */; };
 		6576BB4E15E8007000FB5A98 /* AppReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6576BB4D15E8007000FB5A98 /* AppReceiver.m */; };
@@ -92,6 +93,7 @@
 		655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchGroupView.m; sourceTree = "<group>"; };
 		655AB72815F0D27600C842BA /* BaseAppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppView.h; sourceTree = "<group>"; };
 		655AB72915F0D27600C842BA /* BaseAppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAppView.m; sourceTree = "<group>"; };
+		656F46091603FF060090E467 /* icon-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-glow.png"; path = "Foreman/icon-glow.png"; sourceTree = "<group>"; };
 		6576BB4215E7FD0600FB5A98 /* NewAppGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAppGroupViewController.h; sourceTree = "<group>"; };
 		6576BB4315E7FD0600FB5A98 /* NewAppGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAppGroupViewController.m; sourceTree = "<group>"; };
 		6576BB4815E7FF8500FB5A98 /* NewAppGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAppGroupView.h; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				65FD49FB15F8B23A0035C8C4 /* icons.icns */,
 				654CA53215F80C5E00779BE9 /* icon.icns */,
 				E591300715FA70E700DF4389 /* status-selected.png */,
+				656F46091603FF060090E467 /* icon-glow.png */,
 				E591300815FA70E700DF4389 /* status.png */,
 				6517C0F615E149BD00135B11 /* Foreman */,
 				6517C11315E149BE00135B11 /* ForemanTests */,
@@ -454,6 +457,7 @@
 				E591300915FA70E700DF4389 /* status-selected.png in Resources */,
 				E591300A15FA70E700DF4389 /* status.png in Resources */,
 				65F05F4D15FD6ED600556F80 /* SafeGroupView.xib in Resources */,
+				656F460A1603FF060090E467 /* icon-glow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

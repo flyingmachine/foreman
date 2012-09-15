@@ -64,7 +64,10 @@
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
-  [_image drawInRect:[self bounds] fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+  if (self.selected) {
+    [[NSImage imageNamed:@"icon-glow.png"] drawInRect:NSMakeRect(0, 0, 65, 65) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+  }
+  [_image drawInRect:NSMakeRect(8, 8, 50, 50) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
 }
 
 #pragma mark selection

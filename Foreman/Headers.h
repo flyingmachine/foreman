@@ -10,6 +10,6 @@
 
 #define WorkMode_Header_h
 #define BOTTOM_PADDING 15.0
-
+#import "App.h"
 
 #endif

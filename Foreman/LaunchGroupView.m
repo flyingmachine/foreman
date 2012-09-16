@@ -7,6 +7,7 @@
 //
 
 #import "LaunchGroupView.h"
+#import "Headers.h"
 #define BORDER_WIDTH 3
 
 @implementation LaunchGroupView
@@ -25,10 +26,7 @@
     [self addTrackingArea:trackingArea];
     [self setLayer:[CALayer layer]];
     self.wantsLayer = YES;
-    self.layer.backgroundColor = [[NSColor colorWithCalibratedRed:0.43f
-                                                            green:0.50f
-                                                             blue:0.58f
-                                                            alpha:0.25f] CGColor];
+    self.layer.backgroundColor = [App unselectedLaunchGroupColor];
 
   }
   
@@ -61,15 +59,9 @@
 -(void)setSelected:(BOOL)sel {
   _selected = sel;
   if (_selected) {
-    self.layer.backgroundColor = [[NSColor colorWithCalibratedRed:0.33f
-                                                            green:0.75f
-                                                             blue:0.46f
-                                                            alpha:0.5f] CGColor];
+    self.layer.backgroundColor = [App selectedLaunchGroupColor];
   } else {
-    self.layer.backgroundColor = [[NSColor colorWithCalibratedRed:0.43f
-                                                            green:0.50f
-                                                             blue:0.58f
-                                                            alpha:0.25f] CGColor];
+    self.layer.backgroundColor = [App unselectedLaunchGroupColor];
   }
 }
 

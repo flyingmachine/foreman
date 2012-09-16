@@ -11,4 +11,6 @@
 
 @interface App : NSObject
 + (AppDelegate *)delegate;
++ (CGColorRef)selectedLaunchGroupColor;
++ (CGColorRef)unselectedLaunchGroupColor;
 @end

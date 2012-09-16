@@ -101,7 +101,16 @@
   for(NSDictionary *appGroup in appGroups) {
     [self displayAppGroup:appGroup animate:NO];
   }
+  
+  
+  [self setInitialPosition];
   [self.baseAppView.window makeFirstResponder:self.baseAppView];
+}
+
+- (void) setInitialPosition {
+  NSScreen *mainScreen = [NSScreen mainScreen];
+  NSPoint topLeft = NSMakePoint((mainScreen.visibleFrame.size.width - self.baseAppView.frame.size.width) / 2, mainScreen.visibleFrame.size.height - 50);
+  [self.window setFrameTopLeftPoint:topLeft];
 }
 
 - (void)createStatusItem {

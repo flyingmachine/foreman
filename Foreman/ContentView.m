@@ -13,4 +13,5 @@
   [[NSColor clearColor] setFill];
   NSRectFill(dirtyRect);
 }
+
 @end

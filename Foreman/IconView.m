@@ -37,8 +37,6 @@
   [self enableDeleteBtn];
 }
 
-
-
 - (void)cursorUpdate:(NSEvent *)event {
   [self enableDeleteBtn];
 }
@@ -52,15 +50,6 @@
   // create the image somehow, load from file, draw into it...
   _image = image;
   [self setNeedsDisplay:YES];
-//  NSRect rect = self.frame;
-//  rect.origin = NSMakePoint(0, 0);
-//  CALayer *imageLayer = [CALayer layer];
-//  imageLayer.frame = NSMakeRect(0, 0, 50, 50);
-//  imageLayer.contents = (id)[image CGImageForProposedRect:&rect context:nil hints:nil];
-//  NSLog(@"set icon: %@", image);
-//  
-//  [self.layer.contents insertSublayer:imageLayer above:self.layer];
-//  [self setNeedsDisplay:YES];
 }
 
 - (void)drawRect:(NSRect)dirtyRect {

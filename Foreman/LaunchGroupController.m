@@ -9,6 +9,7 @@
 #import "LaunchGroupView.h"
 #import "IconListView.h"
 #import "IconViewController.h"
+#import "ToCloseView.h"
 #import "Headers.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
@@ -52,6 +53,16 @@
 }
 
 - (void) closeApps {
+  NSRunningApplication* currentApplication = [NSRunningApplication currentApplication];
+  for (NSRunningApplication *runningApp in [[NSWorkspace sharedWorkspace] runningApplications]) {
+    if ([[self appsToClose] containsObject:[[runningApp bundleURL] path]] && !([runningApp isEqual:currentApplication])) {
+      [runningApp terminate];
+    }
+  }
+  [currentApplication hide];
+}
+
+- (NSArray *)appsToClose {
   NSMutableArray *appsToClose = [[NSMutableArray alloc] init];
   NSDictionary *info;
   AppDelegate *appDelegate = [[NSApplication sharedApplication] delegate];
@@ -79,14 +90,7 @@
   }
   
   NSLog(@"apps to close: %@", appsToClose);
-
-  NSRunningApplication* currentApplication = [NSRunningApplication currentApplication];
-  for (NSRunningApplication *runningApp in [[NSWorkspace sharedWorkspace] runningApplications]) {
-    if ([appsToClose containsObject:[[runningApp bundleURL] path]] && !([runningApp isEqual:currentApplication])) {
-      [runningApp terminate];
-    }
-  }
-  [currentApplication hide];
+  return appsToClose;
 }
 
 - (NSString *)viewName {
@@ -128,6 +132,7 @@
 - (void) select {
   [[[App delegate] groupControllers] makeObjectsPerformSelector:@selector(deselect)];
   [(LaunchGroupView *)self.launchGroupView setSelected:YES];
+  [self.toCloseView displayApps:[self appsToClose]];
   [self.iconListView.iconViewControllers[0] select];
 }
 

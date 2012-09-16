@@ -12,11 +12,14 @@
 @class IconListView;
 @class IconViewController;
 @class LaunchGroupView;
+@class ToCloseView;
 
 @interface LaunchGroupController : AppGroupController <NSTextFieldDelegate>
 
 @property (assign) IBOutlet NSTextField *nameField;
 @property (assign) IBOutlet LaunchGroupView *launchGroupView;
+@property (assign) IBOutlet ToCloseView *toCloseView;
+
 
 - (void) launchApps;
 - (void) launchSelectedApp;

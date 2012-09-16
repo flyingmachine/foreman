@@ -47,6 +47,16 @@
 								<reference key="NSNextResponder" ref="1005"/>
 								<int key="NSvFlags">274</int>
 								<array class="NSMutableArray" key="NSSubviews">
+									<object class="NSCustomView" id="212119876">
+										<reference key="NSNextResponder" ref="639661446"/>
+										<int key="NSvFlags">265</int>
+										<string key="NSFrame">{{489, 0}, {64, 64}}</string>
+										<reference key="NSSuperview" ref="639661446"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView" ref="325517153"/>
+										<string key="NSReuseIdentifierKey">_NS:9</string>
+										<string key="NSClassName">ToCloseView</string>
+									</object>
 									<object class="NSCustomView" id="382143532">
 										<reference key="NSNextResponder" ref="639661446"/>
 										<int key="NSvFlags">273</int>
@@ -54,7 +64,7 @@
 										<string key="NSFrame">{{117, 0}, {490, 64}}</string>
 										<reference key="NSSuperview" ref="639661446"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView" ref="325517153"/>
+										<reference key="NSNextKeyView" ref="212119876"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<string key="NSClassName">IconListView</string>
 									</object>
@@ -211,6 +221,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
+						<string key="label">toCloseView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="212119876"/>
+					</object>
+					<int key="connectionID">55</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
 						<string key="label">controller</string>
 						<reference key="source" ref="1005"/>
 						<reference key="destination" ref="1001"/>
@@ -291,6 +309,7 @@
 							<reference ref="382143532"/>
 							<reference ref="325517153"/>
 							<reference ref="828279234"/>
+							<reference ref="212119876"/>
 						</array>
 						<reference key="parent" ref="1005"/>
 					</object>
@@ -305,6 +324,7 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">3</int>
 						<reference key="object" ref="382143532"/>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="639661446"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -325,6 +345,11 @@
 						<reference key="object" ref="431062815"/>
 						<reference key="parent" ref="828279234"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">54</int>
+						<reference key="object" ref="212119876"/>
+						<reference key="parent" ref="639661446"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -339,12 +364,13 @@
 				<string key="42.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="43.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="49.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="54.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">53</int>
+			<int key="maxID">55</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -433,6 +459,7 @@
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="launchGroupView">LaunchGroupView</string>
 						<string key="nameField">NSTextField</string>
+						<string key="toCloseView">ToCloseView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="launchGroupView">
@@ -442,6 +469,10 @@
 						<object class="IBToOneOutletInfo" key="nameField">
 							<string key="name">nameField</string>
 							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="toCloseView">
+							<string key="name">toCloseView</string>
+							<string key="candidateClassName">ToCloseView</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -466,6 +497,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/LaunchGroupView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">ToCloseView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/ToCloseView.h</string>
 					</object>
 				</object>
 			</array>

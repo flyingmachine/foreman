@@ -7,6 +7,7 @@
 //
 
 #import "LaunchGroupView.h"
+#import "LaunchGroupController.h"
 #import "Headers.h"
 #define BORDER_WIDTH 3
 
@@ -35,11 +36,11 @@
 
 
 - (void)mouseEntered:(NSEvent *)theEvent {
-  self.selected = YES;
+  [self.controller select];
 }
 
 - (void)mouseExited:(NSEvent *)theEvent {
-  self.selected = NO;
+  [self.controller deselect];
 }
 
 - (void)mouseDown:(NSEvent *)theEvent {

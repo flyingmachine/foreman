@@ -20,10 +20,10 @@
 
 @implementation AppDelegate {
   NSStatusItem * _statusItem;
-  NSMutableArray *groupControllers;
 }
 
 @synthesize appGroups;
+@synthesize groupControllers;
 @synthesize safeGroup;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -270,7 +270,6 @@
 }
 
 - (void)selectLaunchGroupWithIndex:(NSInteger)index {
-  [groupControllers makeObjectsPerformSelector:@selector(deselect)];
   [(LaunchGroupController *)[groupControllers objectAtIndex:index] select];
 }
 

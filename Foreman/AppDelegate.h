@@ -16,6 +16,7 @@
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSMenu *statusMenu;
 @property (strong) NSMutableArray *appGroups;
+@property (strong) NSMutableArray *groupControllers;
 @property (strong) NSMutableDictionary *safeGroup;
 @property (assign) IBOutlet BaseAppView *baseAppView;
 

@@ -126,12 +126,14 @@
 }
 
 - (void) select {
+  [[[App delegate] groupControllers] makeObjectsPerformSelector:@selector(deselect)];
   [(LaunchGroupView *)self.launchGroupView setSelected:YES];
   [self.iconListView.iconViewControllers[0] select];
 }
 
 - (void) deselect {
   [(LaunchGroupView *)self.launchGroupView setSelected:NO];
+  [[self selectedApp] deselect];
   [self.iconListView.iconViewControllers makeObjectsPerformSelector:@selector(deselect)];
 
 }
@@ -142,9 +144,15 @@
 
 
 - (NSInteger)indexOfSelectedApp {
-  return [self.iconListView.iconViewControllers indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+  NSUInteger selectedIndex = [self.iconListView.iconViewControllers indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
     return [(LaunchGroupController *)obj selected];
   }];
+  
+  if (selectedIndex == NSNotFound) {
+    return 0;
+  } else {
+    return selectedIndex;
+  }
 }
 
 

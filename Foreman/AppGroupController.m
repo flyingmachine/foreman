@@ -49,7 +49,7 @@
 }
 
 - (void)mouseUp {
-  
+  NSLog(@"override me");
 }
 
 @end

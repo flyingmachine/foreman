@@ -27,8 +27,7 @@
 
 - (void)mouseUp:(NSEvent *)event {
   NSPoint mouseLocation = [event locationInWindow];
-
-  if (NSPointInRect(mouseLocation, self.frame)) {
+  if (NSPointInRect([self convertPoint:mouseLocation fromView:nil], self.frame)) {
     [self.controller mouseUp];
   }
 }

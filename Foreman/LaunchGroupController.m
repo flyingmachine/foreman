@@ -38,7 +38,7 @@
     }
   }
   
-  NSLog(@"open apps: %@", openApps);
+  //NSLog(@"open apps: %@", openApps);
   
   for (NSString *app in [self.appGroup valueForKey:@"apps"]) {
     if (![openApps containsObject:app]) {
@@ -83,13 +83,9 @@
   NSRunningApplication* currentApplication = [NSRunningApplication currentApplication];
   for (NSRunningApplication *runningApp in [[NSWorkspace sharedWorkspace] runningApplications]) {
     if ([appsToClose containsObject:[[runningApp bundleURL] path]] && !([runningApp isEqual:currentApplication])) {
-      NSLog(@"closing: %@", [runningApp icon]);
       [runningApp terminate];
     }
   }
-  NSUserDefaults *theDefaults = [NSUserDefaults standardUserDefaults];
-  NSDictionary *dockDict = [theDefaults
-                            persistentDomainForName:@"com.apple.dock"];
   [currentApplication hide];
 }
 

@@ -1321,7 +1321,7 @@
 												<object class="NSTextField" id="449138400">
 													<reference key="NSNextResponder" ref="703243050"/>
 													<int key="NSvFlags">268</int>
-													<string key="NSFrame">{{181, 15}, {244, 20}}</string>
+													<string key="NSFrame">{{141, 15}, {324, 20}}</string>
 													<reference key="NSSuperview" ref="703243050"/>
 													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView"/>
@@ -1330,7 +1330,7 @@
 													<object class="NSTextFieldCell" key="NSCell" id="422461900">
 														<int key="NSCellFlags">605028416</int>
 														<int key="NSCellFlags2">306185216</int>
-														<string key="NSContents">Drag Apps Here To Create New Group</string>
+														<string key="NSContents">Drag Apps Here From Finder To Create New Group</string>
 														<object class="NSFont" key="NSSupport">
 															<string key="NSName">LucidaGrande</string>
 															<double key="NSSize">13</double>

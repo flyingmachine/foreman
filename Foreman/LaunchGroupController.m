@@ -67,12 +67,12 @@
       NSString *bundlePath = (NSString *)[info valueForKey:@"BundlePath"];
       if (
           [[info valueForKey:@"LSUIElement"] intValue] != 1 &&
+          [[info valueForKey:@"LSBackgroundOnly"] intValue] != 1 &&
           bundlePath &&
           ![bundlePath hasPrefix:@"/System"] &&
           ![[self.appGroup valueForKey:@"apps"] containsObject:bundlePath] &&
           ![[appDelegate.safeGroup valueForKey:@"apps"] containsObject:bundlePath]
           ) {
-        
         [appsToClose addObject:bundlePath];
       }
     }
@@ -83,9 +83,13 @@
   NSRunningApplication* currentApplication = [NSRunningApplication currentApplication];
   for (NSRunningApplication *runningApp in [[NSWorkspace sharedWorkspace] runningApplications]) {
     if ([appsToClose containsObject:[[runningApp bundleURL] path]] && !([runningApp isEqual:currentApplication])) {
+      NSLog(@"closing: %@", [runningApp icon]);
       [runningApp terminate];
     }
   }
+  NSUserDefaults *theDefaults = [NSUserDefaults standardUserDefaults];
+  NSDictionary *dockDict = [theDefaults
+                            persistentDomainForName:@"com.apple.dock"];
   [currentApplication hide];
 }
 

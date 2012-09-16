@@ -20,7 +20,10 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-  [[NSColor colorWithPatternImage:[NSImage imageNamed:@"crisp_paper_ruffles.png"]] setFill];
+//  [[NSColor colorWithPatternImage:[NSImage imageNamed:@"crisp_paper_ruffles.png"]] setFill];
+//  NSRectFill(dirtyRect);
+  
+  [[NSColor colorWithCalibratedWhite:1 alpha:1] setFill];
   NSRectFill(dirtyRect);
 }
 

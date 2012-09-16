@@ -18,7 +18,7 @@
   return [[NSColor colorWithCalibratedRed:0.33f
                                     green:0.75f
                                      blue:0.46f
-                                    alpha:0.5f] CGColor];
+                                    alpha:0.8f] CGColor];
 }
 
 + (CGColorRef)unselectedLaunchGroupColor {

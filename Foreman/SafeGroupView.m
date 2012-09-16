@@ -12,7 +12,7 @@
 @implementation SafeGroupView
 - (void)drawRect:(NSRect)dirtyRect {
   // set any NSColor for filling, say white:
-  [[NSColor colorWithCalibratedWhite:1 alpha:1] setFill];
+  [[NSColor colorWithCalibratedWhite:1 alpha:0.8f] setFill];
   NSRectFill(dirtyRect);
 }
 @end

@@ -138,6 +138,7 @@
 
 - (void) deselect {
   [(LaunchGroupView *)self.launchGroupView setSelected:NO];
+  [self.toCloseView setHidden:YES];
   [[self selectedApp] deselect];
   [self.iconListView.iconViewControllers makeObjectsPerformSelector:@selector(deselect)];
 

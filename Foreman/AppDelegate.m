@@ -131,7 +131,11 @@
 
 - (void)displaySafeGroup {
   SafeGroupViewController* controller = [[SafeGroupViewController alloc] initWithAppGroup:self.safeGroup];
-  [self resize: controller.view.frame.size.height animate:NO];
+  [self resize: controller.view.frame.size.height + 3 animate:NO];
+  NSRect adjustedFrame = controller.view.frame;
+  adjustedFrame.origin.y = 2;
+  controller.view.frame = adjustedFrame;
+  
   [self.baseAppView addSubview: controller.view];
 }
 
@@ -169,7 +173,7 @@
   newWinFrame.origin.y -= heightAdjust;
   [self.window setFrame:newWinFrame display:NO animate:animate];
   
-  NSRect newFrame = NSMakeRect(15, 15, self.baseAppView.frame.size.width, self.baseAppView.frame.size.height + heightAdjust);
+  NSRect newFrame = NSMakeRect(15, 13, self.baseAppView.frame.size.width, self.baseAppView.frame.size.height + heightAdjust);
   [self.baseAppView setFrame:newFrame];
 }
 

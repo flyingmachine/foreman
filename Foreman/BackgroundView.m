@@ -16,7 +16,7 @@
   if (self) {
     [self setLayer:[CALayer layer]];
     self.wantsLayer = YES;
-    self.layer.cornerRadius = 10.0f;
+    self.layer.cornerRadius = 6.0f;
     self.layer.masksToBounds = YES;
     self.layer.borderWidth = 1;
     self.layer.borderColor = [[NSColor colorWithCalibratedRed:0.33f

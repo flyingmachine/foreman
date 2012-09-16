@@ -19,7 +19,10 @@
 {
   self = [super initWithFrame:frame];
   if (self) {
-    
+    [self setLayer:[CALayer layer]];
+    self.wantsLayer = YES;
+    self.layer.cornerRadius = 4.0f;
+    self.layer.masksToBounds = YES;
   }
   
   return self;

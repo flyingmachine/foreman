@@ -26,7 +26,7 @@
   return self;
 }
 
-- (void) mouseUp {
+- (void) mouseUp:(NSEvent *)theEvent {
   [self launchApps];
 }
 

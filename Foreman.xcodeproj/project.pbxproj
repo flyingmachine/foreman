@@ -181,8 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				6549236C16074ECC009D8894 /* DDHotKey */,
-				6549236916074EA1009D8894 /* Carbon.framework */,
-				657DC66116035ABB00E326CA /* QuartzCore.framework */,
 				65FD49FB15F8B23A0035C8C4 /* icons.icns */,
 				654CA53215F80C5E00779BE9 /* icon.icns */,
 				E591300715FA70E700DF4389 /* status-selected.png */,
@@ -208,6 +206,8 @@
 		6517C0EF15E149BD00135B11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6549236916074EA1009D8894 /* Carbon.framework */,
+				657DC66116035ABB00E326CA /* QuartzCore.framework */,
 				6517C0F015E149BD00135B11 /* Cocoa.framework */,
 				6517C10E15E149BE00135B11 /* SenTestingKit.framework */,
 				6517C0F215E149BD00135B11 /* Other Frameworks */,

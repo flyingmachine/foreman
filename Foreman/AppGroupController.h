@@ -21,5 +21,4 @@
 
 - (void) addApps: (NSArray *) app;
 - (void)removeApp:(id)app;
-- (void) mouseUp;
 @end

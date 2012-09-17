@@ -23,7 +23,6 @@
 
 - (void) launchApps;
 - (void) launchSelectedApp;
-- (void) mouseUp;
 - (BOOL) selected;
 - (void) select;
 - (void) deselect;

@@ -48,7 +48,7 @@
   return nil;
 }
 
-- (void)mouseUp {
+- (void)mouseUp:(NSEvent *)theEvent {
   NSLog(@"override me");
 }
 

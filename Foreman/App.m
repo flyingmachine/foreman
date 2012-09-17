@@ -28,4 +28,8 @@
                                     alpha:0.25f] CGColor];
 }
 
++ (void)restoreFirstResponder {
+  [self.delegate.window makeFirstResponder:self.delegate.baseAppView];
+}
+
 @end

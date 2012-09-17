@@ -107,7 +107,7 @@
   
   
   [self setInitialPosition];
-  [self.baseAppView.window makeFirstResponder:self.baseAppView];
+  [App restoreFirstResponder];
 }
 
 - (void) setInitialPosition {
@@ -324,7 +324,7 @@
 }
 
 - (void)applicationWillResignActive:(NSNotification *)notification {
-  [[NSRunningApplication currentApplication] hide];
+  //[[NSRunningApplication currentApplication] hide];
 }
 
 - (IBAction)toggle:(id)sender {

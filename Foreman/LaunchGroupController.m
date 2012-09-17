@@ -131,7 +131,7 @@
 
 - (BOOL)control:(NSControl *)control textView:(NSTextView *)textView doCommandBySelector:(SEL)command {
   if (command == @selector(cancelOperation:) || command == @selector(insertNewline:)) {
-    [[textView window] makeFirstResponder:nil];
+    [App restoreFirstResponder];
     return YES;
   } else {
     return NO;

@@ -1296,7 +1296,7 @@
 				<int key="NSWindowStyleMask">2</int>
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{447, 1210}, {637, 80}}</string>
-				<int key="NSWTFlags">-193458176</int>
+				<int key="NSWTFlags">1954025472</int>
 				<string key="NSWindowTitle">Foreman</string>
 				<string key="NSWindowClass">ForemainMainWindow</string>
 				<nil key="NSViewClass"/>

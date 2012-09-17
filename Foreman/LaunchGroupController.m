@@ -54,12 +54,12 @@
 
 - (void) closeApps {
   NSRunningApplication* currentApplication = [NSRunningApplication currentApplication];
+  [currentApplication hide];
   for (NSRunningApplication *runningApp in [[NSWorkspace sharedWorkspace] runningApplications]) {
     if ([[self appsToClose] containsObject:[[runningApp bundleURL] path]] && !([runningApp isEqual:currentApplication])) {
       [runningApp terminate];
     }
   }
-  [currentApplication hide];
 }
 
 - (NSArray *)appsToClose {

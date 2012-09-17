@@ -103,8 +103,6 @@
       }
     }
   }
-  
-  NSLog(@"apps to close: %@", appsToClose);
   return appsToClose;
 }
 

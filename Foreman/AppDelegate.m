@@ -57,8 +57,19 @@
   if ([[NSFileManager defaultManager] fileExistsAtPath:[self pathForLaunchGroups]]) {
     appGroups = [NSMutableArray arrayWithContentsOfFile:[self pathForLaunchGroups]];
   } else {
-    appGroups = [NSMutableArray array];
+    appGroups = [self defaultAppGroups];
   }
+}
+
+- (NSMutableArray *)defaultAppGroups {
+  NSMutableArray *groups = [NSMutableArray array];
+//  NSMutableArray *apps = [NSMutableArray array];
+//  NSString *safariPath = @"/Applications/Safari.app";
+//  if ([[NSFileManager defaultManager] fileExistsAtPath:safariPath]) {
+//    [apps addObject:safariPath];
+//    [groups addObject:@{ @"name" : @"Example", @"apps" : apps }];
+//  }
+  return groups;
 }
 
 - (void)loadSafeGroup {

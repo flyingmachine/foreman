@@ -27,10 +27,18 @@
 }
 
 - (void) mouseUp:(NSEvent *)theEvent {
-  [self launchApps];
+  if (NSShiftKeyMask & [theEvent modifierFlags]) {
+    [self launchApps:YES];
+  } else {
+    [self launchApps];
+  }
 }
 
 - (void) launchApps {
+  [self launchApps:NO];
+}
+
+- (void) launchApps:(BOOL)hideInsteadOfClose {
   NSMutableArray *openApps = [[NSMutableArray alloc] init];
   
   for (NSRunningApplication *runningApp in[[NSWorkspace sharedWorkspace] runningApplications]) {
@@ -48,16 +56,19 @@
   }
   
   [[NSNotificationCenter defaultCenter] postNotificationName:@"appsLaunched" object:self userInfo:NULL];
-  
-  [self closeApps];
+  [self modifyOtherApps:hideInsteadOfClose];
 }
 
-- (void) closeApps {
+- (void) modifyOtherApps:(BOOL)hideInsteadOfClose {
   NSRunningApplication* currentApplication = [NSRunningApplication currentApplication];
   [currentApplication hide];
   for (NSRunningApplication *runningApp in [[NSWorkspace sharedWorkspace] runningApplications]) {
     if ([[self appsToClose] containsObject:[[runningApp bundleURL] path]] && !([runningApp isEqual:currentApplication])) {
-      [runningApp terminate];
+      if (hideInsteadOfClose) {
+        [runningApp hide];
+      } else {
+        [runningApp terminate];
+      }
     }
   }
 }

@@ -1376,7 +1376,7 @@
 									<string key="NSClassName">BaseAppView</string>
 								</object>
 							</array>
-							<string key="NSFrame">{{0, 3}, {636, 77}}</string>
+							<string key="NSFrame">{{0, 2}, {636, 77}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="511231422"/>
@@ -1389,7 +1389,7 @@
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="551198764"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
 				<string key="NSMinSize">{637, 80}</string>
 				<string key="NSMaxSize">{637, 300}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
@@ -1406,6 +1406,26 @@
 			<object class="NSMenu" id="520984987">
 				<string key="NSTitle"/>
 				<array class="NSMutableArray" key="NSMenuItems">
+					<object class="NSMenuItem" id="466262175">
+						<reference key="NSMenu" ref="520984987"/>
+						<string key="NSTitle">Toggle Foreman</string>
+						<string key="NSKeyEquiv">.</string>
+						<int key="NSKeyEquivModMask">1179648</int>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="35465992"/>
+						<reference key="NSMixedImage" ref="502551668"/>
+						<int key="NSTag">499</int>
+					</object>
+					<object class="NSMenuItem" id="583624945">
+						<reference key="NSMenu" ref="520984987"/>
+						<bool key="NSIsDisabled">YES</bool>
+						<bool key="NSIsSeparator">YES</bool>
+						<string key="NSTitle"/>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="35465992"/>
+						<reference key="NSMixedImage" ref="502551668"/>
+					</object>
 					<object class="NSMenuItem" id="42523354">
 						<reference key="NSMenu" ref="520984987"/>
 						<string key="NSTitle">Item 1</string>
@@ -1434,7 +1454,7 @@
 					</object>
 					<object class="NSMenuItem" id="338013741">
 						<reference key="NSMenu" ref="520984987"/>
-						<string key="NSTitle">Quit</string>
+						<string key="NSTitle">Quit Foreman</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="35465992"/>
@@ -2149,6 +2169,14 @@
 						<reference key="destination" ref="511231422"/>
 					</object>
 					<int key="connectionID">1160</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">toggle:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="466262175"/>
+					</object>
+					<int key="connectionID">1191</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -3181,6 +3209,8 @@
 							<reference ref="723771947"/>
 							<reference ref="338013741"/>
 							<reference ref="285455930"/>
+							<reference ref="583624945"/>
+							<reference ref="466262175"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -3241,6 +3271,16 @@
 						<reference key="object" ref="422461900"/>
 						<reference key="parent" ref="449138400"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">1189</int>
+						<reference key="object" ref="583624945"/>
+						<reference key="parent" ref="520984987"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">1190</int>
+						<reference key="object" ref="466262175"/>
+						<reference key="parent" ref="520984987"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -3270,6 +3310,8 @@
 				<real value="0.0" key="1159.IBViewIntegration.shadowOffsetHeight"/>
 				<real value="0.0" key="1159.IBViewIntegration.shadowOffsetWidth"/>
 				<string key="1161.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="1189.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="1190.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="124.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="125.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="126.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3432,13 +3474,24 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1188</int>
+			<int key="maxID">1191</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">AppDelegate</string>
 					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">toggle:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">toggle:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">toggle:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="baseAppView">BaseAppView</string>
 						<string key="statusMenu">NSMenu</string>

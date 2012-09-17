@@ -22,6 +22,9 @@
 		651B1F0B15FE0C7200802EDC /* AppGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651B1F0A15FE0C7200802EDC /* AppGroupController.m */; };
 		651CDD8A15E7943200461C13 /* LaunchGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651CDD8915E7943200461C13 /* LaunchGroupView.xib */; };
 		653121C31605F9F200617015 /* ToCloseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 653121C21605F9F200617015 /* ToCloseView.m */; };
+		6549236A16074EA1009D8894 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6549236916074EA1009D8894 /* Carbon.framework */; };
+		6549238316074ECC009D8894 /* DDHotKeyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6549237416074ECC009D8894 /* DDHotKeyAppDelegate.m */; };
+		6549238416074ECC009D8894 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6549237616074ECC009D8894 /* DDHotKeyCenter.m */; };
 		654CA53315F80C5E00779BE9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 654CA53215F80C5E00779BE9 /* icon.icns */; };
 		655AB71E15F0CA0F00C842BA /* LaunchGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */; };
 		655AB72A15F0D27600C842BA /* BaseAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB72915F0D27600C842BA /* BaseAppView.m */; };
@@ -92,6 +95,11 @@
 		651CDD8915E7943200461C13 /* LaunchGroupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchGroupView.xib; sourceTree = "<group>"; };
 		653121C11605F9F200617015 /* ToCloseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToCloseView.h; sourceTree = "<group>"; };
 		653121C21605F9F200617015 /* ToCloseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToCloseView.m; sourceTree = "<group>"; };
+		6549236916074EA1009D8894 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		6549237316074ECC009D8894 /* DDHotKeyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyAppDelegate.h; sourceTree = "<group>"; };
+		6549237416074ECC009D8894 /* DDHotKeyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyAppDelegate.m; sourceTree = "<group>"; };
+		6549237516074ECC009D8894 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
+		6549237616074ECC009D8894 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
 		654CA53215F80C5E00779BE9 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		655AB71C15F0CA0F00C842BA /* LaunchGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchGroupView.h; sourceTree = "<group>"; };
 		655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchGroupView.m; sourceTree = "<group>"; };
@@ -150,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6549236A16074EA1009D8894 /* Carbon.framework in Frameworks */,
 				657DC66216035ABB00E326CA /* QuartzCore.framework in Frameworks */,
 				6517C0F115E149BD00135B11 /* Cocoa.framework in Frameworks */,
 				63E94952D8E34BA29690C9D6 /* libPods.a in Frameworks */,
@@ -171,6 +180,8 @@
 		6517C0E115E149BD00135B11 = {
 			isa = PBXGroup;
 			children = (
+				6549236C16074ECC009D8894 /* DDHotKey */,
+				6549236916074EA1009D8894 /* Carbon.framework */,
 				657DC66116035ABB00E326CA /* QuartzCore.framework */,
 				65FD49FB15F8B23A0035C8C4 /* icons.icns */,
 				654CA53215F80C5E00779BE9 /* icon.icns */,
@@ -276,6 +287,17 @@
 				65F05F4C15FD6ED600556F80 /* SafeGroupView.xib */,
 			);
 			name = nibs;
+			sourceTree = "<group>";
+		};
+		6549236C16074ECC009D8894 /* DDHotKey */ = {
+			isa = PBXGroup;
+			children = (
+				6549237316074ECC009D8894 /* DDHotKeyAppDelegate.h */,
+				6549237416074ECC009D8894 /* DDHotKeyAppDelegate.m */,
+				6549237516074ECC009D8894 /* DDHotKeyCenter.h */,
+				6549237616074ECC009D8894 /* DDHotKeyCenter.m */,
+			);
+			path = DDHotKey;
 			sourceTree = "<group>";
 		};
 		6576BB3F15E7FC5000FB5A98 /* LaunchGroup */ = {
@@ -442,6 +464,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 6517C0E115E149BD00135B11;
 			productRefGroup = 6517C0ED15E149BD00135B11 /* Products */;
@@ -546,6 +569,8 @@
 				657DC6C41603E79600E326CA /* App.m in Sources */,
 				65956E6D1604BBF300FC6A70 /* ForemanDrawerContentView.m in Sources */,
 				653121C31605F9F200617015 /* ToCloseView.m in Sources */,
+				6549238316074ECC009D8894 /* DDHotKeyAppDelegate.m in Sources */,
+				6549238416074ECC009D8894 /* DDHotKeyCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

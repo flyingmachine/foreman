@@ -71,7 +71,7 @@
 }
 
 - (void)cancelOperation:(id)sender {
-  [self.window close];
+  [[App delegate] toggle:sender];
 }
 
 @end

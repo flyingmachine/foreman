@@ -14,12 +14,14 @@
 #import "StatusItemView.h"
 #import "SafeGroupViewController.h"
 #import "BaseAppView.h"
+#import "DDHotKeyCenter.h"
 
 @interface AppDelegate () <StatusItemViewDataProvier>
 @end
 
 @implementation AppDelegate {
-  NSStatusItem * _statusItem;
+  NSStatusItem *_statusItem;
+  DDHotKeyCenter *_hotKeyCenter;
 }
 
 @synthesize appGroups;
@@ -35,6 +37,7 @@
   [self createObservers];
   [self setFreshWindow];
   [self createStatusItem];
+  [self registerHotkeys];
 }
 
 -(void)awakeFromNib
@@ -125,6 +128,15 @@
 	[_statusItem setAlternateImage:[NSImage imageNamed:@"status-selected"]];
 	[_statusItem setViewDelegate:self];
 //	[[statusItem view] registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]];
+}
+
+- (void)registerHotkeys {
+  _hotKeyCenter = [[DDHotKeyCenter alloc] init];
+  [_hotKeyCenter registerHotKeyWithKeyCode:47
+                             modifierFlags:NSCommandKeyMask | NSShiftKeyMask
+                                      task:^(NSEvent *e) {
+    [self toggle:nil];
+  }];
 }
 
 #pragma mark SafeGroup
@@ -313,5 +325,15 @@
 
 - (void)applicationWillResignActive:(NSNotification *)notification {
   [[NSRunningApplication currentApplication] hide];
+}
+
+- (IBAction)toggle:(id)sender {
+  NSApplication *currentApp = [NSApplication sharedApplication];
+  if ([currentApp isActive]) {
+    [currentApp deactivate];
+    [currentApp hide:nil];
+  } else {
+    [currentApp activateIgnoringOtherApps:YES];
+  }
 }
 @end

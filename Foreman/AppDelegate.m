@@ -321,6 +321,8 @@
 #pragma mark systemEvents
 - (void)applicationWillBecomeActive:(NSNotification *)notification {
   [_window makeKeyAndOrderFront:self];
+  // re-select to ensure preview is accurate
+  [[self selectedLaunchGroup] select];
 }
 
 - (void)applicationWillResignActive:(NSNotification *)notification {

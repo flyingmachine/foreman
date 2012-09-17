@@ -26,6 +26,7 @@
 - (void) selectNextApp;
 - (void) selectPreviousApp;
 - (void) launchSelectedLaunchGroup;
+- (LaunchGroupController *)selectedLaunchGroup;
 - (void) launchSelectedApp;
 - (IBAction)toggle:(id)sender;
 

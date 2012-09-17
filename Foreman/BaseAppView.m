@@ -9,6 +9,7 @@
 #import "BaseAppView.h"
 #import "App.h"
 #import "AppDelegate.h"
+#import "LaunchGroupController.h"
 
 @implementation BaseAppView
 {
@@ -63,9 +64,10 @@
 - (void)insertNewline:(id)sender {
   if ([[self window] firstResponder] == self) {
     if (_shiftHeld) {
-      [[App delegate] launchSelectedLaunchGroup];
+      NSLog(@"shift");
+      [[[App delegate] selectedLaunchGroup] launchAppsHideOthers];
     } else {
-      [[App delegate] launchSelectedLaunchGroup];
+      [[[App delegate] selectedLaunchGroup] launchApps];
     }
   }
 }

@@ -38,6 +38,10 @@
   [self launchApps:NO];
 }
 
+- (void) launchAppsHideOthers {
+  [self launchApps:YES];
+}
+
 - (void) launchApps:(BOOL)hideInsteadOfClose {
   NSMutableArray *openApps = [[NSMutableArray alloc] init];
   

@@ -22,6 +22,7 @@
 
 
 - (void) launchApps;
+- (void) launchAppsHideOthers;
 - (void) launchSelectedApp;
 - (BOOL) selected;
 - (void) select;

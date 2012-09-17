@@ -310,4 +310,8 @@
 - (void)applicationWillBecomeActive:(NSNotification *)notification {
   [_window makeKeyAndOrderFront:self];
 }
+
+- (void)applicationWillResignActive:(NSNotification *)notification {
+  [[NSRunningApplication currentApplication] hide];
+}
 @end

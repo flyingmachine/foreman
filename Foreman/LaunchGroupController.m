@@ -28,9 +28,9 @@
 
 - (void) mouseUp:(NSEvent *)theEvent {
   if (NSShiftKeyMask & [theEvent modifierFlags]) {
-    [self launchApps:YES];
-  } else {
     [self launchApps];
+  } else {
+    [self launchAppsHideOthers];
   }
 }
 

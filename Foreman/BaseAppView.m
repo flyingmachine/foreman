@@ -64,10 +64,9 @@
 - (void)insertNewline:(id)sender {
   if ([[self window] firstResponder] == self) {
     if (_shiftHeld) {
-      NSLog(@"shift");
-      [[[App delegate] selectedLaunchGroup] launchAppsHideOthers];
-    } else {
       [[[App delegate] selectedLaunchGroup] launchApps];
+    } else {
+      [[[App delegate] selectedLaunchGroup] launchAppsHideOthers];
     }
   }
 }

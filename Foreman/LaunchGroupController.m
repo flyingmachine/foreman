@@ -52,7 +52,6 @@
   }
   
   //NSLog(@"open apps: %@", openApps);
-  
   for (NSString *app in [self.appGroup valueForKey:@"apps"]) {
     if (![openApps containsObject:app]) {
       [[NSWorkspace sharedWorkspace] launchApplication:app];
@@ -65,7 +64,7 @@
 
 - (void) modifyOtherApps:(BOOL)hideInsteadOfClose {
   NSRunningApplication* currentApplication = [NSRunningApplication currentApplication];
-  [currentApplication hide];
+  [[App delegate] toggle:nil];
   for (NSRunningApplication *runningApp in [[NSWorkspace sharedWorkspace] runningApplications]) {
     if ([[self appsToClose] containsObject:[[runningApp bundleURL] path]] && !([runningApp isEqual:currentApplication])) {
       if (hideInsteadOfClose) {

@@ -82,7 +82,8 @@
           bundlePath &&
           ![bundlePath hasPrefix:@"/System"] &&
           ![[self.appGroup valueForKey:@"apps"] containsObject:bundlePath] &&
-          ![[appDelegate.safeGroup valueForKey:@"apps"] containsObject:bundlePath]
+          ![[appDelegate.safeGroup valueForKey:@"apps"] containsObject:bundlePath] &&
+          [bundlePath isNotEqualTo: [[NSBundle mainBundle] bundlePath]]
           ) {
         [appsToClose addObject:bundlePath];
       }

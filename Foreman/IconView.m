@@ -54,7 +54,7 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
   if (self.selected) {
-    [[NSImage imageNamed:@"icon-glow.png"] drawInRect:NSMakeRect(0, 0, 50, 65) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
+    //[[NSImage imageNamed:@"icon-glow.png"] drawInRect:NSMakeRect(0, 0, 50, 65) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
   }
   [_image drawInRect:NSMakeRect(0, 8, 50, 50) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1];
 }

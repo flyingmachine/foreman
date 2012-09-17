@@ -63,7 +63,7 @@
 - (void)insertNewline:(id)sender {
   if ([[self window] firstResponder] == self) {
     if (_shiftHeld) {
-      [[App delegate] launchSelectedApp];
+      //[[App delegate] launchSelectedApp];
     } else {
       [[App delegate] launchSelectedLaunchGroup];
     }

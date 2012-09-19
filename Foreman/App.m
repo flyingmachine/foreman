@@ -29,7 +29,7 @@
 }
 
 + (void)restoreFirstResponder {
-  [self.delegate.window makeFirstResponder:self.delegate.baseAppView];
+  [self.delegate.window makeFirstResponder:(NSResponder *)self.delegate.baseAppView];
 }
 
 @end

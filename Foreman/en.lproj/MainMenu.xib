@@ -1295,7 +1295,7 @@
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowStyleMask">2</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{447, 1210}, {637, 80}}</string>
+				<string key="NSWindowRect">{{447, 1173}, {637, 80}}</string>
 				<int key="NSWTFlags">1954025472</int>
 				<string key="NSWindowTitle">Foreman</string>
 				<string key="NSWindowClass">ForemainMainWindow</string>
@@ -1389,7 +1389,7 @@
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="551198764"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
 				<string key="NSMinSize">{637, 80}</string>
 				<string key="NSMaxSize">{637, 300}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>

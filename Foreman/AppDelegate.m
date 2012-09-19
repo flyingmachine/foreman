@@ -38,6 +38,8 @@
   [self setFreshWindow];
   [self createStatusItem];
   [self registerHotkeys];
+  [self toggle:nil];
+  [self toggle:nil];
 }
 
 -(void)awakeFromNib

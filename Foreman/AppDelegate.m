@@ -198,7 +198,7 @@
   newWinFrame.origin.y -= heightAdjust;
   [self.window setFrame:newWinFrame display:NO animate:animate];
   
-  NSRect newFrame = NSMakeRect(15, 13, self.baseAppView.frame.size.width, self.baseAppView.frame.size.height + heightAdjust);
+  NSRect newFrame = NSMakeRect(15, 13, self.baseAppView.frame.size.width, self.baseAppView.frame.size.height);
   [self.baseAppView setFrame:newFrame];
 }
 

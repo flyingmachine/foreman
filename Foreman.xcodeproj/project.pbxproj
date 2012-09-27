@@ -25,6 +25,8 @@
 		6549236A16074EA1009D8894 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6549236916074EA1009D8894 /* Carbon.framework */; };
 		6549238416074ECC009D8894 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6549237616074ECC009D8894 /* DDHotKeyCenter.m */; };
 		654CA53315F80C5E00779BE9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 654CA53215F80C5E00779BE9 /* icon.icns */; };
+		6556948B161513C400D08518 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6556948A161513C400D08518 /* ShortcutRecorder.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		6556948E161515EC00D08518 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6556948A161513C400D08518 /* ShortcutRecorder.framework */; };
 		655AB71E15F0CA0F00C842BA /* LaunchGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */; };
 		655AB72A15F0D27600C842BA /* BaseAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB72915F0D27600C842BA /* BaseAppView.m */; };
 		656F460A1603FF060090E467 /* icon-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 656F46091603FF060090E467 /* icon-glow.png */; };
@@ -67,6 +69,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6556948D161515E400D08518 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6556948E161515EC00D08518 /* ShortcutRecorder.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6517C0EC15E149BD00135B11 /* Foreman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foreman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6517C0F015E149BD00135B11 /* Cocoa.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -98,6 +113,7 @@
 		6549237516074ECC009D8894 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
 		6549237616074ECC009D8894 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
 		654CA53215F80C5E00779BE9 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		6556948A161513C400D08518 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShortcutRecorder.framework; sourceTree = "<group>"; };
 		655AB71C15F0CA0F00C842BA /* LaunchGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchGroupView.h; sourceTree = "<group>"; };
 		655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchGroupView.m; sourceTree = "<group>"; };
 		655AB72815F0D27600C842BA /* BaseAppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppView.h; sourceTree = "<group>"; };
@@ -158,6 +174,7 @@
 				6549236A16074EA1009D8894 /* Carbon.framework in Frameworks */,
 				657DC66216035ABB00E326CA /* QuartzCore.framework in Frameworks */,
 				6517C0F115E149BD00135B11 /* Cocoa.framework in Frameworks */,
+				6556948B161513C400D08518 /* ShortcutRecorder.framework in Frameworks */,
 				63E94952D8E34BA29690C9D6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +220,7 @@
 		6517C0EF15E149BD00135B11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6556948A161513C400D08518 /* ShortcutRecorder.framework */,
 				6549236916074EA1009D8894 /* Carbon.framework */,
 				657DC66116035ABB00E326CA /* QuartzCore.framework */,
 				6517C0F015E149BD00135B11 /* Cocoa.framework */,
@@ -226,6 +244,7 @@
 		6517C0F615E149BD00135B11 /* Foreman */ = {
 			isa = PBXGroup;
 			children = (
+				655694791615138100D08518 /* Supporting Fiels */,
 				65DE63BB15F17192007BF140 /* Resources */,
 				651CDD8B15E794F400461C13 /* nibs */,
 				65956E691604BBD800FC6A70 /* Drawer */,
@@ -293,6 +312,21 @@
 				6549237616074ECC009D8894 /* DDHotKeyCenter.m */,
 			);
 			path = DDHotKey;
+			sourceTree = "<group>";
+		};
+		655694791615138100D08518 /* Supporting Fiels */ = {
+			isa = PBXGroup;
+			children = (
+				6556947B161513A700D08518 /* PTHotKey */,
+			);
+			name = "Supporting Fiels";
+			sourceTree = "<group>";
+		};
+		6556947B161513A700D08518 /* PTHotKey */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PTHotKey;
 			sourceTree = "<group>";
 		};
 		6576BB3F15E7FC5000FB5A98 /* LaunchGroup */ = {
@@ -412,6 +446,7 @@
 			buildConfigurationList = 6517C11E15E149BE00135B11 /* Build configuration list for PBXNativeTarget "Foreman" */;
 			buildPhases = (
 				6517C0E815E149BD00135B11 /* Sources */,
+				6556948D161515E400D08518 /* CopyFiles */,
 				6517C0E915E149BD00135B11 /* Frameworks */,
 				6517C0EA15E149BD00135B11 /* Resources */,
 				22BF7F2B1444406DA1DBBC9F /* Copy Pods Resources */,
@@ -676,6 +711,10 @@
 			baseConfigurationReference = B83FBA0A25FF42DD9BF15855 /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foreman/Foreman-Prefix.pch";
 				INFOPLIST_FILE = "Foreman/Foreman-Info.plist";
@@ -690,6 +729,10 @@
 			baseConfigurationReference = B83FBA0A25FF42DD9BF15855 /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Foreman/Foreman-Prefix.pch";
 				INFOPLIST_FILE = "Foreman/Foreman-Info.plist";

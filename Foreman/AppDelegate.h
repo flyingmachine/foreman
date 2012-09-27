@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <ShortcutRecorder/ShortcutRecorder.h>
+
 #define LAUNCH_GROUPS_FILENAME @"app_groups"
 #define SAFE_GROUP_FILENAME @"safe_group"
 @class LaunchGroupController;

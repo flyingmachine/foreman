@@ -27,6 +27,12 @@
 		654CA53315F80C5E00779BE9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 654CA53215F80C5E00779BE9 /* icon.icns */; };
 		6556948B161513C400D08518 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6556948A161513C400D08518 /* ShortcutRecorder.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		6556948E161515EC00D08518 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6556948A161513C400D08518 /* ShortcutRecorder.framework */; };
+		655694921615186300D08518 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655694911615186300D08518 /* PreferencesController.m */; };
+		6556949C1615198300D08518 /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 655694941615198300D08518 /* PTHotKey.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6556949D1615198300D08518 /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655694961615198300D08518 /* PTHotKeyCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6556949E1615198300D08518 /* PTKeyCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 655694971615198300D08518 /* PTKeyCodes.plist */; };
+		6556949F1615198300D08518 /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 655694991615198300D08518 /* PTKeyCodeTranslator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		655694A01615198300D08518 /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556949B1615198300D08518 /* PTKeyCombo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		655AB71E15F0CA0F00C842BA /* LaunchGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */; };
 		655AB72A15F0D27600C842BA /* BaseAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB72915F0D27600C842BA /* BaseAppView.m */; };
 		656F460A1603FF060090E467 /* icon-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 656F46091603FF060090E467 /* icon-glow.png */; };
@@ -114,6 +120,17 @@
 		6549237616074ECC009D8894 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
 		654CA53215F80C5E00779BE9 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		6556948A161513C400D08518 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShortcutRecorder.framework; sourceTree = "<group>"; };
+		655694901615186300D08518 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		655694911615186300D08518 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		655694931615198300D08518 /* PTHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHotKey.h; sourceTree = "<group>"; };
+		655694941615198300D08518 /* PTHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHotKey.m; sourceTree = "<group>"; };
+		655694951615198300D08518 /* PTHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHotKeyCenter.h; sourceTree = "<group>"; };
+		655694961615198300D08518 /* PTHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHotKeyCenter.m; sourceTree = "<group>"; };
+		655694971615198300D08518 /* PTKeyCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PTKeyCodes.plist; sourceTree = "<group>"; };
+		655694981615198300D08518 /* PTKeyCodeTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTKeyCodeTranslator.h; sourceTree = "<group>"; };
+		655694991615198300D08518 /* PTKeyCodeTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTKeyCodeTranslator.m; sourceTree = "<group>"; };
+		6556949A1615198300D08518 /* PTKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTKeyCombo.h; sourceTree = "<group>"; };
+		6556949B1615198300D08518 /* PTKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTKeyCombo.m; sourceTree = "<group>"; };
 		655AB71C15F0CA0F00C842BA /* LaunchGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchGroupView.h; sourceTree = "<group>"; };
 		655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchGroupView.m; sourceTree = "<group>"; };
 		655AB72815F0D27600C842BA /* BaseAppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppView.h; sourceTree = "<group>"; };
@@ -244,9 +261,10 @@
 		6517C0F615E149BD00135B11 /* Foreman */ = {
 			isa = PBXGroup;
 			children = (
-				655694791615138100D08518 /* Supporting Fiels */,
-				65DE63BB15F17192007BF140 /* Resources */,
+				6556948F1615184600D08518 /* Preferences */,
 				651CDD8B15E794F400461C13 /* nibs */,
+				655694791615138100D08518 /* Supporting Files */,
+				65DE63BB15F17192007BF140 /* Resources */,
 				65956E691604BBD800FC6A70 /* Drawer */,
 				658EC5101602970F00DEB218 /* BaseViews */,
 				6576BB4B15E8005500FB5A98 /* Super */,
@@ -314,19 +332,37 @@
 			path = DDHotKey;
 			sourceTree = "<group>";
 		};
-		655694791615138100D08518 /* Supporting Fiels */ = {
+		655694791615138100D08518 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				6556947B161513A700D08518 /* PTHotKey */,
 			);
-			name = "Supporting Fiels";
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6556947B161513A700D08518 /* PTHotKey */ = {
 			isa = PBXGroup;
 			children = (
+				655694931615198300D08518 /* PTHotKey.h */,
+				655694941615198300D08518 /* PTHotKey.m */,
+				655694951615198300D08518 /* PTHotKeyCenter.h */,
+				655694961615198300D08518 /* PTHotKeyCenter.m */,
+				655694971615198300D08518 /* PTKeyCodes.plist */,
+				655694981615198300D08518 /* PTKeyCodeTranslator.h */,
+				655694991615198300D08518 /* PTKeyCodeTranslator.m */,
+				6556949A1615198300D08518 /* PTKeyCombo.h */,
+				6556949B1615198300D08518 /* PTKeyCombo.m */,
 			);
 			name = PTHotKey;
+			sourceTree = "<group>";
+		};
+		6556948F1615184600D08518 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				655694901615186300D08518 /* PreferencesController.h */,
+				655694911615186300D08518 /* PreferencesController.m */,
+			);
+			name = Preferences;
 			sourceTree = "<group>";
 		};
 		6576BB3F15E7FC5000FB5A98 /* LaunchGroup */ = {
@@ -529,6 +565,7 @@
 				E591300A15FA70E700DF4389 /* status.png in Resources */,
 				65F05F4D15FD6ED600556F80 /* SafeGroupView.xib in Resources */,
 				656F460A1603FF060090E467 /* icon-glow.png in Resources */,
+				6556949E1615198300D08518 /* PTKeyCodes.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +637,11 @@
 				65956E6D1604BBF300FC6A70 /* ForemanDrawerContentView.m in Sources */,
 				653121C31605F9F200617015 /* ToCloseView.m in Sources */,
 				6549238416074ECC009D8894 /* DDHotKeyCenter.m in Sources */,
+				655694921615186300D08518 /* PreferencesController.m in Sources */,
+				6556949C1615198300D08518 /* PTHotKey.m in Sources */,
+				6556949D1615198300D08518 /* PTHotKeyCenter.m in Sources */,
+				6556949F1615198300D08518 /* PTKeyCodeTranslator.m in Sources */,
+				655694A01615198300D08518 /* PTKeyCombo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

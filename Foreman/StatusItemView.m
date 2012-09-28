@@ -15,15 +15,20 @@
 
 const int QUIT_MENU_TAG = 999;
 const int TOGGLE_ITEM_TAG = 499;
+const int PREFERENCES_ITEM_TAG = 599;
 
 - (void)menuWillOpen:(NSMenu *)the_menu
 {
   NSMenuItem *quitItem = [the_menu itemWithTag:QUIT_MENU_TAG];
   NSMenuItem *toggleItem = [the_menu itemWithTag:TOGGLE_ITEM_TAG];
+  NSMenuItem *preferencesItem = [the_menu itemWithTag:PREFERENCES_ITEM_TAG];
   [the_menu removeAllItems];
   
 
   [the_menu addItem:toggleItem];
+  [the_menu addItem:[NSMenuItem separatorItem]];
+  
+  [the_menu addItem:preferencesItem];
   [the_menu addItem:[NSMenuItem separatorItem]];
   
   [[self.dataProvider groupNamesForStatusItemView:self] enumerateObjectsUsingBlock:^(NSString* name, NSUInteger idx, BOOL *stop) {

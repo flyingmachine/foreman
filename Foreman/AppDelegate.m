@@ -38,8 +38,13 @@
   [self setFreshWindow];
   [self createStatusItem];
   [self registerHotkeys];
-  [self toggle:nil];
-  [self toggle:nil];
+  
+  if ([self.appGroups count] == 0) {
+    [self toggle:nil];
+    [self toggle:nil];    
+  } else {
+    [self toggle:nil];
+  }
 }
 
 -(void)awakeFromNib

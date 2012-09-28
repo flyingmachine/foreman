@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
-		<string key="IBDocument.SystemVersion">12C54</string>
+		<string key="IBDocument.SystemVersion">12B19</string>
 		<string key="IBDocument.InterfaceBuilderVersion">2840</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<string key="IBDocument.AppKitVersion">1187</string>
+		<string key="IBDocument.HIToolboxVersion">624.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			<string key="NS.object.0">2840</string>
@@ -1390,7 +1390,7 @@
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="551198764"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMinSize">{637, 80}</string>
 				<string key="NSMaxSize">{637, 300}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
@@ -1429,10 +1429,12 @@
 					<object class="NSMenuItem" id="126916530">
 						<reference key="NSMenu" ref="520984987"/>
 						<string key="NSTitle">Preferences</string>
-						<string key="NSKeyEquiv"/>
+						<string key="NSKeyEquiv">,</string>
+						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
+						<int key="NSTag">599</int>
 					</object>
 					<object class="NSMenuItem" id="104928490">
 						<reference key="NSMenu" ref="520984987"/>
@@ -1491,7 +1493,7 @@
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="601587612">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSCustomView" id="358806904">
@@ -1499,8 +1501,6 @@
 							<int key="NSvFlags">303</int>
 							<string key="NSFrame">{{20, 20}, {163, 22}}</string>
 							<reference key="NSSuperview" ref="601587612"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">SRRecorderControl</string>
 						</object>
@@ -1509,7 +1509,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{31, 50}, {140, 17}}</string>
 							<reference key="NSSuperview" ref="601587612"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="358806904"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1527,12 +1526,10 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{203, 89}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="687800545"/>
 					<string key="NSReuseIdentifierKey">_NS:20</string>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>

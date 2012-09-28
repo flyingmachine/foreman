@@ -1,3 +1,5 @@
 project.xcworkspace
 xcuserdata
 .DS_Store
+Foreman.app
+foreman*.zip

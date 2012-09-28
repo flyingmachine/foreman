@@ -263,7 +263,6 @@
 			children = (
 				6556948F1615184600D08518 /* Preferences */,
 				651CDD8B15E794F400461C13 /* nibs */,
-				655694791615138100D08518 /* Supporting Files */,
 				65DE63BB15F17192007BF140 /* Resources */,
 				65956E691604BBD800FC6A70 /* Drawer */,
 				658EC5101602970F00DEB218 /* BaseViews */,
@@ -284,6 +283,7 @@
 		6517C0F715E149BD00135B11 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6556947B161513A700D08518 /* PTHotKey */,
 				6517C0F815E149BD00135B11 /* Foreman-Info.plist */,
 				6517C0F915E149BD00135B11 /* InfoPlist.strings */,
 				6517C0FC15E149BD00135B11 /* main.m */,
@@ -330,14 +330,6 @@
 				6549237616074ECC009D8894 /* DDHotKeyCenter.m */,
 			);
 			path = DDHotKey;
-			sourceTree = "<group>";
-		};
-		655694791615138100D08518 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6556947B161513A700D08518 /* PTHotKey */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6556947B161513A700D08518 /* PTHotKey */ = {

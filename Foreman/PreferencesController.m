@@ -7,6 +7,7 @@
 //
 
 #import "PreferencesController.h"
+#import "Headers.h"
 
 @implementation PreferencesController
 
@@ -14,13 +15,6 @@
   self = [super init];
   if (self) {
     userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    //    [shortcutRecorder setCanCaptureGlobalHotKeys:YES]; // Defined in interface builder
-    //    [shortcutRecorderTwo setCanCaptureGlobalHotKeys:YES];
-    
-    PTKeyCombo *keys = [[PTKeyCombo alloc] initWithPlistRepresentation:[userDefaults objectForKey:@"globalShortcut"]];
-    KeyCombo someKeyCombo = SRMakeKeyCombo([keys keyCode], SRCarbonToCocoaFlags([keys modifiers]));
-    [shortcutRecorder setKeyCombo:someKeyCombo];
   }
   return self;
 }
@@ -38,12 +32,13 @@
   akeyCombo = [[PTKeyCombo alloc] initWithKeyCode:code modifiers:flags];
   
   if (aRecorder == shortcutRecorder) {
+    NSLog(@"yes");
     [hotKeyCenter unregisterHotKey:otherHotKey]; // The Key to happiness
     
-    otherHotKey = [[PTHotKey alloc] initWithIdentifier:[userDefaults objectForKey:@"hi"] keyCombo:akeyCombo];
-    [userDefaults setObject:[akeyCombo plistRepresentation] forKey:@"hi"];
-    [otherHotKey setTarget:self];
-    [otherHotKey setAction:@selector(sayBye)];
+    otherHotKey = [[PTHotKey alloc] initWithIdentifier:[userDefaults objectForKey:@"globalShortcut"] keyCombo:akeyCombo];
+    [userDefaults setObject:[akeyCombo plistRepresentation] forKey:@"globalShortcut"];
+    [otherHotKey setTarget:[App delegate]];
+    [otherHotKey setAction:@selector(toggle:)];
     [hotKeyCenter registerHotKey:otherHotKey];
   }
   //    if (newKeyCombo.code == ShortcutRecorderEmptyCode & newKeyCombo.flags == ShortcutRecorderEmptyFlags) {
@@ -72,4 +67,10 @@
   }
 }
 
+
+- (void)windowDidBecomeKey:(NSNotification *)notification {
+  PTKeyCombo *keys = [[PTKeyCombo alloc] initWithPlistRepresentation:[userDefaults objectForKey:@"globalShortcut"]];
+  KeyCombo someKeyCombo = SRMakeKeyCombo([keys keyCode], SRCarbonToCocoaFlags([keys modifiers]));
+  [shortcutRecorder setKeyCombo:someKeyCombo];
+}
 @end

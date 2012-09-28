@@ -8,6 +8,7 @@
 
 #import "PreferencesController.h"
 #import "Headers.h"
+#define GLOBAL_SHORTCUT @"globalShortcut"
 
 @implementation PreferencesController
 
@@ -15,6 +16,9 @@
   self = [super init];
   if (self) {
     userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults dictionaryForKey:GLOBAL_SHORTCUT]) {
+      [userDefaults setObject:@{@"keyCode": @47, @"modifiers": @768} forKey:GLOBAL_SHORTCUT];
+    }
   }
   return self;
 }
@@ -35,8 +39,8 @@
     NSLog(@"yes");
     [hotKeyCenter unregisterHotKey:otherHotKey]; // The Key to happiness
     
-    otherHotKey = [[PTHotKey alloc] initWithIdentifier:[userDefaults objectForKey:@"globalShortcut"] keyCombo:akeyCombo];
-    [userDefaults setObject:[akeyCombo plistRepresentation] forKey:@"globalShortcut"];
+    otherHotKey = [[PTHotKey alloc] initWithIdentifier:[userDefaults objectForKey:GLOBAL_SHORTCUT] keyCombo:akeyCombo];
+    [userDefaults setObject:[akeyCombo plistRepresentation] forKey:GLOBAL_SHORTCUT];
     [otherHotKey setTarget:[App delegate]];
     [otherHotKey setAction:@selector(toggle:)];
     [hotKeyCenter registerHotKey:otherHotKey];

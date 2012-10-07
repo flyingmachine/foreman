@@ -24,6 +24,7 @@
     self.wantsLayer = YES;
     self.layer.cornerRadius = 4.0f;
     self.layer.masksToBounds = YES;
+    [self.layer setNeedsDisplay];
   }
   
   return self;

@@ -15,21 +15,38 @@
 }
 
 + (CGColorRef)selectedLaunchGroupColor {
-  return [[NSColor colorWithCalibratedRed:0.33f
+  return [self NSColorToCGColorRef:
+          [NSColor colorWithCalibratedRed:0.33f
                                     green:0.75f
                                      blue:0.46f
-                                    alpha:0.8f] CGColor];
+                                    alpha:0.8f]];
 }
 
 + (CGColorRef)unselectedLaunchGroupColor {
-  return [[NSColor colorWithCalibratedRed:0.43f
-                                    green:0.50f
-                                     blue:0.58f
-                                    alpha:0.25f] CGColor];
+  
+  return [self NSColorToCGColorRef:
+          [NSColor colorWithCalibratedRed:0.43f
+                                     green:0.50f
+                                      blue:0.58f
+                                     alpha:0.25f]];
 }
 
 + (void)restoreFirstResponder {
   [self.delegate.window makeFirstResponder:(NSResponder *)self.delegate.baseAppView];
+}
+
++ (CGColorRef)NSColorToCGColorRef:(NSColor *)color {
+  // Get the r, g, b, a components
+  CGFloat colorComponents[4];
+  [color getComponents:colorComponents];
+  
+  // Create the CGColor
+  return (__bridge CGColorRef)(__bridge id)CGColorCreateGenericRGB(
+                                                            colorComponents[0],
+                                                            colorComponents[1],
+                                                            colorComponents[2],
+                                                            colorComponents[3]);
+  
 }
 
 @end

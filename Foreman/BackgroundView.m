@@ -7,6 +7,7 @@
 //
 
 #import "BackgroundView.h"
+#import "Headers.h"
 
 @implementation BackgroundView
 
@@ -19,23 +20,17 @@
     self.layer.cornerRadius = 6.0f;
     self.layer.masksToBounds = YES;
     self.layer.borderWidth = 1;
-    self.layer.borderColor = [[NSColor colorWithCalibratedRed:0.33f
-                                                        green:0.40f
-                                                         blue:0.48f
-                                                        alpha:1.0f] CGColor];
+    self.layer.borderColor = [App NSColorToCGColorRef:[NSColor colorWithCalibratedRed:0.33f
+                                                                                green:0.40f
+                                                                                 blue:0.48f
+                                                                                alpha:1.0f]];
 
-    self.layer.backgroundColor = [[NSColor colorWithCalibratedRed:0.43f
-                                                            green:0.50f
-                                                             blue:0.58f
-                                                            alpha:0.25f] CGColor];
+    self.layer.backgroundColor = [App NSColorToCGColorRef:[NSColor colorWithCalibratedRed:0.43f
+                                                                                    green:0.50f
+                                                                                     blue:0.58f
+                                                                                    alpha:0.25f]];
   }
   
   return self;
 }
-
-- (void)drawRect:(NSRect)dirtyRect {
-  [[NSColor clearColor] setFill];
-  NSRectFill(dirtyRect);
-}
-
 @end

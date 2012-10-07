@@ -13,5 +13,6 @@
 + (AppDelegate *)delegate;
 + (CGColorRef)selectedLaunchGroupColor;
 + (CGColorRef)unselectedLaunchGroupColor;
++ (CGColorRef)NSColorToCGColorRef:(NSColor *)color;
 + (void)restoreFirstResponder;
 @end

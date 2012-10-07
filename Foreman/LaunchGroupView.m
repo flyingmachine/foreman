@@ -28,10 +28,16 @@
     [self setLayer:[CALayer layer]];
     self.wantsLayer = YES;
     self.layer.backgroundColor = [App unselectedLaunchGroupColor];
-
+    [self.layer setNeedsDisplay];
   }
   
   return self;
+}
+
+- (void)drawRect:(NSRect)dirtyRect {
+  // set any NSColor for filling, say white:
+  [[NSColor colorWithCalibratedWhite:1 alpha:0.8f] setFill];
+  NSRectFill(dirtyRect);
 }
 
 
@@ -64,6 +70,7 @@
   } else {
     self.layer.backgroundColor = [App unselectedLaunchGroupColor];
   }
+  [self.layer setNeedsDisplay];
 }
 
 

@@ -29,16 +29,15 @@
     self.wantsLayer = YES;
     self.layer.backgroundColor = [App unselectedLaunchGroupColor];
     [self.layer setNeedsDisplay];
+    
+    CALayer *sublayer = [CALayer layer];
+    sublayer.backgroundColor = [App NSColorToCGColorRef:[NSColor blackColor]];
+    [self.layer addSublayer:sublayer];
   }
   
   return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect {
-  // set any NSColor for filling, say white:
-  [[NSColor colorWithCalibratedWhite:1 alpha:0.8f] setFill];
-  NSRectFill(dirtyRect);
-}
 
 
 - (void)mouseEntered:(NSEvent *)theEvent {
@@ -51,12 +50,6 @@
 
 - (void)mouseDown:(NSEvent *)theEvent {
   
-}
-
--(void)shiftUp {
-  NSRect frameRect = self.frame;
-  frameRect.origin.y += frameRect.size.height;
-  self.frame = frameRect;
 }
 
 -(BOOL)selected {

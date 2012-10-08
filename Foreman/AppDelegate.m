@@ -14,6 +14,7 @@
 #import "StatusItemView.h"
 #import "SafeGroupViewController.h"
 #import "BaseAppView.h"
+#import "LaunchGroupViewContainer.h"
 #import "DDHotKeyCenter.h"
 
 @interface AppDelegate () <StatusItemViewDataProvier>
@@ -207,26 +208,18 @@
   [self.baseAppView setFrame:newFrame];
 }
 
-- (void)removeAppGroup:(LaunchGroupController *)appGroupController {
-  [appGroups removeObject:appGroupController.appGroup];
+- (void)removeAppGroup:(LaunchGroupController *)launchGroupController {
+  [appGroups removeObject:launchGroupController.appGroup];
   
-  NSMutableArray * toShift = [[NSMutableArray alloc] init];
+  NSLog(@"launch group view: %@", launchGroupController.view);
   
-  BOOL isAfter = NO;
-  for (NSView * subv in [self.baseAppView subviews]) {
-    if (subv == appGroupController.view) {
-      isAfter = YES;
-    }
-    
-    if ([subv class] == [LaunchGroupView class] && isAfter) {
-      [toShift addObject:subv];
-    }
+  for (int i = [[self.baseAppView subviews] indexOfObject: launchGroupController.view];
+       i < [[self.baseAppView subviews] count];
+       i++) {
+    [(LaunchGroupViewContainer *)[[self.baseAppView subviews] objectAtIndex:i] shiftUp];
   }
   
-  [appGroupController.view removeFromSuperview];
-  for (LaunchGroupView * subv in toShift) {
-    [subv shiftUp];
-  }
+  [launchGroupController.view removeFromSuperview];
   
   [self resize: -65 animate:YES];
   

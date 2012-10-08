@@ -35,6 +35,7 @@
 		655694A01615198300D08518 /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556949B1615198300D08518 /* PTKeyCombo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		655AB71E15F0CA0F00C842BA /* LaunchGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */; };
 		655AB72A15F0D27600C842BA /* BaseAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655AB72915F0D27600C842BA /* BaseAppView.m */; };
+		655BC3C316231EF300C14E5C /* LaunchGroupViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 655BC3C216231EF300C14E5C /* LaunchGroupViewContainer.m */; };
 		656F460A1603FF060090E467 /* icon-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 656F46091603FF060090E467 /* icon-glow.png */; };
 		6576BB4415E7FD0600FB5A98 /* NewAppGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6576BB4315E7FD0600FB5A98 /* NewAppGroupViewController.m */; };
 		6576BB4A15E7FF8500FB5A98 /* NewAppGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6576BB4915E7FF8500FB5A98 /* NewAppGroupView.m */; };
@@ -135,6 +136,8 @@
 		655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchGroupView.m; sourceTree = "<group>"; };
 		655AB72815F0D27600C842BA /* BaseAppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppView.h; sourceTree = "<group>"; };
 		655AB72915F0D27600C842BA /* BaseAppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAppView.m; sourceTree = "<group>"; };
+		655BC3C116231EF300C14E5C /* LaunchGroupViewContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchGroupViewContainer.h; sourceTree = "<group>"; };
+		655BC3C216231EF300C14E5C /* LaunchGroupViewContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchGroupViewContainer.m; sourceTree = "<group>"; };
 		656F46091603FF060090E467 /* icon-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-glow.png"; path = "Foreman/icon-glow.png"; sourceTree = "<group>"; };
 		6576BB4215E7FD0600FB5A98 /* NewAppGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAppGroupViewController.h; sourceTree = "<group>"; };
 		6576BB4315E7FD0600FB5A98 /* NewAppGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAppGroupViewController.m; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 				655AB71D15F0CA0F00C842BA /* LaunchGroupView.m */,
 				653121C11605F9F200617015 /* ToCloseView.h */,
 				653121C21605F9F200617015 /* ToCloseView.m */,
+				655BC3C116231EF300C14E5C /* LaunchGroupViewContainer.h */,
+				655BC3C216231EF300C14E5C /* LaunchGroupViewContainer.m */,
 			);
 			name = LaunchGroup;
 			sourceTree = "<group>";
@@ -634,6 +639,7 @@
 				6556949D1615198300D08518 /* PTHotKeyCenter.m in Sources */,
 				6556949F1615198300D08518 /* PTKeyCodeTranslator.m in Sources */,
 				655694A01615198300D08518 /* PTKeyCombo.m in Sources */,
+				655BC3C316231EF300C14E5C /* LaunchGroupViewContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

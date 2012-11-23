@@ -25,14 +25,6 @@
                                     options: (NSTrackingMouseEnteredAndExited | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow )
                                     owner:self userInfo:nil];
     [self addTrackingArea:trackingArea];
-    [self setLayer:[CALayer layer]];
-    self.wantsLayer = YES;
-    self.layer.backgroundColor = [App unselectedLaunchGroupColor];
-    [self.layer setNeedsDisplay];
-    
-    CALayer *sublayer = [CALayer layer];
-    sublayer.backgroundColor = [App NSColorToCGColorRef:[NSColor blackColor]];
-    [self.layer addSublayer:sublayer];
   }
   
   return self;
@@ -58,12 +50,16 @@
 
 -(void)setSelected:(BOOL)sel {
   _selected = sel;
+  [self setNeedsDisplay:YES];
+}
+
+-(void)drawRect:(NSRect)dirtyRect {
   if (_selected) {
-    self.layer.backgroundColor = [App selectedLaunchGroupColor];
+    [[App colorWithHexColorString:@"b0cae6"] setFill];
   } else {
-    self.layer.backgroundColor = [App unselectedLaunchGroupColor];
+    [[NSColor colorWithCalibratedWhite:0.85 alpha:1.0f] setFill];
   }
-  [self.layer setNeedsDisplay];
+  NSRectFill(dirtyRect);
 }
 
 

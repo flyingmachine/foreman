@@ -30,8 +30,6 @@ extern OSStatus CGSNewConnection(const void **attributes, CGSConnection * id);
   if (self != nil) {
     [self setAcceptsMouseMovedEvents:YES];
     [self setOpaque:NO];
-    [self enableBlurForWindow:self];
-
   }
   return self;
 }
@@ -83,22 +81,5 @@ extern OSStatus CGSNewConnection(const void **attributes, CGSConnection * id);
   [self setMovableByWindowBackground:NO];
 }
 
--(void)enableBlurForWindow:(NSWindow *)window
-{
-  CGSConnection thisConnection;
-  uint32_t compositingFilter;
-  int compositingType = 1; // Under the window
-  
-  /* Make a new connection to CoreGraphics */
-  CGSNewConnection(NULL, &thisConnection);
-  
-  /* Create a CoreImage filter and set it up */
-  CGSNewCIFilterByName(thisConnection, (CFStringRef)@"CIGaussianBlur", &compositingFilter);
-  NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:3.0] forKey:@"inputRadius"];
-  CGSSetCIFilterValuesFromDictionary(thisConnection, compositingFilter, (__bridge CFDictionaryRef)options);
-  
-  /* Now apply the filter to the window */
-  CGSAddWindowFilter(thisConnection, [window windowNumber], compositingFilter, compositingType);
-}
 
 @end

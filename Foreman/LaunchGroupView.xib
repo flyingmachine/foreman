@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
-		<string key="IBDocument.SystemVersion">12C54</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2843</string>
+		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
 		<string key="IBDocument.AppKitVersion">1187.34</string>
 		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">2843</string>
+			<string key="NS.object.0">2844</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSButton</string>
@@ -50,7 +50,7 @@
 									<object class="NSCustomView" id="212119876">
 										<reference key="NSNextResponder" ref="639661446"/>
 										<int key="NSvFlags">265</int>
-										<string key="NSFrame">{{489, 0}, {64, 64}}</string>
+										<string key="NSFrame">{{492, 0}, {64, 64}}</string>
 										<reference key="NSSuperview" ref="639661446"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="325517153"/>
@@ -61,7 +61,7 @@
 										<reference key="NSNextResponder" ref="639661446"/>
 										<int key="NSvFlags">273</int>
 										<array class="NSMutableArray" key="NSSubviews"/>
-										<string key="NSFrame">{{117, 0}, {490, 64}}</string>
+										<string key="NSFrame">{{120, 0}, {490, 64}}</string>
 										<reference key="NSSuperview" ref="639661446"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="212119876"/>
@@ -74,7 +74,6 @@
 										<string key="NSFrame">{{564, 16}, {30, 30}}</string>
 										<reference key="NSSuperview" ref="639661446"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:1574</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSButtonCell" key="NSCell" id="768968639">
@@ -146,7 +145,7 @@
 										<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									</object>
 								</array>
-								<string key="NSFrameSize">{607, 64}</string>
+								<string key="NSFrameSize">{610, 64}</string>
 								<reference key="NSSuperview" ref="1005"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="828279234"/>
@@ -155,14 +154,14 @@
 								<string key="NSClassName">DragReceiver</string>
 							</object>
 						</array>
-						<string key="NSFrame">{{0, 1}, {607, 64}}</string>
+						<string key="NSFrame">{{0, 1}, {610, 64}}</string>
 						<reference key="NSSuperview" ref="47686069"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="639661446"/>
 						<string key="NSClassName">LaunchGroupView</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{607, 65}</string>
+				<string key="NSFrameSize">{610, 65}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="1005"/>

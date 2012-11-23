@@ -14,5 +14,6 @@
 + (CGColorRef)selectedLaunchGroupColor;
 + (CGColorRef)unselectedLaunchGroupColor;
 + (CGColorRef)NSColorToCGColorRef:(NSColor *)color;
++ (NSColor *)colorWithHexColorString:(NSString *)inColorString;
 + (void)restoreFirstResponder;
 @end

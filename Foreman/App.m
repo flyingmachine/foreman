@@ -16,19 +16,13 @@
 
 + (CGColorRef)selectedLaunchGroupColor {
   return [self NSColorToCGColorRef:
-          [NSColor colorWithCalibratedRed:0.33f
-                                    green:0.75f
-                                     blue:0.46f
-                                    alpha:0.8f]];
+          [NSColor darkGrayColor]];
 }
 
 + (CGColorRef)unselectedLaunchGroupColor {
   
   return [self NSColorToCGColorRef:
-          [NSColor colorWithCalibratedRed:0.43f
-                                     green:0.50f
-                                      blue:0.58f
-                                     alpha:0.25f]];
+          [NSColor lightGrayColor]];
 }
 
 + (void)restoreFirstResponder {
@@ -47,6 +41,30 @@
                                                             colorComponents[2],
                                                             colorComponents[3]);
   
+}
+
+
++ (NSColor*)colorWithHexColorString:(NSString*)inColorString
+{
+  NSColor* result = nil;
+  unsigned colorCode = 0;
+  unsigned char redByte, greenByte, blueByte;
+  
+  if (nil != inColorString)
+  {
+    NSScanner* scanner = [NSScanner scannerWithString:inColorString];
+    (void) [scanner scanHexInt:&colorCode]; // ignore error
+  }
+  redByte = (unsigned char)(colorCode >> 16);
+  greenByte = (unsigned char)(colorCode >> 8);
+  blueByte = (unsigned char)(colorCode); // masks off high bits
+  
+  result = [NSColor
+            colorWithCalibratedRed:(CGFloat)redByte / 0xff
+            green:(CGFloat)greenByte / 0xff
+            blue:(CGFloat)blueByte / 0xff
+            alpha:1.0];
+  return result;
 }
 
 @end

@@ -8,11 +8,12 @@
 
 #import "SafeGroupView.h"
 #import "SafeGroupViewController.h"
+#import "App.h"
 
 @implementation SafeGroupView
 - (void)drawRect:(NSRect)dirtyRect {
   // set any NSColor for filling, say white:
-  [[NSColor colorWithCalibratedWhite:1 alpha:0.8f] setFill];
+  [[App colorWithHexColorString:@"b7e7b0"] setFill];
   NSRectFill(dirtyRect);
 }
 @end

@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
-		<string key="IBDocument.SystemVersion">12C54</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2843</string>
+		<string key="IBDocument.SystemVersion">12C60</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
 		<string key="IBDocument.AppKitVersion">1187.34</string>
 		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">2843</string>
+			<string key="NS.object.0">2844</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>NSCustomObject</string>
@@ -39,16 +39,15 @@
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSCustomView" id="685672622">
 						<reference key="NSNextResponder" ref="223335812"/>
-						<int key="NSvFlags">268</int>
+						<int key="NSvFlags">264</int>
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="NSCustomView" id="941093072">
 								<reference key="NSNextResponder" ref="685672622"/>
 								<int key="NSvFlags">297</int>
 								<array class="NSMutableArray" key="NSSubviews"/>
-								<string key="NSFrame">{{117, 0}, {490, 65}}</string>
+								<string key="NSFrame">{{120, 0}, {490, 65}}</string>
 								<reference key="NSSuperview" ref="685672622"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<string key="NSClassName">IconListView</string>
 							</object>
@@ -95,7 +94,7 @@
 								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{607, 64}</string>
+						<string key="NSFrameSize">{610, 64}</string>
 						<reference key="NSSuperview" ref="223335812"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="106596592"/>
@@ -104,7 +103,7 @@
 						<string key="NSClassName">DragReceiver</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{607, 64}</string>
+				<string key="NSFrameSize">{610, 64}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="685672622"/>

@@ -164,7 +164,7 @@
   SafeGroupViewController* controller = [[SafeGroupViewController alloc] initWithAppGroup:self.safeGroup];
   [self resize: controller.view.frame.size.height + 3 animate:NO];
   NSRect adjustedFrame = controller.view.frame;
-  adjustedFrame.origin.y = 2;
+  adjustedFrame.origin.y = 1;
   controller.view.frame = adjustedFrame;
   
   [self.baseAppView addSubview: controller.view];
@@ -204,8 +204,6 @@
   newWinFrame.origin.y -= heightAdjust;
   [self.window setFrame:newWinFrame display:NO animate:animate];
   
-  NSRect newFrame = NSMakeRect(15, 13, self.baseAppView.frame.size.width, self.baseAppView.frame.size.height);
-  [self.baseAppView setFrame:newFrame];
 }
 
 - (void)removeAppGroup:(LaunchGroupController *)launchGroupController {
@@ -213,7 +211,7 @@
   
   NSLog(@"launch group view: %@", launchGroupController.view);
   
-  for (int i = [[self.baseAppView subviews] indexOfObject: launchGroupController.view];
+  for (NSUInteger i = [[self.baseAppView subviews] indexOfObject: launchGroupController.view];
        i < [[self.baseAppView subviews] count];
        i++) {
     [(LaunchGroupViewContainer *)[[self.baseAppView subviews] objectAtIndex:i] shiftUp];

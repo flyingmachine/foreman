@@ -1322,9 +1322,10 @@
 												<object class="NSTextField" id="449138400">
 													<reference key="NSNextResponder" ref="703243050"/>
 													<int key="NSvFlags">268</int>
-													<string key="NSFrame">{{141, 17}, {324, 20}}</string>
+													<string key="NSFrame">{{141, 16}, {324, 20}}</string>
 													<reference key="NSSuperview" ref="703243050"/>
 													<reference key="NSWindow"/>
+													<reference key="NSNextKeyView"/>
 													<string key="NSReuseIdentifierKey">_NS:1535</string>
 													<bool key="NSEnabled">YES</bool>
 													<object class="NSTextFieldCell" key="NSCell" id="422461900">
@@ -1360,7 +1361,7 @@
 													<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 												</object>
 											</array>
-											<string key="NSFrame">{{0, 1}, {610, 52}}</string>
+											<string key="NSFrame">{{0, 2}, {610, 51}}</string>
 											<reference key="NSSuperview" ref="511231422"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="449138400"/>
@@ -1493,7 +1494,7 @@
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="601587612">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSCustomView" id="358806904">
@@ -1501,7 +1502,6 @@
 							<int key="NSvFlags">303</int>
 							<string key="NSFrame">{{20, 20}, {163, 22}}</string>
 							<reference key="NSSuperview" ref="601587612"/>
-							<reference key="NSWindow"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">SRRecorderControl</string>
 						</object>
@@ -1510,7 +1510,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{31, 50}, {140, 17}}</string>
 							<reference key="NSSuperview" ref="601587612"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="358806904"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1528,8 +1527,6 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{203, 89}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="687800545"/>
 					<string key="NSReuseIdentifierKey">_NS:20</string>
 				</object>
@@ -3748,6 +3745,47 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/ForemainMainWindow.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSDocument</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="printDocument:">id</string>
+						<string key="revertDocumentToSaved:">id</string>
+						<string key="runPageLayout:">id</string>
+						<string key="saveDocument:">id</string>
+						<string key="saveDocumentAs:">id</string>
+						<string key="saveDocumentTo:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="printDocument:">
+							<string key="name">printDocument:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="revertDocumentToSaved:">
+							<string key="name">revertDocumentToSaved:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="runPageLayout:">
+							<string key="name">runPageLayout:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="saveDocument:">
+							<string key="name">saveDocument:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="saveDocumentAs:">
+							<string key="name">saveDocumentAs:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="saveDocumentTo:">
+							<string key="name">saveDocumentTo:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/NSDocument.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
